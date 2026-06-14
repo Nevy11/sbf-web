@@ -37,7 +37,6 @@ const App: React.FC = () => {
             </p>
             <div className="hero-actions">
               <button className="pill-button primary">Start Your Journey</button>
-              <a href="/sbf-constitution.pdf" download className="pill-button outline">Download Constitution</a>
             </div>
           </div>
           <div className="hero-visual">
@@ -84,21 +83,21 @@ const App: React.FC = () => {
             <div className="library-grid">
               <div className="library-item">
                 <div className="library-image-container">
-                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Mental Caring" className="library-card-image" />
+                  <img src="https://picsum.photos/seed/mental/800/600" alt="Mental Caring" className="library-card-image" />
                 </div>
                 <h3>Mental Caring & Support</h3>
                 <p>Compassionate resources and support systems focused on emotional healing and psychological safety.</p>
               </div>
               <div className="library-item">
                 <div className="library-image-container">
-                  <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&q=80" alt="Digital Book Repository" className="library-card-image" />
+                  <img src="https://picsum.photos/seed/knowledge/800/600" alt="Digital Book Repository" className="library-card-image" />
                 </div>
                 <h3>Knowledge Repository</h3>
                 <p>Curated literature and tools mapping directly to your stage of personal growth and mental development.</p>
               </div>
               <div className="library-item">
                 <div className="library-image-container">
-                  <img src="https://images.unsplash.com/photo-1490730141101-6c45963284aa?auto=format&fit=crop&w=800&q=80" alt="Blossoming" className="library-card-image" />
+                  <img src="/transformation.jpg" alt="Blossoming Green Flower" className="library-card-image" />
                 </div>
                 <h3>Transformation & Blossoming</h3>
                 <p>Guided pathways to help you embody your purpose and blossom into your best, empowered self.</p>
