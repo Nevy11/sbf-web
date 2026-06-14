@@ -1,0 +1,53 @@
+:root {
+  /* 60% Dominant: Backgrounds & Canvas */
+  --bg-canvas: #FDFBF7; /* Soft Cream */
+  --bg-offwhite: #FAF9F6; /* Warm Off-white */
+  
+  /* 30% Secondary: Structure & Typography */
+  --primary-deep: #1B4332; /* Deep Forest Green */
+  
+  /* 10% Accent: Action Elements */
+  --accent-leaf: #52B788; /* Vibrant Organic Leaf Green */
+  --accent-soft: #A3B18A; /* Muted Sage for secondary states */
+  
+  --white: #FFFFFF;
+  --divider: rgba(27, 67, 50, 0.08);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.04);
+  
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color: var(--primary-deep);
+  background-color: var(--bg-canvas);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  margin-top: 0;
+  color: var(--primary-deep);
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+button {
+  font-family: inherit;
+}
