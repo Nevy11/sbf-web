@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import logo from './assets/logo.jpeg';
 
 const App: React.FC = () => {
   return (
@@ -9,38 +8,35 @@ const App: React.FC = () => {
       <header className="header">
         <div className="container header-container">
           <div className="logo-section">
-            <img src={logo} alt="SBF Logo" className="logo" />
+            <img src="/logo.jpeg" alt="SBF Logo" className="logo" />
             <span className="brand-name">Smart Blossoming Foundation</span>
           </div>
           <nav className="nav">
             <ul className="nav-list">
               <li><a href="#home" className="active">Home</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#library">Resource Library</a></li>
-              <li><a href="#pathway">Growth Pathway</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#programs">Programs</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
-          <div className="header-actions">
-            <span className="lang-toggle">EN | SW</span>
-            <button className="pill-button primary">Get Involved</button>
-          </div>
         </div>
       </header>
 
       <main>
+        <div className="foundation-title">
+          Smart Blossoming Foundation
+        </div>
         {/* Hero Section */}
         <section id="home" className="container hero">
           <div className="hero-content">
             <h1 className="hero-headline">
-              Stories Do Not End In Pain; They Can Blossom Into Purpose.
+              Heal Emotionally. Grow Mentally. Blossom Purposefully.
             </h1>
             <p className="hero-subheadline">
-              Empowering you to find your footing, trust your strength, and live your purpose through guided structure and inclusive support.
+              A dedicated space for mental wellness, continuous learning, and personal transformation. We turn stories of pain into journeys of purpose.
             </p>
             <div className="hero-actions">
-              <button className="pill-button primary">Explore Our Programs</button>
-              <button className="pill-button outline">Our Mission</button>
+              <button className="pill-button primary">Start Your Journey</button>
             </div>
           </div>
           <div className="hero-visual">
@@ -52,59 +48,59 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        {/* About Us Section */}
-        <section id="about" className="about-section">
+        {/* Pillars Section */}
+        <section id="programs" className="about-section">
           <div className="container">
-            <div className="section-header">
-              <span className="section-subtitle">Who We Are</span>
-              <h2 className="section-title">Built on Trust and Transparency</h2>
+            <div className="section-header text-center">
+              <span className="section-subtitle">Our Core Pillars</span>
+              <h2 className="section-title">The Path to Self-Actualization</h2>
             </div>
             <div className="about-grid">
               <div className="about-card">
-                <h3>Our Mission</h3>
-                <p>To provide guided structure, resource categorization, and progress tracking for community members on their journey of personal growth.</p>
+                <h3>Heal (Mental Health)</h3>
+                <p>Establishing psychological safety and emotional wellness. We provide the foundation for resolving internal challenges.</p>
               </div>
               <div className="about-card">
-                <h3>Our Vision</h3>
-                <p>An inclusive world where everyone has the tools to navigate their path from healing to peak self-actualization.</p>
+                <h3>Grow (Knowledge)</h3>
+                <p>Acquiring new insights and skills. We foster continuous mental expansion to build your strength.</p>
               </div>
               <div className="about-card">
-                <h3>Motto</h3>
-                <p><strong>Heal. Grow. Blossom.</strong></p>
+                <h3>Blossom (Transformation)</h3>
+                <p>Embodying your purpose. We support you in becoming the best version of yourself, confident and purposeful.</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Resource Library Section */}
-        <section id="library" className="library-section">
+        {/* Resource Section */}
+        <section id="programs" className="library-section">
           <div className="container">
             <div className="section-header text-center">
-              <span className="section-subtitle">Comprehensive Tools</span>
-              <h2 className="section-title">An Ocean of Resources</h2>
-              <p className="section-description">Access multi-format resources designed to support every aspect of your development.</p>
+              <span className="section-subtitle">Our Support Structure</span>
+              <h2 className="section-title">Nurturing Your Journey</h2>
+              <p className="section-description">Resources designed to provide care, facilitate growth, and inspire your unique blossoming.</p>
             </div>
             <div className="library-grid">
               <div className="library-item">
                 <div className="library-image-container">
-                  <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="AI Therapist" className="library-card-image" />
+                  <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0a?auto=format&fit=crop&w=800&q=80" alt="Mental Caring" className="library-card-image" />
                 </div>
-                <h3>AI Therapist Integration</h3>
-                <p>Interactive guidance and advisory support leveraging AI to assist you in navigating your personal journey.</p>
+                <h3>Mental Caring & Support</h3>
+                <p>Compassionate resources and support systems focused on emotional healing and psychological safety.</p>
               </div>
               <div className="library-item">
                 <div className="library-image-container">
                   <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&q=80" alt="Digital Book Repository" className="library-card-image" />
                 </div>
-                <h3>Digital Book Repository</h3>
-                <p>Explore an "ocean of PDFs" and literature mapping directly linked to your growth stage.</p>
+                <h3>Knowledge Repository</h3>
+                <p>Curated literature and tools mapping directly to your stage of personal growth and mental development.</p>
               </div>
               <div className="library-item">
                 <div className="library-image-container">
-                  <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80" alt="Multimedia Content" className="library-card-image" />
+                  <img src="https://images.unsplash.com/photo-1596700033886-79b3842323e7?auto=format&fit=crop&w=800&q=80" alt="Blossoming" className="library-card-image" />
                 </div>
-                <h3>Multimedia Content</h3>
-                <p>Curated educational resources integrated directly via YouTube video streaming for visual learning.</p>
+                <h3>Transformation & Blossoming</h3>
+                <p>Guided pathways to help you embody your purpose and blossom into your best, empowered self.</p>
               </div>
             </div>
           </div>
