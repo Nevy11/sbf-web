@@ -37,6 +37,7 @@ const App: React.FC = () => {
             </p>
             <div className="hero-actions">
               <button className="pill-button primary">Start Your Journey</button>
+              <a href="/sbf-constitution.pdf" download className="pill-button outline">Download Constitution</a>
             </div>
           </div>
           <div className="hero-visual">
@@ -73,7 +74,7 @@ const App: React.FC = () => {
         </section>
 
         {/* Resource Section */}
-        <section id="programs" className="library-section">
+        <section id="resources" className="library-section">
           <div className="container">
             <div className="section-header text-center">
               <span className="section-subtitle">Our Support Structure</span>
@@ -83,7 +84,7 @@ const App: React.FC = () => {
             <div className="library-grid">
               <div className="library-item">
                 <div className="library-image-container">
-                  <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0a?auto=format&fit=crop&w=800&q=80" alt="Mental Caring" className="library-card-image" />
+                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Mental Caring" className="library-card-image" />
                 </div>
                 <h3>Mental Caring & Support</h3>
                 <p>Compassionate resources and support systems focused on emotional healing and psychological safety.</p>
@@ -97,7 +98,7 @@ const App: React.FC = () => {
               </div>
               <div className="library-item">
                 <div className="library-image-container">
-                  <img src="https://images.unsplash.com/photo-1596700033886-79b3842323e7?auto=format&fit=crop&w=800&q=80" alt="Blossoming" className="library-card-image" />
+                  <img src="https://images.unsplash.com/photo-1490730141101-6c45963284aa?auto=format&fit=crop&w=800&q=80" alt="Blossoming" className="library-card-image" />
                 </div>
                 <h3>Transformation & Blossoming</h3>
                 <p>Guided pathways to help you embody your purpose and blossom into your best, empowered self.</p>

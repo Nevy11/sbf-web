@@ -456,4 +456,18 @@
     gap: 1rem;
     font-size: 0.8rem;
   }
+  .brand-name {
+    display: none;
+  }
+}
+
+.foundation-title {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 1.5rem;
+  color: var(--primary-deep);
+  background-color: var(--bg-canvas);
 }
