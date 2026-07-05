@@ -1,71 +1,170 @@
 # Smart Blossoming Foundation (SBF) Web App
 
-Welcome to the **Smart Blossoming Foundation (SBF)** web application repository. SBF is a dedicated space for mental wellness, continuous learning, and personal transformation, aiming to turn stories of pain into journeys of purpose.
+The Smart Blossoming Foundation web app is a React and TypeScript experience designed to support mental wellness, personal growth, and guided transformation. The platform is structured around three core user journeys:
+
+- Heal: emotional wellbeing and mental health support
+- Grow: learning, reflection, and personal development
+- Blossom: purpose, confidence, and self-actualization
+
+This project combines a modern frontend experience with Supabase-backed data access and Cloudflare deployment support.
+
+## Overview
+
+SBF provides a digital space where users can:
+
+- explore a welcoming landing experience
+- create an account and sign in securely
+- access a protected dashboard experience
+- navigate through themed wellness and growth views
+- interact with a foundation-centered experience designed for reflection and progress
 
 ## Core Pillars
 
-Our foundation is built on three core pillars:
-- **Heal (Mental Health):** Establishing psychological safety and emotional wellness.
-- **Grow (Knowledge):** Acquiring new insights and skills for continuous mental expansion.
-- **Blossom (Transformation):** Embodying your purpose and becoming your best, empowered self.
+The product experience is organized around three pillars:
 
-## Key Features
+- Heal: creating psychological safety and emotional wellness
+- Grow: building knowledge, skills, and continuous learning habits
+- Blossom: embodying purpose and becoming an empowered self
 
-- **Growth Rating System:** An integrated dashboard that tracks and rates the level of growth (Personalized Growth Score, Milestone Achievements).
-- **Resource Library:** Curated literature, tools, and support systems mapped to the user's stage of development.
-- **Inclusive & Accessible:** Fully inclusive with bilingual support in **English & Kiswahili**.
+## Features
+
+- responsive, single-page application experience
+- protected routes for authenticated users
+- structured dashboard navigation for Heal, Grow, and Blossom views
+- Supabase integration for authentication and data access
+- Cloudflare Worker-based asset serving for deployment
+- modular component structure for maintainability
 
 ## Tech Stack
 
-- **Frontend:** React, TypeScript, Vite
-- **Styling:** Custom CSS
-- **Deployment:** Cloudflare Workers / Pages
-- **Backend / Database:** Supabase
+- Frontend: React, TypeScript, Vite
+- Routing: React Router
+- Styling: CSS Modules and custom styles
+- Backend and data: Supabase
+- Hosting and deployment: Cloudflare Workers / Wrangler
+- Linting: ESLint
 
-## Getting Started
+## Project Structure
 
-### Prerequisites
-- Node.js
-- Yarn package manager (This project uses `yarn` for package management)
-- Supabase CLI (for deploying edge functions)
+```text
+src/
+  components/         # shared UI components and route protection
+  lib/                # shared client and app utilities
+  pages/              # route-level views and page components
+  App.tsx             # application routing configuration
+  main.tsx            # app entry point
+  worker.ts           # Cloudflare Worker entry for SPA asset serving
+supabase/
+  config.toml         # Supabase project config
+  migrations/         # database migration files
+```
 
-### Installation
+## Prerequisites
 
-1. Clone the repository and navigate to the project directory:
-   ```bash
-   cd sbf-web
-   ```
-2. Install dependencies using Yarn:
-   ```bash
-   yarn install
-   ```
-3. Start the development server:
-   ```bash
-   yarn dev
-   ```
+Before getting started, make sure you have:
 
-### Available Scripts
+- Node.js 18+ or newer
+- npm or Yarn
+- a Supabase project
+- a Cloudflare account if you plan to deploy
 
-- `yarn dev` - Starts the Vite development server.
-- `yarn build` - Compiles TypeScript and builds the app for production.
-- `yarn lint` - Runs ESLint to check for code quality.
-- `yarn preview` - Previews the production build locally.
+## Environment Setup
+
+Create a local environment file named `.env` in the project root and add your Supabase credentials:
+
+```env
+VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+These values are used by the Supabase client in the application.
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd sbf-web
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+If you prefer Yarn, the equivalent command is:
+
+```bash
+yarn install
+```
+
+## Development
+
+Start the local development server:
+
+```bash
+npm run dev
+```
+
+The app will be available in your browser at the local Vite URL shown in the terminal.
+
+## Available Scripts
+
+- `npm run dev` – start the Vite development server
+- `npm run build` – build the production bundle
+- `npm run preview` – preview the built app locally
+- `npm run lint` – run ESLint checks
+
+## Routing Overview
+
+The app currently includes the following main routes:
+
+- `/` – landing page
+- `/login` – sign in page
+- `/signup` – sign up page
+- `/dashboard` – protected dashboard shell
+- `/dashboard/heal` – Heal experience
+- `/dashboard/grow` – Grow experience
+- `/dashboard/blossom` – Blossom experience
+
+## Supabase Notes
+
+The application uses Supabase for backend connectivity and data access. Database migration files are stored in the `supabase/migrations` directory.
+
+If you are working with Supabase Edge Functions, you can deploy them using the Supabase CLI:
+
+```bash
+supabase functions deploy <function_name> --no-verify-jwt
+```
 
 ## Deployment
 
-### Frontend (Cloudflare)
-This project uses Cloudflare for hosting. You can deploy the frontend using Wrangler:
+### Frontend and Worker
+
+This project is configured for Cloudflare deployment using Wrangler and a Worker entry point in `src/worker.ts`.
+
+Build the site:
+
+```bash
+npm run build
+```
+
+Deploy with Wrangler:
+
 ```bash
 npx wrangler deploy
 ```
 
-### Backend (Supabase Edge Functions)
-Supabase Edge Functions are used for backend operations. 
+## Contributing
 
-**Important:** Every time you update a Supabase Edge Function, you must deploy it using the following command:
-```bash
-supabase functions deploy <function_name> --no-verify-jwt
-```
+Contributions are welcome. If you plan to make changes:
+
+1. create a feature branch
+2. make your updates
+3. test locally
+4. open a pull request with a clear summary of the change
 
 ## License
 
