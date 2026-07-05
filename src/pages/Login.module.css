@@ -62,7 +62,33 @@
   outline: none;
   transition: border-color 0.2s;
   font-family: inherit;
+  width: 100%;
 }
+
+.passwordWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.passwordToggle:hover {
+  color: var(--color-secondary);
+}
+
 
 .input:focus {
   border-color: var(--color-accent);

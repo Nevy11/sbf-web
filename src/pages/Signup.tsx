@@ -4,14 +4,18 @@ import { supabase } from '../lib/supabase';
 import { Flower, Eye, EyeOff } from 'lucide-react';
 import styles from './Login.module.css';
 
-export const Login: React.FC = () => {
+export const Signup: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [successMsg, setSuccessMsg] = useState<string | null>(null);
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const [session, setSession] = useState<any>(null);
+
 
   React.useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -35,13 +39,24 @@ export const Login: React.FC = () => {
     e.preventDefault();
     setLoading(true);
     setError(null);
+    setSuccessMsg(null);
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match.");
+      setLoading(false);
+      return;
+    }
 
     try {
-      const { error } = await supabase.auth.signInWithPassword({
+      const { error } = await supabase.auth.signUp({
         email,
         password,
+        options: {
+          emailRedirectTo: `${window.location.origin}/dashboard`
+        }
       });
       if (error) throw error;
+      setSuccessMsg('Check your email for the confirmation link!');
     } catch (err: any) {
       setError(err.message);
     } finally {
@@ -54,12 +69,13 @@ export const Login: React.FC = () => {
       <div className={styles.loginCard}>
         <div className={styles.header}>
           <Flower className={styles.logo} size={48} />
-          <h1 className={styles.title}>Welcome Back</h1>
-          <p className={styles.subtitle}>Sign in to continue your blossoming journey.</p>
+          <h1 className={styles.title}>Join SBF</h1>
+          <p className={styles.subtitle}>Begin your journey to purposeful living.</p>
         </div>
 
         <form onSubmit={handleSubmit} className={styles.form}>
           {error && <div className={styles.error}>{error}</div>}
+          {successMsg && <div style={{ color: 'var(--color-accent)', textAlign: 'center', fontSize: '0.85rem' }}>{successMsg}</div>}
 
           <div className={styles.inputGroup}>
             <label className={styles.label}>Email Address</label>
@@ -93,14 +109,35 @@ export const Login: React.FC = () => {
             </div>
           </div>
 
+          <div className={styles.inputGroup}>
+            <label className={styles.label}>Confirm Password</label>
+            <div className={styles.passwordWrapper}>
+              <input 
+                type={showConfirmPassword ? "text" : "password"} 
+                className={styles.input} 
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                required 
+              />
+              <button 
+                type="button" 
+                className={styles.passwordToggle} 
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                aria-label={showConfirmPassword ? "Hide password" : "Show password"}
+              >
+                {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+              </button>
+            </div>
+          </div>
+
           <button type="submit" className={styles.submitBtn} disabled={loading}>
-            {loading ? 'Processing...' : 'Sign In'}
+            {loading ? 'Processing...' : 'Create Account'}
           </button>
         </form>
 
         <div className={styles.toggleBtn}>
-          <Link to="/signup" style={{ textDecoration: 'none', color: 'var(--color-text-secondary)' }}>
-            Don't have an account? <span style={{ color: 'var(--color-accent)', fontWeight: 600 }}>Sign Up</span>
+          <Link to="/login" style={{ textDecoration: 'none', color: 'var(--color-text-secondary)' }}>
+            Already have an account? <span style={{ color: 'var(--color-accent)', fontWeight: 600 }}>Sign In</span>
           </Link>
         </div>
       </div>
