@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# Smart Blossoming Foundation (SBF) Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Smart Blossoming Foundation (SBF)** web application repository. SBF is a dedicated space for mental wellness, continuous learning, and personal transformation, aiming to turn stories of pain into journeys of purpose.
 
-Currently, two official plugins are available:
+## Core Pillars
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Our foundation is built on three core pillars:
+- **Heal (Mental Health):** Establishing psychological safety and emotional wellness.
+- **Grow (Knowledge):** Acquiring new insights and skills for continuous mental expansion.
+- **Blossom (Transformation):** Embodying your purpose and becoming your best, empowered self.
 
-## React Compiler
+## Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Growth Rating System:** An integrated dashboard that tracks and rates the level of growth (Personalized Growth Score, Milestone Achievements).
+- **Resource Library:** Curated literature, tools, and support systems mapped to the user's stage of development.
+- **Inclusive & Accessible:** Fully inclusive with bilingual support in **English & Kiswahili**.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend:** React, TypeScript, Vite
+- **Styling:** Custom CSS
+- **Deployment:** Cloudflare Workers / Pages
+- **Backend / Database:** Supabase
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
+- Node.js
+- Yarn package manager (This project uses `yarn` for package management)
+- Supabase CLI (for deploying edge functions)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
+
+1. Clone the repository and navigate to the project directory:
+   ```bash
+   cd sbf-web
+   ```
+2. Install dependencies using Yarn:
+   ```bash
+   yarn install
+   ```
+3. Start the development server:
+   ```bash
+   yarn dev
+   ```
+
+### Available Scripts
+
+- `yarn dev` - Starts the Vite development server.
+- `yarn build` - Compiles TypeScript and builds the app for production.
+- `yarn lint` - Runs ESLint to check for code quality.
+- `yarn preview` - Previews the production build locally.
+
+## Deployment
+
+### Frontend (Cloudflare)
+This project uses Cloudflare for hosting. You can deploy the frontend using Wrangler:
+```bash
+npx wrangler deploy
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Backend (Supabase Edge Functions)
+Supabase Edge Functions are used for backend operations. 
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+**Important:** Every time you update a Supabase Edge Function, you must deploy it using the following command:
+```bash
+supabase functions deploy <function_name> --no-verify-jwt
 ```
+
+## License
+
+© 2024-Present Smart Blossoming Foundation (SBF). All rights reserved.
