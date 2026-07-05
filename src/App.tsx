@@ -41,8 +41,8 @@ const App: React.FC = () => {
           </div>
           <div className="hero-visual">
             <img 
-              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-              alt="Community gathering" 
+              src="/hero-image.jpg" 
+              alt="Community support" 
               className="hero-image"
             />
           </div>
@@ -97,7 +97,7 @@ const App: React.FC = () => {
               </div>
               <div className="library-item">
                 <div className="library-image-container">
-                  <img src="/transformation.jpg" alt="Blossoming Green Flower" className="library-card-image" />
+                  <img src="/sbf_smile.jpeg" alt="Blossoming" className="library-card-image" />
                 </div>
                 <h3>Transformation & Blossoming</h3>
                 <p>Guided pathways to help you embody your purpose and blossom into your best, empowered self.</p>
