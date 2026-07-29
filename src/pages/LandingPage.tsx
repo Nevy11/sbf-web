@@ -51,8 +51,8 @@ export const LandingPage: React.FC = () => {
           </div>
           <div className="hero-visual">
             <img 
-              src="/hero-image.jpg" 
-              alt="Community support" 
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" 
+              alt="Participants collaborating during a career building workshop" 
               className="hero-image"
             />
           </div>
@@ -94,35 +94,35 @@ export const LandingPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Resource Section */}
+        {/* Active Programs Section */}
         <section id="resources" className="library-section">
           <div className="container">
             <div className="section-header text-center">
-              <span className="section-subtitle">Our Support Structure</span>
-              <h2 className="section-title">Nurturing Your Journey</h2>
-              <p className="section-description">Resources designed to provide care, facilitate growth, and inspire your unique blossoming.</p>
+              <span className="section-subtitle">What SBF Does</span>
+              <h2 className="section-title">Our Core Offerings</h2>
+              <p className="section-description">We provide structured pathways through practical skills training, emotional support, and community leadership.</p>
             </div>
             <div className="library-grid">
               <div className="library-item">
                 <div className="library-image-container">
-                  <img src="https://picsum.photos/seed/mental/800/600" alt="Mental Caring" className="library-card-image" />
+                  <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800" alt="A supportive mentorship session focused on emotional awareness and self-trust" className="library-card-image" />
                 </div>
-                <h3>Mental Caring & Support</h3>
-                <p>Compassionate resources and support systems focused on emotional healing and psychological safety.</p>
+                <h3>Emotional Awareness (HEAL)</h3>
+                <p>Safe spaces designed to build emotional awareness, self-trust, and resilience through community support.</p>
               </div>
               <div className="library-item">
                 <div className="library-image-container">
-                  <img src="https://picsum.photos/seed/knowledge/800/600" alt="Digital Book Repository" className="library-card-image" />
+                  <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800" alt="Group learning environment focused on mindset and practical skills" className="library-card-image" />
                 </div>
-                <h3>Knowledge Repository</h3>
-                <p>Curated literature and tools mapping directly to your stage of personal growth and mental development.</p>
+                <h3>Practical Learning (GROW)</h3>
+                <p>Strengthen your mindset and acquire practical skills, including career building, finance, and professional growth.</p>
               </div>
               <div className="library-item">
                 <div className="library-image-container">
-                  <img src="/sbf_smile.jpeg" alt="Blossoming" className="library-card-image" />
+                  <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=800" alt="Community leaders engaging in purpose discovery discussions" className="library-card-image" />
                 </div>
-                <h3>Transformation & Blossoming</h3>
-                <p>Guided pathways to help you embody your purpose and blossom into your best, empowered self.</p>
+                <h3>Purpose & Leadership (BLOSSOM)</h3>
+                <p>Connect your personal growth to broader purpose discovery, contributing to the community and stepping into leadership.</p>
               </div>
             </div>
           </div>
@@ -139,22 +139,22 @@ export const LandingPage: React.FC = () => {
               <div className="pathway-stage">
                 <div className="stage-number">01</div>
                 <div className="stage-content">
-                  <h3>Healing Phase</h3>
-                  <p>Focused on baseline recovery, mental wellness, and resolving initial blockages. Find your ground.</p>
+                  <h3>HEAL Phase</h3>
+                  <p>Focused on building emotional awareness and self-trust within safe, community-centred environments.</p>
                 </div>
               </div>
               <div className="pathway-stage">
                 <div className="stage-number">02</div>
                 <div className="stage-content">
-                  <h3>Growing Phase</h3>
-                  <p>Targeting continuous skill-building, mental development, and habit formation. Strengthen your roots.</p>
+                  <h3>GROW Phase</h3>
+                  <p>Targeting mindset strengthening, mentorship, and practical career-building skills (like Finance Phase 2).</p>
                 </div>
               </div>
               <div className="pathway-stage">
                 <div className="stage-number">03</div>
                 <div className="stage-content">
-                  <h3>Blossoming Phase</h3>
-                  <p>Advanced tier focused on peak self-actualization, empowerment, and long-term sustainability.</p>
+                  <h3>BLOSSOM Phase</h3>
+                  <p>Connecting individual growth with purpose discovery, community contribution, and leadership development.</p>
                 </div>
               </div>
             </div>
