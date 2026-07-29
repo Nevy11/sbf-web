@@ -15,12 +15,17 @@ export const LandingPage: React.FC = () => {
           </div>
           <nav className="nav">
             <ul className="nav-list">
-              <li><a href="#home" className="active">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#programs">Programs</a></li>
+              <li><a href="#impact">Impact</a></li>
+              <li><a href="#resources">Resources</a></li>
+              <li><a href="#get-involved">Get Involved</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
+          <div className="header-actions">
+            <button className="pill-button explore-programs-btn" onClick={() => navigate('/#programs')}>Explore Programs</button>
+          </div>
         </div>
       </header>
 
@@ -31,15 +36,18 @@ export const LandingPage: React.FC = () => {
         {/* Hero Section */}
         <section id="home" className="container hero">
           <div className="hero-content">
+            <div className="hero-eyebrow">Personal growth, confidence and purpose</div>
             <h1 className="hero-headline">
-              Heal Emotionally. Grow Mentally. Blossom Purposefully.
+              Your story can blossom into purpose.
             </h1>
             <p className="hero-subheadline">
-              A dedicated space for mental wellness, continuous learning, and personal transformation. We turn stories of pain into journeys of purpose.
+              Smart Blossoming Foundation creates safe, community-centred spaces to heal emotionally, grow mentally, build confidence and live with purpose.
             </p>
             <div className="hero-actions">
-              <button className="pill-button primary" onClick={() => navigate('/login')}>Start Your Journey</button>
+              <button className="pill-button primary" onClick={() => navigate('/#programs')}>Explore Programs</button>
+              <button className="pill-button outline" onClick={() => navigate('/#inquiry')}>Ask Privately</button>
             </div>
+            <div className="hero-trust">Respectful. Choice-led. Community-centred.</div>
           </div>
           <div className="hero-visual">
             <img 

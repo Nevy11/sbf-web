@@ -1,12 +1,35 @@
 :root {
-  /* SBF Design System */
-  --color-dominant: #FDFBF7;
-  --color-secondary: #1B4332;
-  --color-accent: #52B788;
-  --color-text-primary: #2D3748;
-  --color-text-secondary: #718096;
+  /* SBF Design System - Official Color Tokens */
+  --color-forest: #004735;
+  --color-leaf: #6F9D4D;
+  --color-sage: #D6E2CE;
+  --color-mist: #F1F5ED;
+  --color-ink: #102A27;
+  --color-gold: #D4A85A;
   
-  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  /* Typography Tokens */
+  --font-family: 'Source Sans 3', 'Nunito Sans', system-ui, -apple-system, sans-serif;
+  --font-size-h1-desktop: 56px;
+  --font-size-h1-mobile: 40px;
+  --font-size-body-desktop: 18px;
+  --font-size-body-mobile: 16px;
+  --line-height-body: 1.6;
+
+  /* Component Tokens */
+  --border-radius-card: 16px;
+  --cta-primary-bg: var(--color-forest);
+  --cta-primary-text: #FFFFFF;
+  --cta-secondary-border: var(--color-forest);
+  --cta-secondary-text: var(--color-forest);
+  --cta-secondary-bg: var(--color-mist);
+  
+  /* Legacy aliases for backwards compatibility */
+  --bg-canvas: #FFFFFF;
+  --bg-offwhite: var(--color-mist);
+  --primary-deep: var(--color-forest);
+  --accent-leaf: var(--color-leaf);
+  --divider: var(--color-sage);
+  --color-text-primary: var(--color-ink);
 }
 
 * {
@@ -16,11 +39,27 @@
 }
 
 body {
-  background-color: var(--color-dominant);
-  color: var(--color-text-primary);
+  background-color: var(--bg-canvas);
+  color: var(--color-ink);
   font-family: var(--font-family);
+  font-size: var(--font-size-body-desktop);
+  line-height: var(--line-height-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: var(--font-size-h1-desktop);
+  color: var(--color-forest);
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: var(--font-size-body-mobile);
+  }
+  h1 {
+    font-size: var(--font-size-h1-mobile);
+  }
 }
 
 /* Base interactive styles */
