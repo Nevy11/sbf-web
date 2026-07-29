@@ -213,6 +213,9 @@
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .path-chip:hover {
@@ -566,4 +569,18 @@
   font-size: 1.5rem;
   color: var(--color-forest);
   background-color: #FFFFFF;
+}
+
+/* Icon Wrappers */
+.journey-icon-wrapper {
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-sage);
 }

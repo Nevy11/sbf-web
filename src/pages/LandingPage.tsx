@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flower } from 'lucide-react';
+import { Flower, BookOpen, Heart, Handshake, Gift, Users, HeartPulse, TrendingUp } from 'lucide-react';
 import '../App.css';
 
 export const LandingPage: React.FC = () => {
@@ -53,11 +53,11 @@ export const LandingPage: React.FC = () => {
       <section className="quick-paths-section">
         <h2 className="quick-paths-title">I want to...</h2>
         <div className="quick-paths-chips">
-          <button className="path-chip">Join a program</button>
-          <button className="path-chip">Learn from resources</button>
-          <button className="path-chip">Volunteer</button>
-          <button className="path-chip">Partner</button>
-          <button className="path-chip">Support</button>
+          <button className="path-chip"><Users size={16} /> Join a program</button>
+          <button className="path-chip"><BookOpen size={16} /> Learn from resources</button>
+          <button className="path-chip"><Heart size={16} /> Volunteer</button>
+          <button className="path-chip"><Handshake size={16} /> Partner</button>
+          <button className="path-chip"><Gift size={16} /> Support</button>
         </div>
       </section>
 
@@ -70,14 +70,17 @@ export const LandingPage: React.FC = () => {
           </p>
           <div className="journey-grid">
             <div className="journey-card">
+              <div className="journey-icon-wrapper"><HeartPulse size={32} color="var(--color-forest)" /></div>
               <h3>HEAL</h3>
               <p>Build emotional awareness, self-trust and steady ways to move forward.</p>
             </div>
             <div className="journey-card">
+              <div className="journey-icon-wrapper"><TrendingUp size={32} color="var(--color-forest)" /></div>
               <h3>GROW</h3>
               <p>Strengthen mindset, practical skills and confidence through learning and mentorship.</p>
             </div>
             <div className="journey-card">
+              <div className="journey-icon-wrapper"><Flower size={32} color="var(--color-forest)" /></div>
               <h3>BLOSSOM</h3>
               <p>Connect personal growth with purpose, contribution, leadership and community.</p>
             </div>
