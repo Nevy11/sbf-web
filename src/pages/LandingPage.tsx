@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flower, BookOpen, Heart, Handshake, Gift, Users, HeartPulse, TrendingUp } from 'lucide-react';
+import { Flower, BookOpen, Heart, Handshake, Gift, Users, HeartPulse, TrendingUp, Calendar, MapPin, Activity, CheckCircle } from 'lucide-react';
 import '../App.css';
 
 export const LandingPage: React.FC = () => {
@@ -83,6 +83,93 @@ export const LandingPage: React.FC = () => {
               <div className="journey-icon-wrapper"><Flower size={32} color="var(--color-forest)" /></div>
               <h3>BLOSSOM</h3>
               <p>Connect personal growth with purpose, contribution, leadership and community.</p>
+            </div>
+          </div>
+        </div>
+      {/* Featured Programs Section */}
+      <section id="programs" className="featured-programs-section">
+        <div className="container">
+          <h2 className="section-title text-center" style={{ marginBottom: '3rem' }}>Featured Programs</h2>
+          <div className="programs-grid">
+            {/* Card 1 */}
+            <div className="program-card">
+              <div className="program-badge heal-badge">HEAL</div>
+              <h3 className="program-title">Emotional First Aid</h3>
+              <div className="program-meta">
+                <span className="meta-chip"><Users size={14} /> Adults 18+</span>
+                <span className="meta-chip"><MapPin size={14} /> Online</span>
+                <span className="meta-chip status-open">Open</span>
+                <span className="meta-chip"><Calendar size={14} /> Next: Aug 15</span>
+              </div>
+              <p className="program-benefit">Learn immediate, practical tools to manage anxiety and regulate your nervous system in moments of stress.</p>
+              <button className="pill-button outline full-width">View Program</button>
+            </div>
+            {/* Card 2 */}
+            <div className="program-card">
+              <div className="program-badge grow-badge">GROW</div>
+              <h3 className="program-title">Confidence Building Workshop</h3>
+              <div className="program-meta">
+                <span className="meta-chip"><Users size={14} /> Youth 14-17</span>
+                <span className="meta-chip"><MapPin size={14} /> In person</span>
+                <span className="meta-chip status-upcoming">Upcoming</span>
+                <span className="meta-chip"><Calendar size={14} /> Next: Sep 5</span>
+              </div>
+              <p className="program-benefit">Develop self-trust and communication skills to navigate social situations and academic pressures.</p>
+              <button className="pill-button outline full-width">View Program</button>
+            </div>
+            {/* Card 3 */}
+            <div className="program-card">
+              <div className="program-badge blossom-badge">BLOSSOM</div>
+              <h3 className="program-title">Community Leadership Program</h3>
+              <div className="program-meta">
+                <span className="meta-chip"><Users size={14} /> All Ages</span>
+                <span className="meta-chip"><MapPin size={14} /> Hybrid</span>
+                <span className="meta-chip status-closed">Closed</span>
+                <span className="meta-chip"><Calendar size={14} /> Next: Spring 2027</span>
+              </div>
+              <p className="program-benefit">Turn your personal growth into community impact by learning how to mentor and support others.</p>
+              <button className="pill-button outline full-width">View Program</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust & Boundaries Section */}
+      <section className="trust-boundaries-section">
+        <div className="container text-center">
+          <div className="trust-card">
+            <h2 className="section-title" style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>A respectful space with clear boundaries.</h2>
+            <p className="section-description" style={{ fontSize: '1.1rem', margin: '0 auto', maxWidth: '800px', opacity: 0.9 }}>
+              SBF is independent, non-partisan and non-sectarian. Participation is choice-led and personal information is handled with care. SBF programs are not emergency, diagnostic or clinical services.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Early-Stage Impact Section */}
+      <section id="impact" className="impact-section">
+        <div className="container">
+          <div className="text-center" style={{ marginBottom: '4rem' }}>
+            <h2 className="section-title" style={{ marginBottom: '1.5rem' }}>Building evidence from the beginning.</h2>
+            <p className="section-description" style={{ margin: '0 auto', fontSize: '1.1rem', maxWidth: '800px' }}>
+              We publish verified participation, learning and feedback measures with reporting periods, definitions and limitations. Until a full annual report is available, we will share what we delivered, what participants told us and what we are improving.
+            </p>
+          </div>
+          <div className="impact-grid">
+            <div className="impact-card">
+              <div className="impact-number">85%</div>
+              <h4 className="impact-label">Reported Improved Wellbeing</h4>
+              <p className="impact-period">Jan-Jun 2026 (N=120)</p>
+            </div>
+            <div className="impact-card">
+              <div className="impact-number">4.8<span style={{ fontSize: '1.5rem', opacity: 0.7 }}>/5</span></div>
+              <h4 className="impact-label">Average Program Rating</h4>
+              <p className="impact-period">Jan-Jun 2026 (N=200)</p>
+            </div>
+            <div className="impact-card">
+              <div className="impact-number">50+</div>
+              <h4 className="impact-label">Community Sessions Delivered</h4>
+              <p className="impact-period">YTD 2026</p>
             </div>
           </div>
         </div>
