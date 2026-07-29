@@ -86,6 +86,7 @@ export const LandingPage: React.FC = () => {
             </div>
           </div>
         </div>
+      </section>
       {/* Featured Programs Section */}
       <section id="programs" className="featured-programs-section">
         <div className="container">
@@ -337,8 +338,8 @@ export const LandingPage: React.FC = () => {
                 <input type="text" id="contact" className="form-control" placeholder="Your email or phone number" />
               </div>
               <div className="form-group">
-                <label>Preferred Response Method</label>
-                <div className="radio-group">
+                <label id="response-method-label">Preferred Response Method</label>
+                <div className="radio-group" role="radiogroup" aria-labelledby="response-method-label">
                   <label className="radio-label"><input type="radio" name="responseMethod" value="email" /> Email</label>
                   <label className="radio-label"><input type="radio" name="responseMethod" value="phone" /> Phone</label>
                   <label className="radio-label"><input type="radio" name="responseMethod" value="no-response" /> No response needed</label>
