@@ -181,34 +181,86 @@
   box-shadow: var(--shadow-soft);
 }
 
-/* About Section */
-.about-section {
-  padding: 100px 0;
-  background-color: var(--bg-offwhite);
+/* Quick Paths Section */
+.quick-paths-section {
+  padding: 4rem 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-.about-grid {
+.quick-paths-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+}
+
+.quick-paths-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.path-chip {
+  background: white;
+  border: 1px solid var(--divider);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  color: var(--primary-deep);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.path-chip:hover {
+  background: var(--bg-offwhite);
+  border-color: var(--accent-leaf);
+  color: var(--accent-leaf);
+  transform: translateY(-2px);
+}
+
+/* Journey Section */
+.journey-section {
+  padding: 80px 0;
+  background-color: var(--bg-canvas);
+}
+
+.journey-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
 }
 
-.about-card {
-  background: white;
-  padding: 3rem;
-  border-radius: 12px;
-  border: 1px solid var(--divider);
-  box-shadow: var(--shadow-soft);
+.journey-card {
+  background-color: #F1F5ED;
+  border: 2px solid #D6E2CE;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
-.about-card h3 {
-  font-size: 1.25rem;
+.journey-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.journey-card h3 {
+  font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: #004735;
+  font-weight: 800;
+  letter-spacing: 0.05em;
 }
 
-.about-card p {
-  font-size: 0.95rem;
-  opacity: 0.7;
+.journey-card p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--primary-deep);
+  opacity: 0.85;
 }
 
 /* Library Section */
@@ -453,7 +505,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .about-grid, .library-grid {
+  .journey-grid, .library-grid {
     grid-template-columns: 1fr;
     max-width: 500px;
     margin: 0 auto;
@@ -478,7 +530,7 @@
   .section-title {
     font-size: 2rem;
   }
-  .about-card {
+  .journey-card {
     padding: 2rem;
   }
   .header-container {
@@ -492,6 +544,16 @@
   }
   .brand-name {
     display: none;
+  }
+  .quick-paths-section {
+    padding: 3rem 24px 1rem;
+  }
+  .quick-paths-chips {
+    flex-direction: column;
+    width: 100%;
+  }
+  .path-chip {
+    width: 100%;
   }
 }
 

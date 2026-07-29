@@ -58,25 +58,37 @@ export const LandingPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Pillars Section */}
-        <section id="programs" className="about-section">
+        {/* Quick Paths Section */}
+        <section className="quick-paths-section container">
+          <h2 className="quick-paths-title">I want to...</h2>
+          <div className="quick-paths-chips">
+            <button className="path-chip">Join a program</button>
+            <button className="path-chip">Learn from resources</button>
+            <button className="path-chip">Volunteer</button>
+            <button className="path-chip">Partner</button>
+            <button className="path-chip">Support</button>
+          </div>
+        </section>
+
+        {/* Heal-Grow-Blossom Journey Section */}
+        <section id="programs" className="journey-section">
           <div className="container">
             <div className="section-header text-center">
-              <span className="section-subtitle">Our Core Pillars</span>
-              <h2 className="section-title">The Path to Self-Actualization</h2>
+              <h2 className="section-title">Where are you in your journey?</h2>
+              <p className="section-description">Choose the path that feels most useful today. You do not need to share your full story to take a first step.</p>
             </div>
-            <div className="about-grid">
-              <div className="about-card">
-                <h3>Heal (Mental Health)</h3>
-                <p>Establishing psychological safety and emotional wellness. We provide the foundation for resolving internal challenges.</p>
+            <div className="journey-grid">
+              <div className="journey-card">
+                <h3>HEAL</h3>
+                <p>Build emotional awareness, self-trust and steady ways to move forward.</p>
               </div>
-              <div className="about-card">
-                <h3>Grow (Knowledge)</h3>
-                <p>Acquiring new insights and skills. We foster continuous mental expansion to build your strength.</p>
+              <div className="journey-card">
+                <h3>GROW</h3>
+                <p>Strengthen mindset, practical skills and confidence through learning and mentorship.</p>
               </div>
-              <div className="about-card">
-                <h3>Blossom (Transformation)</h3>
-                <p>Embodying your purpose. We support you in becoming the best version of yourself, confident and purposeful.</p>
+              <div className="journey-card">
+                <h3>BLOSSOM</h3>
+                <p>Connect personal growth with purpose, contribution, leadership and community.</p>
               </div>
             </div>
           </div>
