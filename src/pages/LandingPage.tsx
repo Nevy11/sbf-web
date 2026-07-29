@@ -48,6 +48,42 @@ export const LandingPage: React.FC = () => {
           <img src="https://images.unsplash.com/photo-1528716321680-815a8cdb8c56?auto=format&fit=crop&q=80&w=800" alt="Person blossoming and looking confident" className="hero-image" />
         </div>
       </section>
+
+      {/* Quick Paths Section */}
+      <section className="quick-paths-section">
+        <h2 className="quick-paths-title">I want to...</h2>
+        <div className="quick-paths-chips">
+          <button className="path-chip">Join a program</button>
+          <button className="path-chip">Learn from resources</button>
+          <button className="path-chip">Volunteer</button>
+          <button className="path-chip">Partner</button>
+          <button className="path-chip">Support</button>
+        </div>
+      </section>
+
+      {/* Journey Section */}
+      <section className="journey-section">
+        <div className="container text-center">
+          <h2 className="section-title" style={{ fontSize: '2rem', marginBottom: '1rem' }}>Where are you in your journey?</h2>
+          <p className="section-description" style={{ marginBottom: '3rem' }}>
+            Choose the path that feels most useful today. You do not need to share your full story to take a first step.
+          </p>
+          <div className="journey-grid">
+            <div className="journey-card">
+              <h3>HEAL</h3>
+              <p>Build emotional awareness, self-trust and steady ways to move forward.</p>
+            </div>
+            <div className="journey-card">
+              <h3>GROW</h3>
+              <p>Strengthen mindset, practical skills and confidence through learning and mentorship.</p>
+            </div>
+            <div className="journey-card">
+              <h3>BLOSSOM</h3>
+              <p>Connect personal growth with purpose, contribution, leadership and community.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
