@@ -17,8 +17,8 @@
   height: 80px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--divider);
-  background-color: var(--bg-canvas);
+  border-bottom: 1px solid var(--color-sage);
+  background-color: #FFFFFF;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -60,14 +60,14 @@
 }
 
 .nav-list a {
-  color: var(--primary-deep);
+  color: var(--color-forest);
   font-weight: 500;
   font-size: 0.9rem;
   text-decoration: none;
 }
 
 .nav-list a.active {
-  color: var(--accent-leaf);
+  color: var(--color-leaf);
 }
 
 .pill-button {
@@ -81,19 +81,19 @@
 }
 
 .pill-button.primary {
-  background-color: var(--accent-leaf);
-  color: white;
+  background-color: var(--cta-primary-bg);
+  color: var(--cta-primary-text);
 }
 
 .pill-button.outline {
   background: transparent;
-  border: 1px solid var(--primary-deep);
-  color: var(--primary-deep);
+  border: 1px solid var(--cta-secondary-border);
+  color: var(--cta-secondary-text);
 }
 
 .explore-programs-btn {
-  background-color: #004735;
-  color: white;
+  background-color: var(--cta-primary-bg);
+  color: var(--cta-primary-text);
 }
 
 .explore-programs-btn:hover {
@@ -106,7 +106,7 @@
 }
 
 .section-subtitle {
-  color: var(--accent-leaf);
+  color: var(--color-leaf);
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -144,7 +144,7 @@
 }
 
 .hero-eyebrow {
-  color: var(--accent-leaf);
+  color: var(--color-leaf);
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.85rem;
@@ -154,7 +154,7 @@
 
 .hero-subheadline {
   font-size: 1.25rem;
-  color: var(--primary-deep);
+  color: var(--color-forest);
   opacity: 0.8;
   margin-bottom: 3rem;
   max-width: 500px;
@@ -169,7 +169,7 @@
   margin-top: 1.5rem;
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--primary-deep);
+  color: var(--color-forest);
   opacity: 0.8;
 }
 
@@ -177,7 +177,7 @@
   width: 100%;
   aspect-ratio: 4/5;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: var(--border-radius-card);
   box-shadow: var(--shadow-soft);
 }
 
@@ -193,7 +193,7 @@
 .quick-paths-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-deep);
+  color: var(--color-forest);
 }
 
 .quick-paths-chips {
@@ -205,27 +205,27 @@
 
 .path-chip {
   background: white;
-  border: 1px solid var(--divider);
+  border: 1px solid var(--color-sage);
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
-  color: var(--primary-deep);
+  color: var(--color-forest);
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .path-chip:hover {
-  background: var(--bg-offwhite);
-  border-color: var(--accent-leaf);
-  color: var(--accent-leaf);
+  background: var(--color-mist);
+  border-color: var(--color-leaf);
+  color: var(--color-leaf);
   transform: translateY(-2px);
 }
 
 /* Journey Section */
 .journey-section {
   padding: 80px 0;
-  background-color: var(--bg-canvas);
+  background-color: #FFFFFF;
 }
 
 .journey-grid {
@@ -235,10 +235,10 @@
 }
 
 .journey-card {
-  background-color: #F1F5ED;
-  border: 2px solid #D6E2CE;
+  background-color: var(--color-mist);
+  border: 2px solid var(--color-sage);
   padding: 3rem 2rem;
-  border-radius: 16px;
+  border-radius: var(--border-radius-card);
   text-align: center;
   transition: all 0.3s ease;
 }
@@ -251,7 +251,7 @@
 .journey-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #004735;
+  color: var(--color-forest);
   font-weight: 800;
   letter-spacing: 0.05em;
 }
@@ -259,7 +259,7 @@
 .journey-card p {
   font-size: 1.05rem;
   line-height: 1.6;
-  color: var(--primary-deep);
+  color: var(--color-forest);
   opacity: 0.85;
 }
 
@@ -282,11 +282,11 @@
 .library-image-container {
   width: 100%;
   aspect-ratio: 16/10;
-  border-radius: 12px;
+  border-radius: var(--border-radius-card);
   overflow: hidden;
   margin-bottom: 2rem;
   box-shadow: var(--shadow-soft);
-  border: 1px solid var(--divider);
+  border: 1px solid var(--color-sage);
 }
 
 .library-card-image {
@@ -308,12 +308,12 @@
 /* Pathway Section */
 .pathway-section {
   padding: 120px 0;
-  background-color: var(--primary-deep);
-  color: var(--bg-canvas);
+  background-color: var(--color-forest);
+  color: #FFFFFF;
 }
 
 .pathway-section .section-title {
-  color: var(--bg-canvas);
+  color: #FFFFFF;
 }
 
 .pathway-timeline {
@@ -344,7 +344,7 @@
 .stage-number {
   width: 60px;
   height: 60px;
-  background: var(--accent-leaf);
+  background: var(--color-leaf);
   color: white;
   display: flex;
   align-items: center;
@@ -357,7 +357,7 @@
 }
 
 .stage-content h3 {
-  color: var(--bg-canvas);
+  color: #FFFFFF;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -394,15 +394,15 @@
 
 .tracking-features li::before {
   content: '✓';
-  color: var(--accent-leaf);
+  color: var(--color-leaf);
 }
 
 .dashboard-mockup {
   background: white;
   padding: 3rem;
-  border-radius: 20px;
+  border-radius: var(--border-radius-card);
   box-shadow: 0 40px 100px rgba(0,0,0,0.08);
-  border: 1px solid var(--divider);
+  border: 1px solid var(--color-sage);
 }
 
 .mockup-header {
@@ -412,7 +412,7 @@
 
 .mockup-progress-bar {
   height: 12px;
-  background: var(--bg-offwhite);
+  background: var(--color-mist);
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 1rem;
@@ -421,7 +421,7 @@
 .progress-fill {
   width: 75%;
   height: 100%;
-  background: var(--accent-leaf);
+  background: var(--color-leaf);
 }
 
 .mockup-stats {
@@ -435,7 +435,7 @@
 /* Localization Section */
 .localization-section {
   padding: 80px 0;
-  border-top: 1px solid var(--divider);
+  border-top: 1px solid var(--color-sage);
 }
 
 .localization-p {
@@ -446,7 +446,7 @@
 
 /* Callout Block */
 .callout-block {
-  background-color: var(--primary-deep);
+  background-color: var(--color-forest);
   padding: 140px 0;
   text-align: center;
 }
@@ -454,13 +454,13 @@
 .callout-statement {
   font-size: 2.5rem;
   font-style: italic;
-  color: var(--bg-offwhite);
+  color: var(--color-mist);
   margin-bottom: 2rem;
   line-height: 1.3;
 }
 
 .callout-preamble {
-  color: var(--bg-offwhite);
+  color: var(--color-mist);
   opacity: 0.6;
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -473,7 +473,7 @@
 /* Footer */
 .footer {
   padding: 3rem 0;
-  border-top: 1px solid var(--divider);
+  border-top: 1px solid var(--color-sage);
 }
 
 .footer-container {
@@ -564,6 +564,6 @@
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 1.5rem;
-  color: var(--primary-deep);
-  background-color: var(--bg-canvas);
+  color: var(--color-forest);
+  background-color: #FFFFFF;
 }
