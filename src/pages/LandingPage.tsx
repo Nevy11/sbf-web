@@ -174,6 +174,252 @@ export const LandingPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Community Story Section */}
+      <section className="community-story-section">
+        <div className="container">
+          <div className="story-card">
+            <h2 className="section-title">Community Story</h2>
+            <blockquote className="story-quote">
+              "Finding this space allowed me to connect with others who understood my journey. The workshops provided practical tools to navigate my daily life with more confidence and clarity. It's been a truly supportive environment for personal growth."
+            </blockquote>
+            <div className="story-author">— Maya T. (Name changed for privacy)</div>
+            <a href="#read-more" className="text-link">Read story <TrendingUp size={16} /></a>
+          </div>
+        </div>
+      </section>
+
+      {/* Freshness & Updates Section */}
+      <section id="resources" className="updates-section">
+        <div className="container">
+          <h2 className="section-title text-center" style={{ marginBottom: '3rem' }}>Upcoming & Recent</h2>
+          <div className="updates-grid">
+            <div className="update-card event-card">
+              <span className="update-badge">Upcoming Event</span>
+              <h3 className="update-title">Annual Blossoming Retreat</h3>
+              <p className="update-date"><Calendar size={14} /> October 12, 2026</p>
+              <p className="update-desc">A full-day interactive retreat focusing on community building and resilience.</p>
+              <a href="#register" className="text-link">Register Now</a>
+            </div>
+            <div className="update-card resource-card">
+              <span className="update-badge">Recent Resource</span>
+              <h3 className="update-title">Guide to Emotional Regulation</h3>
+              <p className="update-date"><BookOpen size={14} /> Published: July 20, 2026</p>
+              <p className="update-desc">A practical 10-page guide with everyday tools to manage stress.</p>
+              <a href="#download" className="text-link">Download PDF</a>
+            </div>
+            <div className="update-card resource-card">
+              <span className="update-badge">Recent Resource</span>
+              <h3 className="update-title">Mindset Shift Worksheet</h3>
+              <p className="update-date"><BookOpen size={14} /> Published: July 5, 2026</p>
+              <p className="update-desc">Exercises to help identify and shift limiting beliefs.</p>
+              <a href="#download" className="text-link">Download PDF</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Approved Partners Grid Section */}
+      <section className="partners-section">
+        <div className="container text-center">
+          <h2 className="section-title" style={{ marginBottom: '1rem' }}>Our Partners</h2>
+          <p className="section-description" style={{ marginBottom: '3rem', margin: '0 auto', maxWidth: '800px' }}>
+            We collaborate with verified organizations aligned with our mission to provide extended support and resources.
+          </p>
+          <div className="partners-grid">
+            <div className="partner-card">
+              <div className="partner-logo-placeholder">Mindful Hub</div>
+              <p className="partner-relation">Wellness Resource Partner</p>
+            </div>
+            <div className="partner-card">
+              <div className="partner-logo-placeholder">Community Connect</div>
+              <p className="partner-relation">Local Venue Partner</p>
+            </div>
+            <div className="partner-card">
+              <div className="partner-logo-placeholder">Growth Institute</div>
+              <p className="partner-relation">Curriculum Collaborator</p>
+            </div>
+            <div className="partner-card">
+              <div className="partner-logo-placeholder">Tech for Good</div>
+              <p className="partner-relation">Technology Sponsor</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Get Involved Section */}
+      <section id="get-involved" className="get-involved-section">
+        <div className="container text-center">
+          <h2 className="section-title" style={{ marginBottom: '1rem' }}>Get Involved</h2>
+          <p className="section-description" style={{ marginBottom: '3rem', margin: '0 auto', maxWidth: '800px' }}>
+            Join our community in making a meaningful impact. Choose the path that fits your capacity and skills.
+          </p>
+          <div className="involvement-grid">
+            <div className="involvement-card">
+              <div className="involvement-icon"><Heart size={32} color="var(--color-forest)" /></div>
+              <h3>Volunteer</h3>
+              <div className="involvement-expectations">
+                <p><CheckCircle size={14} /> 2-4 hours per month</p>
+                <p><CheckCircle size={14} /> Background check required</p>
+                <p><CheckCircle size={14} /> Mandatory training session</p>
+              </div>
+              <button className="pill-button outline">Apply to Volunteer</button>
+            </div>
+            <div className="involvement-card">
+              <div className="involvement-icon"><Handshake size={32} color="var(--color-forest)" /></div>
+              <h3>Partner</h3>
+              <div className="involvement-expectations">
+                <p><CheckCircle size={14} /> Aligned mission & values</p>
+                <p><CheckCircle size={14} /> Signed MOU</p>
+                <p><CheckCircle size={14} /> Annual review</p>
+              </div>
+              <button className="pill-button outline">Become a Partner</button>
+            </div>
+            <div className="involvement-card">
+              <div className="involvement-icon"><Gift size={32} color="var(--color-forest)" /></div>
+              <h3>Support</h3>
+              <div className="involvement-expectations">
+                <p><CheckCircle size={14} /> One-time or recurring</p>
+                <p><CheckCircle size={14} /> Tax-deductible</p>
+                <p><CheckCircle size={14} /> Transparent reporting</p>
+              </div>
+              <button className="pill-button outline">Make a Donation</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final Call-to-Action Block */}
+      <section className="final-cta-section text-center">
+        <div className="container">
+          <h2 className="section-title" style={{ color: '#FFFFFF', marginBottom: '1rem' }}>Take the next step that fits you.</h2>
+          <p className="section-description" style={{ color: 'rgba(255,255,255,0.9)', margin: '0 auto 3rem', maxWidth: '600px' }}>
+            Explore an upcoming program, ask a private question, volunteer your skills or discuss a partnership.
+          </p>
+          <div className="hero-actions" style={{ justifyContent: 'center' }}>
+            <a href="#programs" className="pill-button primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#FFFFFF', color: 'var(--color-forest)' }}>
+              Explore Programs
+            </a>
+            <a href="#inquiry" className="pill-button outline" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderColor: '#FFFFFF', color: '#FFFFFF' }}>
+              Send Inquiry
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Safe Inquiry Form Section */}
+      <section id="inquiry" className="inquiry-section">
+        <div className="container">
+          <div className="inquiry-card">
+            <h2 className="section-title text-center" style={{ marginBottom: '1rem', fontSize: '2rem' }}>Safe Inquiry Form</h2>
+            <p className="text-center" style={{ marginBottom: '3rem', opacity: 0.8 }}>
+              Send us a secure message. We handle your information with care and respect.
+            </p>
+            <form className="inquiry-form" onSubmit={(e) => e.preventDefault()}>
+              <div className="form-group">
+                <label htmlFor="purpose">Purpose of Inquiry</label>
+                <select id="purpose" className="form-control" defaultValue="">
+                  <option value="" disabled>Select a purpose</option>
+                  <option value="programs">Programs</option>
+                  <option value="partnership">Partnership</option>
+                  <option value="media">Media</option>
+                  <option value="volunteer">Volunteer</option>
+                  <option value="general">General</option>
+                  <option value="safeguarding">Safeguarding Concern</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <label htmlFor="name">Name or Preferred Name</label>
+                <input type="text" id="name" className="form-control" placeholder="How should we address you?" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="contact">Contact: Email or Phone</label>
+                <input type="text" id="contact" className="form-control" placeholder="Your email or phone number" />
+              </div>
+              <div className="form-group">
+                <label>Preferred Response Method</label>
+                <div className="radio-group">
+                  <label className="radio-label"><input type="radio" name="responseMethod" value="email" /> Email</label>
+                  <label className="radio-label"><input type="radio" name="responseMethod" value="phone" /> Phone</label>
+                  <label className="radio-label"><input type="radio" name="responseMethod" value="no-response" /> No response needed</label>
+                </div>
+              </div>
+              <div className="form-group">
+                <label htmlFor="message">Message (OPTIONAL)</label>
+                <textarea id="message" className="form-control" rows={4} placeholder="Share as much or as little as you'd like..."></textarea>
+              </div>
+              <div className="form-group checkbox-group">
+                <label className="checkbox-label">
+                  <input type="checkbox" id="privacy-consent" />
+                  <span>I consent to Smart Blossoming Foundation handling my information as outlined in the Privacy Policy to process this inquiry.</span>
+                </label>
+              </div>
+              <button type="submit" className="pill-button primary full-width">Send Secure Inquiry</button>
+              
+              <div className="form-footer-note">
+                <strong>Response Time:</strong> We aim to reply within 2-3 business days.<br/>
+                <strong>Privacy Statement:</strong> Your information is stored securely and never shared with third parties without explicit consent.<br/>
+                <strong style={{ color: 'var(--color-forest)' }}>Disclaimer:</strong> This form is not monitored 24/7. It is not an emergency, crisis response, or clinical service. If you need immediate help, please contact your local emergency services.
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Complete Footer */}
+      <footer id="contact" className="site-footer">
+        <div className="container">
+          <div className="footer-grid">
+            <div className="footer-brand">
+              <div className="logo-section" style={{ marginBottom: '1.5rem', color: '#FFFFFF' }}>
+                <Flower color="#FFFFFF" size={32} />
+                <span className="brand-name">Smart Blossoming Foundation</span>
+              </div>
+              <p className="footer-description">
+                Creating safe, community-centred spaces to heal emotionally, grow mentally, build confidence and live with purpose.
+              </p>
+              <div className="footer-contact-details">
+                <p><strong>Official Contact:</strong></p>
+                <p>Email: hello@smartblossoming.org</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>PO Box 123, Growth City, ST 12345</p>
+              </div>
+              <div className="social-links">
+                <a href="#" className="social-link" aria-label="LinkedIn">IN</a>
+                <a href="#" className="social-link" aria-label="Twitter">TW</a>
+                <a href="#" className="social-link" aria-label="Facebook">FB</a>
+                <a href="#" className="social-link" aria-label="Instagram">IG</a>
+              </div>
+            </div>
+            
+            <div className="footer-links-group">
+              <h4 className="footer-heading">Navigation</h4>
+              <ul className="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#get-involved">Get Involved</a></li>
+                <li><a href="#inquiry">Contact</a></li>
+              </ul>
+            </div>
+            
+            <div className="footer-links-group">
+              <h4 className="footer-heading">Governance & Legal</h4>
+              <ul className="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Safeguarding Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Governance Documents</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="footer-bottom">
+            <p className="copyright-notice">&copy; {new Date().getFullYear()} Smart Blossoming Foundation. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
