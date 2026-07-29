@@ -64,7 +64,7 @@ supabase/
 Before getting started, make sure you have:
 
 - Node.js 18+ or newer
-- npm or Yarn
+- Yarn
 - a Supabase project
 - a Cloudflare account if you plan to deploy
 
@@ -91,12 +91,6 @@ cd sbf-web
 2. Install dependencies:
 
 ```bash
-npm install
-```
-
-If you prefer Yarn, the equivalent command is:
-
-```bash
 yarn install
 ```
 
@@ -105,17 +99,17 @@ yarn install
 Start the local development server:
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 The app will be available in your browser at the local Vite URL shown in the terminal.
 
 ## Available Scripts
 
-- `npm run dev` – start the Vite development server
-- `npm run build` – build the production bundle
-- `npm run preview` – preview the built app locally
-- `npm run lint` – run ESLint checks
+- `yarn dev` – start the Vite development server
+- `yarn build` – build the production bundle
+- `yarn preview` – preview the built app locally
+- `yarn lint` – run ESLint checks
 
 ## Routing Overview
 
@@ -148,7 +142,7 @@ This project is configured for Cloudflare deployment using Wrangler and a Worker
 Build the site:
 
 ```bash
-npm run build
+yarn build
 ```
 
 Deploy with Wrangler:
