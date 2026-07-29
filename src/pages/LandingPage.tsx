@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flower, BookOpen, Heart, Handshake, Gift, Users, HeartPulse, TrendingUp, Calendar, MapPin, Activity, CheckCircle } from 'lucide-react';
+import { Flower, BookOpen, Heart, Handshake, Gift, Users, HeartPulse, TrendingUp, Calendar, MapPin, CheckCircle } from 'lucide-react';
 import '../App.css';
 
 export const LandingPage: React.FC = () => {
