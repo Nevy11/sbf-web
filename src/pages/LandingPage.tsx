@@ -15,6 +15,7 @@ export const LandingPage: React.FC = () => {
           <nav className="nav-list">
             <a href="#about">About</a>
             <a href="#programs">Programs</a>
+            <a href="/events">Events</a> {/* NEW: Direct link to Events page */}
             <a href="#impact">Impact</a>
             <a href="#resources">Resources</a>
             <a href="#get-involved">Get Involved</a>
@@ -200,7 +201,7 @@ export const LandingPage: React.FC = () => {
               <h3 className="update-title">Annual Blossoming Retreat</h3>
               <p className="update-date"><Calendar size={14} /> October 12, 2026</p>
               <p className="update-desc">A full-day interactive retreat focusing on community building and resilience.</p>
-              <a href="#register" className="text-link">Register Now</a>
+              <a href="/events" className="text-link">View Event Details</a> {/* NEW: Linked to Events page */}
             </div>
             <div className="update-card resource-card">
               <span className="update-badge">Recent Resource</span>
@@ -399,6 +400,7 @@ export const LandingPage: React.FC = () => {
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#programs">Programs</a></li>
+                <li><a href="/events">Events</a></li> {/* NEW: Direct link to Events page */}
                 <li><a href="#impact">Impact</a></li>
                 <li><a href="#get-involved">Get Involved</a></li>
                 <li><a href="#inquiry">Contact</a></li>
