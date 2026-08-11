@@ -102,15 +102,14 @@ export const Contact: React.FC = () => {
               </p>
               <div className="footer-contact-details">
                 <p><strong>Official Contact:</strong></p>
+                <p>Phone: 0735231262</p>
                 <p>Email: hello@smartblossoming.org</p>
-                <p>Phone: +1 (555) 123-4567</p>
-                <p>PO Box 123, Growth City, ST 12345</p>
-              </div>
-              <div className="social-links">
-                <a href="#" className="social-link" aria-label="LinkedIn">IN</a>
-                <a href="#" className="social-link" aria-label="Twitter">TW</a>
-                <a href="#" className="social-link" aria-label="Facebook">FB</a>
-                <a href="#" className="social-link" aria-label="Instagram">IG</a>
+                <p>Twitter: @SmartBlossomOrg</p>
+                <p>Facebook: Smart Blossoming Foundation</p>
+                <p>YouTube: Smart Blossoming Foundation</p>
+                <p>LinkedIn: Smart Blossoming Foundation</p>
+                <p>Instagram: @Smartblossoming_foundation</p>
+                <p>TikTok: @smart blossoming foundation</p>
               </div>
             </div>
             
