@@ -136,7 +136,7 @@ export const Contact: React.FC = () => {
             <div className="footer-links-group">
               <h4 className="footer-heading">Governance & Legal</h4>
               <ul className="footer-links">
-                <li><a href="#">Privacy Policy</a></li>
+                <li><Link to="/privacy-policy">Privacy Policy</Link></li>
                 <li><a href="#">Safeguarding Policy</a></li>
                 <li><a href="#">Terms of Service</a></li>
                 <li><a href="#">Governance Documents</a></li>
