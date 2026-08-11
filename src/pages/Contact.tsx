@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flower } from 'lucide-react';
+import { Flower } from '../components/Icon3D';
 import { Link } from 'react-router-dom';
 import '../App.css';
 

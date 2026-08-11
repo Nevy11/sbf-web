@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Flower, BookOpen, Heart, Handshake, Gift, Users, HeartPulse, TrendingUp, Calendar, MapPin, CheckCircle } from 'lucide-react';
+import { Flower, BookOpen, Heart, Handshake, Gift, Users, HeartPulse, TrendingUp, Calendar, MapPin, CheckCircle } from '../components/Icon3D';
 import '../App.css';
 
 export const LandingPage: React.FC = () => {

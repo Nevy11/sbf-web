@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { HeartPulse, TrendingUp, Flower, LogOut, LayoutDashboard } from 'lucide-react';
+import { HeartPulse, TrendingUp, Flower, LogOut, LayoutDashboard } from './Icon3D';
 import { supabase } from '../lib/supabase';
 import styles from './Navigation.module.css';
 

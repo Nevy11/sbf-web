@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Bot, X, Send, Mic } from 'lucide-react';
+import { Bot, X, Send, Mic } from './Icon3D';
 import styles from './FloatingAI.module.css';
 
 interface Message {

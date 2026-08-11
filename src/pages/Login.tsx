@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Navigate, Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
-import { Flower, Eye, EyeOff } from 'lucide-react';
+import { Flower, Eye, EyeOff } from '../components/Icon3D';
 import styles from './Login.module.css';
 
 export const Login: React.FC = () => {
