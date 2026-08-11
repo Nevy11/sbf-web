@@ -14,8 +14,7 @@ export const Contact: React.FC = () => {
             <span className="brand-name">Smart Blossoming Foundation</span>
           </Link>
           <nav className="nav-list">
-            <a href="/#about">About</a>
-            <a href="/#programs">Programs</a>
+            <Link to="/">Home</Link>
             <a href="/#impact">Impact</a>
             <a href="/#resources">Resources</a>
             <a href="/#get-involved">Get Involved</a>
