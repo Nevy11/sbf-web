@@ -9,7 +9,7 @@ export const LandingPage: React.FC = () => {
       <header className="header">
         <div className="container header-container">
           <div className="logo-section">
-            <Flower color="var(--color-forest)" size={32} />
+            <img src="/logo.jpeg" alt="Smart Blossoming Foundation Logo" style={{ width: '40px', height: '40px', objectFit: 'contain', mixBlendMode: 'multiply' }} />
             <span className="brand-name">Smart Blossoming Foundation</span>
           </div>
           <nav className="nav-list">
