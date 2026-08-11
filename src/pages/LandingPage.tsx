@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Flower, BookOpen, Heart, Handshake, Gift, Users, HeartPulse, TrendingUp, Calendar, MapPin, CheckCircle } from 'lucide-react';
 import '../App.css';
 
@@ -18,7 +19,7 @@ export const LandingPage: React.FC = () => {
             <a href="#impact">Impact</a>
             <a href="#resources">Resources</a>
             <a href="#get-involved">Get Involved</a>
-            <a href="#contact">Contact</a>
+            <Link to="/contact">Contact</Link>
           </nav>
           <a href="#programs" className="pill-button primary explore-programs-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
             Explore Programs
@@ -308,64 +309,7 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Safe Inquiry Form Section */}
-      <section id="inquiry" className="inquiry-section">
-        <div className="container">
-          <div className="inquiry-card">
-            <h2 className="section-title text-center" style={{ marginBottom: '1rem', fontSize: '2rem' }}>Safe Inquiry Form</h2>
-            <p className="text-center" style={{ marginBottom: '3rem', opacity: 0.8 }}>
-              Send us a secure message. We handle your information with care and respect.
-            </p>
-            <form className="inquiry-form" onSubmit={(e) => e.preventDefault()}>
-              <div className="form-group">
-                <label htmlFor="purpose">Purpose of Inquiry</label>
-                <select id="purpose" className="form-control" defaultValue="">
-                  <option value="" disabled>Select a purpose</option>
-                  <option value="programs">Programs</option>
-                  <option value="partnership">Partnership</option>
-                  <option value="media">Media</option>
-                  <option value="volunteer">Volunteer</option>
-                  <option value="general">General</option>
-                  <option value="safeguarding">Safeguarding Concern</option>
-                </select>
-              </div>
-              <div className="form-group">
-                <label htmlFor="name">Name or Preferred Name</label>
-                <input type="text" id="name" className="form-control" placeholder="How should we address you?" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="contact">Contact: Email or Phone</label>
-                <input type="text" id="contact" className="form-control" placeholder="Your email or phone number" />
-              </div>
-              <div className="form-group">
-                <label id="response-method-label">Preferred Response Method</label>
-                <div className="radio-group" role="radiogroup" aria-labelledby="response-method-label">
-                  <label className="radio-label"><input type="radio" name="responseMethod" value="email" /> Email</label>
-                  <label className="radio-label"><input type="radio" name="responseMethod" value="phone" /> Phone</label>
-                  <label className="radio-label"><input type="radio" name="responseMethod" value="no-response" /> No response needed</label>
-                </div>
-              </div>
-              <div className="form-group">
-                <label htmlFor="message">Message (OPTIONAL)</label>
-                <textarea id="message" className="form-control" rows={4} placeholder="Share as much or as little as you'd like..."></textarea>
-              </div>
-              <div className="form-group checkbox-group">
-                <label className="checkbox-label">
-                  <input type="checkbox" id="privacy-consent" />
-                  <span>I consent to Smart Blossoming Foundation handling my information as outlined in the Privacy Policy to process this inquiry.</span>
-                </label>
-              </div>
-              <button type="submit" className="pill-button primary full-width">Send Secure Inquiry</button>
-              
-              <div className="form-footer-note">
-                <strong>Response Time:</strong> We aim to reply within 2-3 business days.<br/>
-                <strong>Privacy Statement:</strong> Your information is stored securely and never shared with third parties without explicit consent.<br/>
-                <strong style={{ color: 'var(--color-forest)' }}>Disclaimer:</strong> This form is not monitored 24/7. It is not an emergency, crisis response, or clinical service. If you need immediate help, please contact your local emergency services.
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
+
 
       {/* Complete Footer */}
       <footer id="contact" className="site-footer">
@@ -401,7 +345,7 @@ export const LandingPage: React.FC = () => {
                 <li><a href="#programs">Programs</a></li>
                 <li><a href="#impact">Impact</a></li>
                 <li><a href="#get-involved">Get Involved</a></li>
-                <li><a href="#inquiry">Contact</a></li>
+                <li><Link to="/contact">Contact</Link></li>
               </ul>
             </div>
             
