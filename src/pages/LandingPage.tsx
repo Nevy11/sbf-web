@@ -335,7 +335,7 @@ export const LandingPage: React.FC = () => {
               <ul className="footer-links">
                 <li><Link to="/privacy-policy">Privacy Policy</Link></li>
                 <li><a href="#">Safeguarding Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
+                <li><Link to="/terms-of-service">Terms of Service</Link></li>
                 <li><a href="#">Governance Documents</a></li>
               </ul>
             </div>
