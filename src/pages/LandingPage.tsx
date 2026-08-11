@@ -54,7 +54,7 @@ export const LandingPage: React.FC = () => {
           <p className="hero-trust">Respectful. Choice-led. Community-centred.</p>
         </div>
         <div className="hero-image-container">
-          <img src="https://images.unsplash.com/photo-1528716321680-815a8cdb8c56?auto=format&fit=crop&q=80&w=800" alt="Person blossoming and looking confident" className="hero-image" />
+          <img src="/a_person_blossoming_without_logo.jpeg" alt="Person blossoming and looking confident" className="hero-image" />
         </div>
       </section>
 
