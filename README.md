@@ -104,12 +104,30 @@ yarn dev
 
 The app will be available in your browser at the local Vite URL shown in the terminal.
 
-## Available Scripts
+## Available Yarn Commands
 
-- `yarn dev` – start the Vite development server
-- `yarn build` – build the production bundle
-- `yarn preview` – preview the built app locally
-- `yarn lint` – run ESLint checks
+We use [Yarn](https://yarnpkg.com/) as our package manager. If you are new to Yarn, here are the most common commands you will use in this project:
+
+- **`yarn install`** (or simply **`yarn`**)
+  Installs all the required dependencies. Run this immediately after cloning the repository, or when someone else has added a new package.
+
+- **`yarn dev`**
+  Starts the local development server. Use this when you are actively writing code. It will automatically reload the page when you save your changes.
+
+- **`yarn build`**
+  Compiles the application into optimized static files ready for production deployment.
+
+- **`yarn preview`**
+  Locally hosts the production build created by `yarn build` so you can verify how the app will behave before deploying it.
+
+- **`yarn lint`**
+  Runs code quality checks to find potential errors or formatting issues.
+
+- **`yarn add <package-name>`**
+  Installs a new package and adds it to the project (e.g., `yarn add lodash`).
+
+- **`yarn remove <package-name>`**
+  Uninstalls a package and removes it from the project.
 
 ## Routing Overview
 
