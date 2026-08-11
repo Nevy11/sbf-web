@@ -221,33 +221,7 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Approved Partners Grid Section */}
-      <section className="partners-section">
-        <div className="container text-center">
-          <h2 className="section-title" style={{ marginBottom: '1rem' }}>Our Partners</h2>
-          <p className="section-description" style={{ marginBottom: '3rem', margin: '0 auto', maxWidth: '800px' }}>
-            We collaborate with verified organizations aligned with our mission to provide extended support and resources.
-          </p>
-          <div className="partners-grid">
-            <div className="partner-card">
-              <div className="partner-logo-placeholder">Mindful Hub</div>
-              <p className="partner-relation">Wellness Resource Partner</p>
-            </div>
-            <div className="partner-card">
-              <div className="partner-logo-placeholder">Community Connect</div>
-              <p className="partner-relation">Local Venue Partner</p>
-            </div>
-            <div className="partner-card">
-              <div className="partner-logo-placeholder">Growth Institute</div>
-              <p className="partner-relation">Curriculum Collaborator</p>
-            </div>
-            <div className="partner-card">
-              <div className="partner-logo-placeholder">Tech for Good</div>
-              <p className="partner-relation">Technology Sponsor</p>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Get Involved Section */}
       <section id="get-involved" className="get-involved-section">
