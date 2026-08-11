@@ -18,7 +18,6 @@ export const LandingPage: React.FC = () => {
             <Link to="/">Home</Link>
             <a href="#impact">Impact</a>
             <a href="#resources">Resources</a>
-            <a href="#get-involved">Get Involved</a>
             <Link to="/contact">Contact</Link>
           </nav>
           <div className="header-actions" style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>

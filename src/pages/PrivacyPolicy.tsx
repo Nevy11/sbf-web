@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import '../pages/Dashboard.module.css'; // Just using some existing styles if needed, or we can use regular styles
