@@ -85,6 +85,18 @@
   color: var(--cta-primary-text);
 }
 
+.pill-button.donate {
+  background-color: var(--color-gold);
+  color: var(--color-ink);
+  box-shadow: 0 4px 14px rgba(212, 168, 90, 0.4);
+  font-weight: 700;
+  border: none;
+}
+.pill-button.donate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 168, 90, 0.6);
+}
+
 .pill-button.outline {
   background: transparent;
   border: 1px solid var(--cta-secondary-border);
