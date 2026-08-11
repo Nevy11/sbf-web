@@ -137,7 +137,7 @@ export const Contact: React.FC = () => {
               <h4 className="footer-heading">Governance & Legal</h4>
               <ul className="footer-links">
                 <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-                <li><a href="#">Safeguarding Policy</a></li>
+                <li><Link to="/safeguarding-policy">Safeguarding Policy</Link></li>
                 <li><Link to="/terms-of-service">Terms of Service</Link></li>
                 <li><a href="#">Governance Documents</a></li>
               </ul>

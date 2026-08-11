@@ -3,6 +3,7 @@ import { LandingPage } from './pages/LandingPage';
 import { Contact } from './pages/Contact';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { TermsOfService } from './pages/TermsOfService';
+import { SafeguardingPolicy } from './pages/SafeguardingPolicy';
 import { Login } from './pages/Login';
 import { Signup } from './pages/Signup';
 import { Dashboard } from './pages/Dashboard';
@@ -20,6 +21,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
+        <Route path="/safeguarding-policy" element={<SafeguardingPolicy />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         
