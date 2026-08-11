@@ -1,6 +1,7 @@
 import React from 'react';
 import { Flower } from '../components/Icon3D';
 import { Link } from 'react-router-dom';
+import { Phone, Mail } from 'lucide-react';
 import '../App.css';
 
 export const Contact: React.FC = () => {
@@ -100,15 +101,16 @@ export const Contact: React.FC = () => {
                 Creating safe, community-centred spaces to heal emotionally, grow mentally, build confidence and live with purpose.
               </p>
               <div className="footer-contact-details">
-                <p><strong>Official Contact:</strong></p>
-                <p>Phone: 0735231262</p>
-                <p>Email: hello@smartblossoming.org</p>
-                <p>Twitter: @SmartBlossomOrg</p>
-                <p>Facebook: Smart Blossoming Foundation</p>
-                <p>YouTube: Smart Blossoming Foundation</p>
-                <p>LinkedIn: Smart Blossoming Foundation</p>
-                <p>Instagram: @Smartblossoming_foundation</p>
-                <p>TikTok: @smart blossoming foundation</p>
+                <p style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Phone size={16} /> 0735231262</p>
+                <p style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Mail size={16} /> hello@smartblossoming.org</p>
+              </div>
+              <div className="social-links">
+                <a href="#" className="social-link" title="Twitter">𝕏</a>
+                <a href="#" className="social-link" title="Facebook">f</a>
+                <a href="#" className="social-link" title="YouTube">▶</a>
+                <a href="#" className="social-link" title="LinkedIn">in</a>
+                <a href="#" className="social-link" title="Instagram">📷</a>
+                <a href="#" className="social-link" title="TikTok">♪</a>
               </div>
             </div>
             
@@ -116,9 +118,8 @@ export const Contact: React.FC = () => {
               <h4 className="footer-heading">Navigation</h4>
               <ul className="footer-links">
                 <li><Link to="/">Home</Link></li>
-                <li><a href="/#about">About</a></li>
-                <li><a href="/#programs">Programs</a></li>
                 <li><a href="/#impact">Impact</a></li>
+                <li><a href="/#resources">Resources</a></li>
                 <li><a href="/#get-involved">Get Involved</a></li>
                 <li><Link to="/contact">Contact</Link></li>
               </ul>
