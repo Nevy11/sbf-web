@@ -10,7 +10,7 @@ export const Contact: React.FC = () => {
       <header className="header">
         <div className="container header-container">
           <Link to="/" className="logo-section" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <img src="/sbf_logo_no_background_preview.png" alt="Smart Blossoming Foundation Logo" style={{ width: '70px', height: '70px', objectFit: 'contain' }} />
+            <img src="/sbf_logo_no_background_preview.png" alt="Smart Blossoming Foundation Logo" style={{ width: 'auto', height: '85px', objectFit: 'contain' }} />
             <span className="brand-name">Smart Blossoming Foundation</span>
           </Link>
           <nav className="nav-list">
