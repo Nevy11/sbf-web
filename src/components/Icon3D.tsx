@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const Icon3D = ({ name, size = 16, className }: { name: string, size?: number, className?: string }) => {
   const images: Record<string, string> = {
