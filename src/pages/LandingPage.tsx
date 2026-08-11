@@ -10,7 +10,7 @@ export const LandingPage: React.FC = () => {
       <header className="header">
         <div className="container header-container">
           <div className="logo-section">
-            <img src="/logo.jpeg" alt="Smart Blossoming Foundation Logo" style={{ width: '40px', height: '40px', objectFit: 'contain', mixBlendMode: 'multiply' }} />
+            <img src="/sbf_logo_no_background_preview.png" alt="Smart Blossoming Foundation Logo" style={{ width: '70px', height: '70px', objectFit: 'contain' }} />
             <span className="brand-name">Smart Blossoming Foundation</span>
           </div>
           <nav className="nav-list">
