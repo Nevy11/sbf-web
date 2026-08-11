@@ -21,9 +21,17 @@ export const Contact: React.FC = () => {
             <a href="/#get-involved">Get Involved</a>
             <Link to="/contact">Contact</Link>
           </nav>
-          <a href="/#programs" className="pill-button primary explore-programs-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
-            Explore Programs
-          </a>
+          <div className="header-actions" style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
+            <a href="/#programs" className="pill-button outline explore-programs-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
+              Programs
+            </a>
+            <a href="/#get-involved" className="pill-button primary volunteer-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
+              Volunteer
+            </a>
+            <a href="/#get-involved" className="pill-button donate donate-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
+              Donate
+            </a>
+          </div>
         </div>
       </header>
 
