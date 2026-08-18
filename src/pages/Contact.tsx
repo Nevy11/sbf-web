@@ -16,14 +16,15 @@ export const Contact: React.FC = () => {
           </Link>
           <nav className="nav-list">
             <Link to="/">Home</Link>
+            <Link to="/events-programs">Programs & Events</Link> {/* <-- Added Programs & Events link */}
             <a href="/#impact">Impact</a>
             <a href="/#resources">Resources</a>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" style={{ fontWeight: 'bold', color: 'var(--color-forest)' }}>Contact</Link> {/* <-- Highlighted active page */}
           </nav>
           <div className="header-actions" style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-            <a href="/#programs" className="pill-button outline explore-programs-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
+            <Link to="/events-programs" className="pill-button outline explore-programs-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
               Programs
-            </a>
+            </Link> {/* <-- Updated to route to the new page */}
             <a href="/#get-involved" className="pill-button primary volunteer-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
               Volunteer
             </a>
@@ -125,6 +126,7 @@ export const Contact: React.FC = () => {
               <h4 className="footer-heading">Navigation</h4>
               <ul className="footer-links">
                 <li><Link to="/">Home</Link></li>
+                <li><Link to="/events-programs">Programs & Events</Link></li> {/* <-- Added Programs & Events link */}
                 <li><a href="/#impact">Impact</a></li>
                 <li><a href="/#resources">Resources</a></li>
                 <li><a href="/#get-involved">Get Involved</a></li>

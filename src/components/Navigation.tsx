@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { HeartPulse, TrendingUp, Flower, LogOut, LayoutDashboard } from './Icon3D';
+import { HeartPulse, TrendingUp, Flower, LogOut, LayoutDashboard, Calendar } from './Icon3D';
 import { supabase } from '../lib/supabase';
 import styles from './Navigation.module.css';
 
@@ -48,6 +48,15 @@ export const Navigation: React.FC = () => {
         >
           <Flower size={20} />
           <span>Blossom</span>
+        </NavLink>
+
+        {/* UPDATED: Button label and route for the Events & Programs page */}
+        <NavLink 
+          to="/events-programs" 
+          className={({ isActive }) => isActive ? `${styles.navItem} ${styles.activeNavItem}` : styles.navItem}
+        >
+          <Calendar size={20} />
+          <span>Events & Programs</span>
         </NavLink>
       </div>
       
