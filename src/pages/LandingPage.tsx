@@ -24,12 +24,12 @@ export const LandingPage: React.FC = () => {
             <a href="#programs" className="pill-button outline explore-programs-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
               Programs
             </a>
-            <a href="#get-involved" className="pill-button primary volunteer-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
+            <Link to="/volunteer" className="pill-button primary volunteer-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
               Volunteer
-            </a>
-            <a href="#get-involved" className="pill-button donate donate-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
+            </Link>
+            <Link to="/donate" className="pill-button donate donate-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
               Donate
-            </a>
+            </Link>
           </div>
         </div>
       </header>
@@ -64,8 +64,8 @@ export const LandingPage: React.FC = () => {
           <a href="#programs" className="path-chip" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}><Users size={16} /> Join a program</a>
           <a href="#resources" className="path-chip" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}><BookOpen size={16} /> Learn from resources</a>
           <a href="#get-involved" className="path-chip" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}><Handshake size={16} /> Partner</a>
-          <a href="#get-involved" className="path-chip" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', background: 'var(--color-sage)', border: '1px solid var(--color-forest)', color: 'var(--color-forest)', fontWeight: 'bold' }}><Heart size={16} /> Volunteer</a>
-          <a href="#get-involved" className="path-chip" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', background: 'var(--color-gold)', border: 'none', color: 'var(--color-ink)', fontWeight: 'bold', boxShadow: '0 4px 10px rgba(212,168,90,0.3)' }}><Gift size={16} /> Donate</a>
+          <Link to="/volunteer" className="path-chip" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', background: 'var(--color-sage)', border: '1px solid var(--color-forest)', color: 'var(--color-forest)', fontWeight: 'bold' }}><Heart size={16} /> Volunteer</Link>
+          <Link to="/donate" className="path-chip" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', background: 'var(--color-gold)', border: 'none', color: 'var(--color-ink)', fontWeight: 'bold', boxShadow: '0 4px 10px rgba(212,168,90,0.3)' }}><Gift size={16} /> Donate</Link>
         </div>
       </section>
 
@@ -246,7 +246,7 @@ export const LandingPage: React.FC = () => {
                 <p><CheckCircle size={14} /> Background check required</p>
                 <p><CheckCircle size={14} /> Mandatory training session</p>
               </div>
-              <button className="pill-button primary">Apply to Volunteer</button>
+              <Link to="/volunteer" className="pill-button primary" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>Apply to Volunteer</Link>
             </div>
             <div className="involvement-card">
               <div className="involvement-icon"><Handshake size={32} color="var(--color-forest)" /></div>
@@ -256,7 +256,7 @@ export const LandingPage: React.FC = () => {
                 <p><CheckCircle size={14} /> Signed MOU</p>
                 <p><CheckCircle size={14} /> Annual review</p>
               </div>
-              <button className="pill-button outline">Become a Partner</button>
+              <Link to="/contact" className="pill-button outline" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>Become a Partner</Link>
             </div>
             <div className="involvement-card" style={{ background: 'var(--color-mist)', border: '2px solid var(--color-gold)', transform: 'scale(1.05)', boxShadow: '0 12px 32px rgba(212,168,90,0.15)' }}>
               <div className="involvement-icon"><Gift size={32} color="var(--color-forest)" /></div>
@@ -266,7 +266,7 @@ export const LandingPage: React.FC = () => {
                 <p><CheckCircle size={14} /> Tax-deductible</p>
                 <p><CheckCircle size={14} /> Transparent reporting</p>
               </div>
-              <button className="pill-button donate">Make a Donation</button>
+              <Link to="/donate" className="pill-button donate" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>Make a Donation</Link>
             </div>
           </div>
         </div>
@@ -324,7 +324,8 @@ export const LandingPage: React.FC = () => {
                 <li><Link to="/">Home</Link></li>
                 <li><a href="#impact">Impact</a></li>
                 <li><a href="#resources">Resources</a></li>
-                <li><a href="#get-involved">Get Involved</a></li>
+                <li><Link to="/volunteer">Volunteer</Link></li>
+                <li><Link to="/donate">Donate</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
               </ul>
             </div>

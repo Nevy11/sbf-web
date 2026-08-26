@@ -22,12 +22,12 @@ export const EventsPrograms: React.FC = () => {
             <Link to="/contact">Contact</Link>
           </nav>
           <div className="header-actions" style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-            <a href="#get-involved" className="pill-button primary volunteer-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
+            <Link to="/volunteer" className="pill-button primary volunteer-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
               Volunteer
-            </a>
-            <a href="#get-involved" className="pill-button donate donate-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
+            </Link>
+            <Link to="/donate" className="pill-button donate donate-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
               Donate
-            </a>
+            </Link>
           </div>
         </div>
       </header>
@@ -113,7 +113,7 @@ export const EventsPrograms: React.FC = () => {
                 <h3 className="update-title">Field Visits & Volunteering</h3>
                 <p className="update-date"><Calendar size={14} /> Starting July 2026</p>
                 <p className="update-desc">Join us as we visit schools, children's homes, and rehab centers to extend our impact directly into the community.</p>
-                <button className="pill-button outline" style={{ marginTop: '1rem', padding: '0.5rem 1rem' }}>Volunteer With Us</button>
+                <Link to="/volunteer" className="pill-button outline" style={{ marginTop: '1rem', padding: '0.5rem 1rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>Volunteer With Us</Link>
               </div>
 
               <div className="update-card event-card" style={{ borderLeft: '4px solid var(--color-gold)' }}>
@@ -162,7 +162,8 @@ export const EventsPrograms: React.FC = () => {
                 <li><Link to="/events-programs">Programs & Events</Link></li>
                 <li><a href="/#impact">Impact</a></li>
                 <li><a href="/#resources">Resources</a></li>
-                <li><a href="/#get-involved">Get Involved</a></li>
+                <li><Link to="/volunteer">Volunteer</Link></li>
+                <li><Link to="/donate">Donate</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
               </ul>
             </div>

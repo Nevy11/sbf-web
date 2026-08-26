@@ -25,12 +25,12 @@ export const Contact: React.FC = () => {
             <Link to="/events-programs" className="pill-button outline explore-programs-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
               Programs
             </Link> {/* <-- Updated to route to the new page */}
-            <a href="/#get-involved" className="pill-button primary volunteer-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
+            <Link to="/volunteer" className="pill-button primary volunteer-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
               Volunteer
-            </a>
-            <a href="/#get-involved" className="pill-button donate donate-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
+            </Link>
+            <Link to="/donate" className="pill-button donate donate-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
               Donate
-            </a>
+            </Link>
           </div>
         </div>
       </header>
@@ -129,7 +129,8 @@ export const Contact: React.FC = () => {
                 <li><Link to="/events-programs">Programs & Events</Link></li> {/* <-- Added Programs & Events link */}
                 <li><a href="/#impact">Impact</a></li>
                 <li><a href="/#resources">Resources</a></li>
-                <li><a href="/#get-involved">Get Involved</a></li>
+                <li><Link to="/volunteer">Volunteer</Link></li>
+                <li><Link to="/donate">Donate</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
               </ul>
             </div>
