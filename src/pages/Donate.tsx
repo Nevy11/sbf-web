@@ -21,16 +21,18 @@ export const Donate: React.FC = () => {
           </Link>
           <nav className="nav-list">
             <Link to="/">Home</Link>
-            <Link to="/events-programs">Programs & Events</Link>
             <a href="/#impact">Impact</a>
             <a href="/#resources">Resources</a>
             <Link to="/contact">Contact</Link>
           </nav>
           <div className="header-actions" style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
+            <a href="/#programs" className="pill-button outline explore-programs-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
+              Programs
+            </a>
             <Link to="/volunteer" className="pill-button primary volunteer-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
               Volunteer
             </Link>
-            <Link to="/donate" className="pill-button donate donate-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', fontWeight: 'bold' }}>
+            <Link to="/donate" className="pill-button donate donate-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
               Donate
             </Link>
           </div>
