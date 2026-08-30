@@ -10,7 +10,7 @@ export const BlossomView: React.FC = () => {
       </div>
 
       <div style={{ marginBottom: '2.5rem' }}>
-        <h2 style={{ fontSize: '1.25rem', color: 'var(--color-secondary)', marginBottom: '1rem' }}>Transformation Pathway</h2>
+        <h2 className={styles.sectionTitle}>Transformation Pathway</h2>
         <div className={`${styles.card} ${styles['card-shadow']}`}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
             <span style={{ fontWeight: 600, color: 'var(--color-secondary)' }}>Current Phase: Discovery</span>
@@ -26,7 +26,7 @@ export const BlossomView: React.FC = () => {
       </div>
 
       <div>
-        <h2 style={{ fontSize: '1.25rem', color: 'var(--color-secondary)', marginBottom: '1rem' }}>Foundation Updates & Opportunities</h2>
+        <h2 className={styles.sectionTitle}>Foundation Updates & Opportunities</h2>
         <div className={styles.grid}>
           {[
             { tag: 'Program', title: 'Community Mentorship Fall 2026', desc: 'Apply to become a mentor for new members entering the Heal phase.' },

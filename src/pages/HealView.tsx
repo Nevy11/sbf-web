@@ -16,12 +16,12 @@ export const HealView: React.FC = () => {
       </div>
 
       <div style={{ marginBottom: '2rem' }}>
-        <h2 style={{ fontSize: '1.25rem', color: 'var(--color-secondary)', marginBottom: '1rem' }}>Daily Wellness Log</h2>
-        <div className={`${styles.card} ${styles['card-shadow']}`} style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+        <h2 className={styles.sectionTitle}>Daily Wellness Log</h2>
+        <div className={`${styles.card} ${styles.wellnessCard}`}>
           <span style={{ fontSize: '1.5rem' }}>How are you feeling today?</span>
-          <div style={{ display: 'flex', gap: '0.5rem' }}>
+          <div className={styles.emojiRow}>
             {['😢', '😐', '🙂', '😊', '🌟'].map((emoji, i) => (
-              <button key={i} style={{ fontSize: '2rem', transition: 'transform 0.2s' }} onMouseEnter={e => e.currentTarget.style.transform='scale(1.2)'} onMouseLeave={e => e.currentTarget.style.transform='scale(1)'}>
+              <button key={i} className={styles.emojiBtn} onMouseEnter={e => e.currentTarget.style.transform='scale(1.2)'} onMouseLeave={e => e.currentTarget.style.transform='scale(1)'}>
                 {emoji}
               </button>
             ))}
@@ -30,7 +30,7 @@ export const HealView: React.FC = () => {
       </div>
 
       <div>
-        <h2 style={{ fontSize: '1.25rem', color: 'var(--color-secondary)', marginBottom: '1rem' }}>Therapist Directory</h2>
+        <h2 className={styles.sectionTitle}>Therapist Directory</h2>
         <div className={styles.grid}>
           {therapists.map(t => (
             <div key={t.id} className={`${styles.card} ${styles['card-shadow']}`}>

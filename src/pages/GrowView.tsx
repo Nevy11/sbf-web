@@ -10,8 +10,8 @@ export const GrowView: React.FC = () => {
       </div>
 
       <div style={{ marginBottom: '2.5rem' }}>
-        <h2 style={{ fontSize: '1.25rem', color: 'var(--color-secondary)', marginBottom: '1rem' }}>Personalized Growth Score</h2>
-        <div className={`${styles.card} ${styles['card-shadow']}`} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'linear-gradient(135deg, var(--color-secondary) 0%, #2D6A4F 100%)', color: 'white', border: 'none' }}>
+        <h2 className={styles.sectionTitle}>Personalized Growth Score</h2>
+        <div className={`${styles.card} ${styles.growScoreCard}`}>
           <div>
             <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', fontWeight: 500 }}>Your Score</h3>
             <div style={{ fontSize: '3rem', fontWeight: 700, color: 'var(--color-accent)' }}>742</div>
@@ -24,7 +24,7 @@ export const GrowView: React.FC = () => {
       </div>
 
       <div>
-        <h2 style={{ fontSize: '1.25rem', color: 'var(--color-secondary)', marginBottom: '1rem' }}>Resource Library</h2>
+        <h2 className={styles.sectionTitle}>Resource Library</h2>
         <div className={styles.grid}>
           {[
             { title: 'Understanding Triggers', type: 'Article', time: '5 min read' },

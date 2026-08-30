@@ -10,13 +10,13 @@ export const EventsPrograms: React.FC = () => {
     <div className="landing-page">
       <SiteHeader />
 
-      <main style={{ paddingBottom: '6rem', minHeight: 'calc(100vh - 200px)' }}>
+      <main className="inner-page-main">
         
         {/* Simplified Hero Section */}
         <section className="hero container page-hero">
           <div className="hero-content text-center" style={{ margin: '0 auto', alignItems: 'center' }}>
             <span className="hero-eyebrow">2026 Theme: Discovering & Empowering Growth</span>
-            <h1 className="hero-headline" style={{ fontSize: '3rem' }}>Our Programs & Events</h1>
+            <h1 className="hero-headline page-hero-headline">Our Programs & Events</h1>
             <p className="hero-subheadline" style={{ maxWidth: '700px', textAlign: 'center' }}>
               We offer structured mentorship, career-building skills, and special growth events tailored to help you at every stage of your journey.
             </p>

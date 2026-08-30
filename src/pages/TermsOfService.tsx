@@ -1,13 +1,13 @@
 
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import '../pages/Dashboard.module.css';
+import '../App.css';
 
 export function TermsOfService() {
   return (
-    <div className="page-container" style={{ minHeight: '100vh', backgroundColor: 'var(--color-sand)', padding: '4rem 2rem' }}>
-      <div className="container" style={{ maxWidth: '800px', margin: '0 auto', backgroundColor: '#fff', padding: '3rem', borderRadius: '1rem', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
-        <Link to="/" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-forest)', textDecoration: 'none', marginBottom: '2rem', fontWeight: 600 }}>
+    <div className="policy-page">
+      <div className="policy-page-card">
+        <Link to="/" className="policy-back-link">
           <ArrowLeft size={20} /> Back to Home
         </Link>
         

@@ -15,8 +15,34 @@
 @media (max-width: 768px) {
   .mainContent {
     margin-left: 0;
-    padding: 1.5rem;
-    padding-bottom: 88px; /* space for bottom nav */
+    padding: 1.25rem;
+    padding-bottom: 88px;
+  }
+
+  .pageTitle {
+    font-size: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .wellnessCard {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 1rem;
+  }
+
+  .emojiRow {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .growScoreCard {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
@@ -52,4 +78,36 @@
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.wellnessCard {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.emojiRow {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.emojiBtn {
+  font-size: 2rem;
+  transition: transform 0.2s;
+}
+
+.growScoreCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, var(--color-secondary) 0%, #2D6A4F 100%);
+  color: white;
+  border: none;
+  gap: 1.5rem;
 }

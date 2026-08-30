@@ -10,11 +10,11 @@ export const Volunteer: React.FC = () => {
     <div className="landing-page">
       <SiteHeader />
 
-      <main style={{ paddingBottom: '6rem', minHeight: 'calc(100vh - 200px)' }}>
+      <main className="inner-page-main">
         <section className="hero container page-hero" style={{ paddingBottom: '3rem' }}>
           <div className="hero-content text-center" style={{ margin: '0 auto', alignItems: 'center' }}>
             <span className="hero-eyebrow">Give your time & skills</span>
-            <h1 className="hero-headline" style={{ fontSize: '3rem' }}>Volunteer With Us</h1>
+            <h1 className="hero-headline page-hero-headline">Volunteer With Us</h1>
             <p className="hero-subheadline" style={{ maxWidth: '700px', textAlign: 'center' }}>
               Join a respectful, choice-led community helping people heal, grow, and blossom. Choose a role that fits your capacity and strengths.
             </p>
