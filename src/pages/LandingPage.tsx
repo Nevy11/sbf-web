@@ -1,10 +1,75 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Flower, BookOpen, Heart, Handshake, Gift, Users, HeartPulse, TrendingUp, Calendar, MapPin, CheckCircle } from '../components/Icon3D';
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail, ChevronLeft, ChevronRight } from 'lucide-react';
 import '../App.css';
 
+const HERO_SLIDES: Array<{
+  image: string;
+  eyebrow: string;
+  headline: string;
+  subheadline: string;
+  trust: string;
+  primaryCta: { label: string; href: string };
+  secondaryCta: { label: string; href: string; isRoute?: boolean };
+}> = [
+  {
+    image: '/a_person_blossoming_without_logo.jpeg',
+    eyebrow: 'Personal growth, confidence and purpose',
+    headline: 'Your story can blossom into purpose.',
+    subheadline:
+      'Smart Blossoming Foundation creates safe, community-centred spaces to heal emotionally, grow mentally, build confidence and live with purpose.',
+    trust: 'Respectful. Choice-led. Community-centred.',
+    primaryCta: { label: 'Explore Programs', href: '#programs' },
+    secondaryCta: { label: 'Ask Privately', href: '#inquiry' },
+  },
+  {
+    image: '/sbf_smile.jpeg',
+    eyebrow: 'For every young person',
+    headline: 'Every young person deserves space to become.',
+    subheadline:
+      'We create safe and transformative spaces where young people heal emotionally, grow mentally, build confidence, discover purpose and become equipped to shape their future.',
+    trust: 'Safe. Supportive. Youth-centred.',
+    primaryCta: { label: 'Explore Programs', href: '#programs' },
+    secondaryCta: { label: 'Ask Privately', href: '#inquiry' },
+  },
+  {
+    image: '/transformation.jpg',
+    eyebrow: 'Heal. Grow. Blossom.',
+    headline: 'Where healing meets purpose.',
+    subheadline:
+      'From emotional wellbeing to confident leadership, we walk alongside each person through a journey of growth — with compassion, mentorship and community at every step.',
+    trust: 'Independent. Non-partisan. Choice-led.',
+    primaryCta: { label: 'Explore Programs', href: '#programs' },
+    secondaryCta: { label: 'Volunteer', href: '/volunteer', isRoute: true },
+  },
+];
+
+const SLIDE_INTERVAL_MS = 5000;
+
 export const LandingPage: React.FC = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const goToSlide = useCallback((index: number) => {
+    setActiveSlide((index + HERO_SLIDES.length) % HERO_SLIDES.length);
+  }, []);
+
+  const goToNextSlide = useCallback(() => {
+    goToSlide(activeSlide + 1);
+  }, [activeSlide, goToSlide]);
+
+  const goToPrevSlide = useCallback(() => {
+    goToSlide(activeSlide - 1);
+  }, [activeSlide, goToSlide]);
+
+  useEffect(() => {
+    if (isPaused) return undefined;
+
+    const timer = window.setInterval(goToNextSlide, SLIDE_INTERVAL_MS);
+    return () => window.clearInterval(timer);
+  }, [activeSlide, goToNextSlide, isPaused]);
+
   return (
     <div className="landing-page">
       {/* Navigation Header */}
@@ -34,26 +99,82 @@ export const LandingPage: React.FC = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="hero container">
-        <div className="hero-content">
-          <span className="hero-eyebrow">Personal growth, confidence and purpose</span>
-          <h1 className="hero-headline">Your story can blossom into purpose.</h1>
-          <p className="hero-subheadline">
-            Smart Blossoming Foundation creates safe, community-centred spaces to heal emotionally, grow mentally, build confidence and live with purpose.
-          </p>
-          <div className="hero-actions">
-            <a href="#programs" className="pill-button primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
-              Explore Programs
-            </a>
-            <a href="#inquiry" className="pill-button outline" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
-              Ask Privately
-            </a>
-          </div>
-          <p className="hero-trust">Respectful. Choice-led. Community-centred.</p>
+      {/* Hero Carousel */}
+      <section
+        className="hero-carousel"
+        aria-roledescription="carousel"
+        aria-label="Foundation highlights"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        onFocusCapture={() => setIsPaused(true)}
+        onBlurCapture={() => setIsPaused(false)}
+      >
+        <div
+          className="hero-carousel-track"
+          style={{ transform: `translateX(-${activeSlide * 100}%)` }}
+        >
+          {HERO_SLIDES.map((slide, index) => (
+            <article
+              key={slide.headline}
+              className={`hero-carousel-slide${index === activeSlide ? ' is-active' : ''}`}
+              style={{ backgroundImage: `url(${slide.image})` }}
+              aria-hidden={index !== activeSlide}
+            >
+              <div className="hero-carousel-content container">
+                <span className="hero-carousel-eyebrow">{slide.eyebrow}</span>
+                <h1 className="hero-carousel-headline">{slide.headline}</h1>
+                <p className="hero-carousel-subheadline">{slide.subheadline}</p>
+                <div className="hero-carousel-actions">
+                  <a
+                    href={slide.primaryCta.href}
+                    className="pill-button primary hero-carousel-btn"
+                  >
+                    {slide.primaryCta.label}
+                  </a>
+                  {slide.secondaryCta.isRoute ? (
+                    <Link to={slide.secondaryCta.href} className="pill-button outline hero-carousel-btn hero-carousel-btn-outline">
+                      {slide.secondaryCta.label}
+                    </Link>
+                  ) : (
+                    <a href={slide.secondaryCta.href} className="pill-button outline hero-carousel-btn hero-carousel-btn-outline">
+                      {slide.secondaryCta.label}
+                    </a>
+                  )}
+                </div>
+                <p className="hero-carousel-trust">{slide.trust}</p>
+              </div>
+            </article>
+          ))}
         </div>
-        <div className="hero-image-container">
-          <img src="/a_person_blossoming_without_logo.jpeg" alt="Person blossoming and looking confident" className="hero-image" />
+
+        <button
+          type="button"
+          className="hero-carousel-arrow hero-carousel-arrow-prev"
+          aria-label="Previous slide"
+          onClick={goToPrevSlide}
+        >
+          <ChevronLeft size={28} strokeWidth={2.5} />
+        </button>
+        <button
+          type="button"
+          className="hero-carousel-arrow hero-carousel-arrow-next"
+          aria-label="Next slide"
+          onClick={goToNextSlide}
+        >
+          <ChevronRight size={28} strokeWidth={2.5} />
+        </button>
+
+        <div className="hero-carousel-controls">
+          {HERO_SLIDES.map((slide, index) => (
+            <button
+              key={slide.headline}
+              type="button"
+              className={`hero-carousel-dot${index === activeSlide ? ' is-active' : ''}`}
+              aria-label={`Go to slide ${index + 1}: ${slide.headline}`}
+              aria-current={index === activeSlide ? 'true' : undefined}
+              onClick={() => goToSlide(index)}
+            />
+          ))}
         </div>
       </section>
 
