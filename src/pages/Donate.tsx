@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Flower } from '../components/Icon3D';
 import { Phone, Mail } from 'lucide-react';
+import { SiteHeader } from '../components/SiteHeader';
 import '../App.css';
 
 const AMOUNTS = [500, 1000, 2500, 5000] as const;
@@ -78,28 +79,7 @@ export const Donate: React.FC = () => {
 
   return (
     <div className="landing-page donate-page">
-      <header className="header">
-        <div className="container header-container">
-          <Link to="/" className="logo-section" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <img src="/sbf_logo_no_background_preview.png" alt="Smart Blossoming Foundation Logo" style={{ width: 'auto', height: '85px', objectFit: 'contain' }} />
-            <span className="brand-name">Smart Blossoming Foundation</span>
-          </Link>
-          <nav className="nav-list">
-            <Link to="/">Home</Link>
-            <Link to="/events-programs">Programs & Events</Link>
-            <a href="/#impact">Impact</a>
-            <Link to="/contact">Contact</Link>
-          </nav>
-          <div className="header-actions" style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-            <Link to="/volunteer" className="pill-button primary volunteer-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
-              Volunteer
-            </Link>
-            <Link to="/donate" className="pill-button donate donate-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', fontWeight: 'bold' }}>
-              Donate
-            </Link>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="donate-main">
         <section className="donate-hero">

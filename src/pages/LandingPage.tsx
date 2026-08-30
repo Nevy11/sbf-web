@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Flower } from '../components/Icon3D';
 import { Phone, Mail, ChevronLeft, ChevronRight } from 'lucide-react';
+import { SiteHeader } from '../components/SiteHeader';
 import '../App.css';
 
 const HERO_SLIDES: Array<{
@@ -72,32 +73,7 @@ export const LandingPage: React.FC = () => {
 
   return (
     <div className="landing-page">
-      {/* Navigation Header */}
-      <header className="header">
-        <div className="container header-container">
-          <Link to="/" className="logo-section" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <img src="/sbf_logo_no_background_preview.png" alt="Smart Blossoming Foundation Logo" style={{ width: 'auto', height: '85px', objectFit: 'contain' }} />
-            <span className="brand-name">Smart Blossoming Foundation</span>
-          </Link>
-          <nav className="nav-list">
-            <Link to="/">Home</Link>
-            <a href="#impact">Impact</a>
-            <a href="#resources">Resources</a>
-            <Link to="/contact">Contact</Link>
-          </nav>
-          <div className="header-actions" style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-            <a href="#programs" className="pill-button outline explore-programs-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
-              Programs
-            </a>
-            <Link to="/volunteer" className="pill-button primary volunteer-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
-              Volunteer
-            </Link>
-            <Link to="/donate" className="pill-button donate donate-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
-              Donate
-            </Link>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* Hero Carousel */}
       <section

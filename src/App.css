@@ -1,5 +1,6 @@
 .landing-page {
   width: 100%;
+  padding-top: var(--header-height);
 }
 
 .container {
@@ -14,14 +15,43 @@
 
 /* Header */
 .header {
-  height: 100px;
+  height: var(--header-height);
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--color-sage);
-  background-color: #FFFFFF;
-  position: sticky;
+  background-color: #ffffff;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
+  box-shadow: 0 2px 12px rgba(0, 71, 53, 0.06);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-logo {
+  width: auto;
+  height: 85px;
+  object-fit: contain;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.header .pill-button {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
 }
 
 .header-container {
@@ -29,12 +59,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.logo-section {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
 }
 
 .logo {
@@ -57,6 +81,12 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.nav-list a.active,
+.nav-list a[aria-current='page'] {
+  color: var(--color-leaf);
+  font-weight: 700;
 }
 
 .nav-list a {
@@ -968,14 +998,19 @@
 }
 
 @media (max-width: 768px) {
+  :root {
+    --header-height: 200px;
+  }
+
   .container {
     padding: 0 1.5rem;
   }
   
   .header {
     height: auto;
+    min-height: var(--header-height);
     padding: 1rem 0;
-    position: relative;
+    position: fixed;
   }
 
   .header-container {
@@ -1762,7 +1797,17 @@
   position: relative;
   z-index: 1;
   max-width: 760px;
-  padding: 7rem 4rem 5rem;
+  padding: 4rem 4rem 5rem;
+}
+
+.page-hero {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.page-main {
+  padding: 3rem 0 6rem;
+  min-height: calc(100vh - 200px);
 }
 
 .donate-hero-eyebrow {
