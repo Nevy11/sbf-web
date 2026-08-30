@@ -1732,3 +1732,457 @@
     padding: 2rem;
   }
 }
+
+/* Donate Page */
+.donate-main {
+  padding-bottom: 0;
+}
+
+.donate-hero {
+  position: relative;
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  background: url('/transformation.jpg') center / cover no-repeat;
+  color: #ffffff;
+}
+
+.donate-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(0, 71, 53, 0.92) 0%,
+    rgba(0, 71, 53, 0.78) 50%,
+    rgba(16, 42, 39, 0.65) 100%
+  );
+}
+
+.donate-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  padding: 7rem 4rem 5rem;
+}
+
+.donate-hero-eyebrow {
+  display: inline-block;
+  color: var(--color-gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  margin-bottom: 1.25rem;
+}
+
+.donate-hero-headline {
+  font-size: 3.25rem;
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.donate-hero-subheadline {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 2.5rem;
+  max-width: 640px;
+}
+
+.donate-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.donate-hero-cta {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 0.9rem 2.25rem;
+  box-shadow: 0 8px 24px rgba(212, 168, 90, 0.45);
+}
+
+.donate-hero-cta-outline {
+  border-color: rgba(255, 255, 255, 0.85);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donate-hero-cta-outline:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.donate-hero-trust {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.02em;
+}
+
+.donate-stats-strip {
+  background: var(--color-forest);
+  padding: 3rem 0;
+  margin-top: -2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.donate-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.donate-stat {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.donate-stat-value {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--color-gold);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.donate-stat-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
+}
+
+.donate-stat-period {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.65);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.donate-section-eyebrow {
+  display: inline-block;
+  color: var(--color-leaf);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.75rem;
+}
+
+.donate-section-header {
+  margin-bottom: 3rem;
+}
+
+.donate-tiers-section {
+  padding: 6rem 0 4rem;
+  background: #ffffff;
+}
+
+.donate-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.donate-tier-card {
+  text-align: left;
+  background: #ffffff;
+  border: 2px solid var(--color-sage);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  box-shadow: 0 8px 24px rgba(0, 71, 53, 0.05);
+}
+
+.donate-tier-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-gold);
+  box-shadow: 0 16px 36px rgba(212, 168, 90, 0.18);
+}
+
+.donate-tier-card.is-selected {
+  border-color: var(--color-gold);
+  background: linear-gradient(180deg, #fffdf8 0%, #ffffff 100%);
+  box-shadow: 0 16px 40px rgba(212, 168, 90, 0.25);
+}
+
+.donate-tier-amount {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-forest);
+  margin-bottom: 1rem;
+}
+
+.donate-tier-impact {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-forest);
+  opacity: 0.85;
+  margin-bottom: 1.25rem;
+  min-height: 4.8rem;
+}
+
+.donate-tier-cta {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-leaf);
+}
+
+.donate-tier-card.is-selected .donate-tier-cta {
+  color: #9a6b1a;
+}
+
+.donate-pillars-section {
+  padding: 5rem 0;
+  background: var(--color-mist);
+}
+
+.donate-pillar-card .program-benefit {
+  margin-bottom: 0;
+}
+
+.donate-story-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--color-forest) 0%, #003326 100%);
+}
+
+.donate-story-card {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.donate-story-section .donate-section-eyebrow {
+  color: var(--color-gold);
+}
+
+.donate-story-quote {
+  font-size: 1.45rem;
+  line-height: 1.7;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 1.5rem 0;
+}
+
+.donate-story-author {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.04em;
+}
+
+.donate-trust-section {
+  padding: 5rem 0;
+  background: #ffffff;
+}
+
+.donate-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.donate-trust-card {
+  background: var(--color-mist);
+  border: 1px solid var(--color-sage);
+  border-radius: 20px;
+  padding: 2.25rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.donate-trust-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 71, 53, 0.08);
+}
+
+.donate-trust-card h3 {
+  font-size: 1.2rem;
+  color: var(--color-forest);
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.donate-trust-card p {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--color-forest);
+  opacity: 0.85;
+}
+
+.donate-trust-card a {
+  color: var(--color-leaf);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.donate-form-section {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, var(--color-mist) 0%, #ffffff 100%);
+}
+
+.donate-form-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.donate-form-story {
+  padding: 1rem 0;
+}
+
+.donate-form-lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-forest);
+  opacity: 0.85;
+  margin: 1rem 0 2rem;
+}
+
+.donate-impact-preview {
+  background: #ffffff;
+  border: 2px solid var(--color-gold);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 24px rgba(212, 168, 90, 0.15);
+}
+
+.donate-impact-preview-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #9a6b1a;
+  margin-bottom: 0.5rem;
+}
+
+.donate-impact-preview-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-forest);
+  font-weight: 600;
+}
+
+.donate-form-benefits {
+  margin-bottom: 0;
+}
+
+.donate-form-card {
+  max-width: none;
+  margin: 0;
+  border: 2px solid rgba(212, 168, 90, 0.35);
+  box-shadow: 0 16px 48px rgba(0, 71, 53, 0.1);
+}
+
+.donate-form-card::before {
+  background: linear-gradient(90deg, var(--color-gold), #e8c078);
+}
+
+.donate-form-card-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-forest);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.donate-amount-chips .amount-chip.selected {
+  background: linear-gradient(135deg, var(--color-gold), #e0b86a);
+  border-color: var(--color-gold);
+  color: var(--color-ink);
+}
+
+.donate-submit-btn {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.donate-alt-section {
+  padding: 4rem 0 6rem;
+  background: #ffffff;
+}
+
+@media (max-width: 1100px) {
+  .donate-stats-grid,
+  .donate-tiers-grid,
+  .donate-trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .donate-form-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .donate-hero-content {
+    padding: 6rem 1.5rem 4rem;
+    text-align: center;
+  }
+
+  .donate-hero-headline {
+    font-size: 2.25rem;
+  }
+
+  .donate-hero-subheadline {
+    font-size: 1.05rem;
+  }
+
+  .donate-hero-actions {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .donate-hero-actions .pill-button {
+    width: 100%;
+  }
+
+  .donate-stats-grid,
+  .donate-tiers-grid,
+  .donate-trust-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .donate-tier-impact {
+    min-height: auto;
+  }
+
+  .donate-story-quote {
+    font-size: 1.15rem;
+  }
+
+  .donate-form-story {
+    text-align: center;
+  }
+
+  .donate-form-benefits {
+    text-align: left;
+  }
+}
