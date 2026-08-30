@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Flower, Users, Calendar, MapPin } from '../components/Icon3D';
+import { Flower } from '../components/Icon3D';
 import { Phone, Mail } from 'lucide-react';
 import '../App.css';
 
@@ -50,43 +50,40 @@ export const EventsPrograms: React.FC = () => {
           <div className="container">
             <h2 className="section-title" style={{ marginBottom: '2rem' }}>Core Mentorship Programs</h2>
             <div className="programs-grid">
-              {/* Card 1: Heal */}
-              <div className="program-card">
+              <div className="program-card program-card-heal">
                 <div className="program-badge heal-badge">HEAL</div>
                 <h3 className="program-title">Emotional First Aid</h3>
                 <div className="program-meta">
-                  <span className="meta-chip"><Users size={14} /> Adults 18+</span>
-                  <span className="meta-chip"><MapPin size={14} /> Online</span>
+                  <span className="meta-chip">Adults 18+</span>
+                  <span className="meta-chip">Online</span>
                   <span className="meta-chip status-open">Open</span>
-                  <span className="meta-chip"><Calendar size={14} /> Monthly</span>
+                  <span className="meta-chip">Monthly</span>
                 </div>
                 <p className="program-benefit">Learn immediate, practical tools to manage anxiety and regulate your nervous system in moments of stress.</p>
                 <button className="pill-button outline full-width">Join Program</button>
               </div>
 
-              {/* Card 2: Grow */}
-              <div className="program-card">
+              <div className="program-card program-card-grow">
                 <div className="program-badge grow-badge">GROW</div>
                 <h3 className="program-title">Confidence Building Workshop</h3>
                 <div className="program-meta">
-                  <span className="meta-chip"><Users size={14} /> Youth 14-17</span>
-                  <span className="meta-chip"><MapPin size={14} /> In person</span>
+                  <span className="meta-chip">Youth 14-17</span>
+                  <span className="meta-chip">In person</span>
                   <span className="meta-chip status-upcoming">Upcoming</span>
-                  <span className="meta-chip"><Calendar size={14} /> Weekly</span>
+                  <span className="meta-chip">Weekly</span>
                 </div>
                 <p className="program-benefit">Develop self-trust and communication skills to navigate social situations and academic pressures.</p>
                 <button className="pill-button outline full-width">Join Program</button>
               </div>
 
-              {/* Card 3: Blossom */}
-              <div className="program-card">
+              <div className="program-card program-card-blossom">
                 <div className="program-badge blossom-badge">BLOSSOM</div>
                 <h3 className="program-title">Community Leadership Program</h3>
                 <div className="program-meta">
-                  <span className="meta-chip"><Users size={14} /> All Ages</span>
-                  <span className="meta-chip"><MapPin size={14} /> Hybrid</span>
+                  <span className="meta-chip">All Ages</span>
+                  <span className="meta-chip">Hybrid</span>
                   <span className="meta-chip status-closed">Closed</span>
-                  <span className="meta-chip"><Calendar size={14} /> Next: Spring 2027</span>
+                  <span className="meta-chip">Next: Spring 2027</span>
                 </div>
                 <p className="program-benefit">Turn your personal growth into community impact by learning how to mentor and support others.</p>
                 <button className="pill-button outline full-width">View Details</button>
@@ -100,28 +97,28 @@ export const EventsPrograms: React.FC = () => {
           <div className="container">
             <h2 className="section-title" style={{ marginBottom: '2rem' }}>Major Upcoming Events (2026)</h2>
             <div className="updates-grid">
-              <div className="update-card event-card" style={{ borderLeft: '4px solid var(--color-forest)' }}>
+              <div className="update-card event-card">
                 <span className="update-badge">Mental & Emotional Growth</span>
                 <h3 className="update-title">Mega Conference</h3>
-                <p className="update-date"><Calendar size={14} /> June 2026</p>
+                <p className="update-date">June 2026</p>
                 <p className="update-desc">A major mid-year gathering focused on mental and emotional breakthroughs with guest speakers and interactive workshops.</p>
-                <button className="pill-button outline" style={{ marginTop: '1rem', padding: '0.5rem 1rem' }}>Get Notified</button>
+                <button type="button" className="pill-button outline update-card-cta">Get Notified</button>
               </div>
 
-              <div className="update-card event-card" style={{ borderLeft: '4px solid var(--color-sage)' }}>
+              <div className="update-card event-card">
                 <span className="update-badge">Community Outreach</span>
                 <h3 className="update-title">Field Visits & Volunteering</h3>
-                <p className="update-date"><Calendar size={14} /> Starting July 2026</p>
+                <p className="update-date">Starting July 2026</p>
                 <p className="update-desc">Join us as we visit schools, children's homes, and rehab centers to extend our impact directly into the community.</p>
-                <Link to="/volunteer" className="pill-button outline" style={{ marginTop: '1rem', padding: '0.5rem 1rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>Volunteer With Us</Link>
+                <Link to="/volunteer" className="pill-button outline update-card-cta">Volunteer With Us</Link>
               </div>
 
-              <div className="update-card event-card" style={{ borderLeft: '4px solid var(--color-gold)' }}>
+              <div className="update-card event-card">
                 <span className="update-badge">Celebration</span>
                 <h3 className="update-title">First Anniversary (AGM)</h3>
-                <p className="update-date"><Calendar size={14} /> January 17, 2027</p>
+                <p className="update-date">January 17, 2027</p>
                 <p className="update-desc">Reflect on a year of empowerment and discovering growth as we hold our Annual General Meeting.</p>
-                <button className="pill-button outline" style={{ marginTop: '1rem', padding: '0.5rem 1rem' }}>Save the Date</button>
+                <button type="button" className="pill-button outline update-card-cta">Save the Date</button>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Flower, Heart, CheckCircle, Users, Calendar, MapPin } from '../components/Icon3D';
+import { Flower } from '../components/Icon3D';
 import { Phone, Mail } from 'lucide-react';
 import '../App.css';
 
@@ -43,32 +43,32 @@ export const Volunteer: React.FC = () => {
         </section>
 
         <section className="container" style={{ paddingBottom: '4rem' }}>
-          <div className="involvement-grid" style={{ maxWidth: '1000px', margin: '0 auto', gridTemplateColumns: 'repeat(3, 1fr)' }}>
-            <div className="involvement-card" style={{ border: '2px solid var(--color-sage)' }}>
-              <div className="involvement-icon"><Heart size={28} color="var(--color-forest)" /></div>
+          <div className="involvement-grid involvement-grid-narrow">
+            <div className="involvement-card involvement-card-volunteer">
+              <span className="involvement-tag">Your schedule</span>
               <h3>Time Commitment</h3>
-              <div className="involvement-expectations">
-                <p><CheckCircle size={14} /> Flexible scheduling</p>
-                <p><CheckCircle size={14} /> Online or in person</p>
-              </div>
+              <ul className="involvement-expectations">
+                <li>Flexible scheduling</li>
+                <li>Online or in person</li>
+              </ul>
             </div>
-            <div className="involvement-card" style={{ border: '2px solid var(--color-sage)' }}>
-              <div className="involvement-icon"><Users size={28} color="var(--color-forest)" /></div>
+            <div className="involvement-card involvement-card-partner">
+              <span className="involvement-tag">What we need</span>
               <h3>Requirements</h3>
-              <div className="involvement-expectations">
-                <p><CheckCircle size={14} /> Background check required</p>
-                <p><CheckCircle size={14} /> Mandatory training session</p>
-                <p><CheckCircle size={14} /> Safeguarding agreement</p>
-              </div>
+              <ul className="involvement-expectations">
+                <li>Background check required</li>
+                <li>Mandatory training session</li>
+                <li>Safeguarding agreement</li>
+              </ul>
             </div>
-            <div className="involvement-card" style={{ border: '2px solid var(--color-sage)' }}>
-              <div className="involvement-icon"><Calendar size={28} color="var(--color-forest)" /></div>
+            <div className="involvement-card involvement-card-donate">
+              <span className="involvement-tag">Your reward</span>
               <h3>What You Gain</h3>
-              <div className="involvement-expectations">
-                <p><CheckCircle size={14} /> Meaningful community impact</p>
-                <p><CheckCircle size={14} /> Skills & mentorship growth</p>
-                <p><CheckCircle size={14} /> Supportive team culture</p>
-              </div>
+              <ul className="involvement-expectations">
+                <li>Meaningful community impact</li>
+                <li>Skills & mentorship growth</li>
+                <li>Supportive team culture</li>
+              </ul>
             </div>
           </div>
         </section>
@@ -77,34 +77,34 @@ export const Volunteer: React.FC = () => {
           <div className="container">
             <h2 className="section-title text-center" style={{ marginBottom: '2rem' }}>Volunteer Roles</h2>
             <div className="programs-grid">
-              <div className="program-card">
+              <div className="program-card program-card-heal">
                 <div className="program-badge heal-badge">SUPPORT</div>
                 <h3 className="program-title">Program & Workshop Support</h3>
                 <div className="program-meta">
-                  <span className="meta-chip"><Users size={14} /> Adults 18+</span>
-                  <span className="meta-chip"><MapPin size={14} /> Hybrid</span>
+                  <span className="meta-chip">Adults 18+</span>
+                  <span className="meta-chip">Hybrid</span>
                   <span className="meta-chip status-open">Open</span>
                 </div>
                 <p className="program-benefit">Help facilitate sessions, welcome participants, and create a calm, respectful environment during Heal and Grow programs.</p>
               </div>
 
-              <div className="program-card">
+              <div className="program-card program-card-grow">
                 <div className="program-badge grow-badge">OUTREACH</div>
                 <h3 className="program-title">Field Visits & Community Outreach</h3>
                 <div className="program-meta">
-                  <span className="meta-chip"><Users size={14} /> Adults 18+</span>
-                  <span className="meta-chip"><MapPin size={14} /> In person</span>
+                  <span className="meta-chip">Adults 18+</span>
+                  <span className="meta-chip">In person</span>
                   <span className="meta-chip status-upcoming">From July 2026</span>
                 </div>
                 <p className="program-benefit">Join visits to schools, children’s homes, and rehab centres to extend care and encouragement into the community.</p>
               </div>
 
-              <div className="program-card">
+              <div className="program-card program-card-blossom">
                 <div className="program-badge blossom-badge">EVENTS</div>
                 <h3 className="program-title">Events & Communications</h3>
                 <div className="program-meta">
-                  <span className="meta-chip"><Users size={14} /> All skills welcome</span>
-                  <span className="meta-chip"><MapPin size={14} /> Hybrid</span>
+                  <span className="meta-chip">All skills welcome</span>
+                  <span className="meta-chip">Hybrid</span>
                   <span className="meta-chip status-open">Open</span>
                 </div>
                 <p className="program-benefit">Support conferences, social content, registration desks, and guest hospitality for major community gatherings.</p>
@@ -115,7 +115,7 @@ export const Volunteer: React.FC = () => {
 
         <section id="volunteer-form" className="inquiry-section" style={{ paddingTop: '4rem' }}>
           <div className="container">
-            <div className="inquiry-card" style={{ maxWidth: '760px' }}>
+            <div className="inquiry-card inquiry-card-narrow">
               <h2 className="section-title text-center" style={{ marginBottom: '0.75rem', fontSize: '2rem' }}>Volunteer Application</h2>
               <p className="text-center" style={{ marginBottom: '2.5rem', opacity: 0.8 }}>
                 Tell us a little about yourself. We review applications carefully and respond within a few business days.

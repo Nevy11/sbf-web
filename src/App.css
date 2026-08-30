@@ -1281,6 +1281,15 @@
   align-self: flex-start;
 }
 
+.update-card-cta {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 0.6rem 1.25rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
 /* Partners Section */
 .partners-section {
   padding: 100px 0;
@@ -1331,6 +1340,20 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+}
+
+.involvement-grid-narrow {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.programs-grid-narrow {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.program-card .involvement-tag {
+  margin-bottom: 1rem;
 }
 
 .involvement-card {
@@ -1471,13 +1494,34 @@
 }
 
 .inquiry-card {
-  background: #FFFFFF;
-  border-radius: var(--border-radius-card);
-  padding: 4rem;
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 3.5rem;
   max-width: 700px;
   margin: 0 auto;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 12px 40px rgba(0, 71, 53, 0.08);
   border: 1px solid var(--color-sage);
+  overflow: hidden;
+}
+
+.inquiry-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--color-forest), var(--color-leaf));
+}
+
+.inquiry-card-narrow {
+  max-width: 760px;
+}
+
+.benefit-list {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 .inquiry-form {

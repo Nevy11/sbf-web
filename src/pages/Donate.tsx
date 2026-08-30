@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Flower, Gift, CheckCircle, HeartPulse, TrendingUp } from '../components/Icon3D';
+import { Flower } from '../components/Icon3D';
 import { Phone, Mail } from 'lucide-react';
 import '../App.css';
 
@@ -49,28 +49,28 @@ export const Donate: React.FC = () => {
         </section>
 
         <section className="container" style={{ paddingBottom: '4rem' }}>
-          <div className="programs-grid" style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <div className="program-card">
-              <div className="involvement-icon" style={{ margin: '0 auto 1rem' }}><HeartPulse size={28} color="var(--color-forest)" /></div>
-              <h3 className="program-title" style={{ textAlign: 'center' }}>Fund Healing</h3>
-              <p className="program-benefit" style={{ textAlign: 'center' }}>Support emotional first-aid workshops and safe spaces for adults and youth.</p>
+          <div className="programs-grid programs-grid-narrow">
+            <div className="program-card program-card-heal">
+              <span className="involvement-tag">Where it goes</span>
+              <h3 className="program-title">Fund Healing</h3>
+              <p className="program-benefit">Support emotional first-aid workshops and safe spaces for adults and youth.</p>
             </div>
-            <div className="program-card">
-              <div className="involvement-icon" style={{ margin: '0 auto 1rem' }}><TrendingUp size={28} color="var(--color-forest)" /></div>
-              <h3 className="program-title" style={{ textAlign: 'center' }}>Grow Confidence</h3>
-              <p className="program-benefit" style={{ textAlign: 'center' }}>Enable mentorship, skills training, and confidence-building programs.</p>
+            <div className="program-card program-card-grow">
+              <span className="involvement-tag">Build skills</span>
+              <h3 className="program-title">Grow Confidence</h3>
+              <p className="program-benefit">Enable mentorship, skills training, and confidence-building programs.</p>
             </div>
-            <div className="program-card">
-              <div className="involvement-icon" style={{ margin: '0 auto 1rem' }}><Gift size={28} color="var(--color-forest)" /></div>
-              <h3 className="program-title" style={{ textAlign: 'center' }}>Community Impact</h3>
-              <p className="program-benefit" style={{ textAlign: 'center' }}>Help field visits, school outreach, and community leadership initiatives.</p>
+            <div className="program-card program-card-blossom">
+              <span className="involvement-tag">Reach further</span>
+              <h3 className="program-title">Community Impact</h3>
+              <p className="program-benefit">Help field visits, school outreach, and community leadership initiatives.</p>
             </div>
           </div>
         </section>
 
         <section id="donate-form" className="inquiry-section" style={{ paddingTop: '4rem' }}>
           <div className="container">
-            <div className="inquiry-card" style={{ maxWidth: '760px' }}>
+            <div className="inquiry-card inquiry-card-narrow">
               <h2 className="section-title text-center" style={{ marginBottom: '0.75rem', fontSize: '2rem' }}>Choose your gift</h2>
               <p className="text-center" style={{ marginBottom: '2.5rem', opacity: 0.8 }}>
                 One-time or recurring. Transparent reporting. Every contribution matters.
@@ -167,11 +167,11 @@ export const Donate: React.FC = () => {
                   Continue to Donate
                 </button>
 
-                <div className="involvement-expectations" style={{ marginTop: '1.5rem', marginBottom: 0 }}>
-                  <p><CheckCircle size={14} /> One-time or recurring gifts welcome</p>
-                  <p><CheckCircle size={14} /> Tax-deductible where applicable</p>
-                  <p><CheckCircle size={14} /> Transparent impact reporting</p>
-                </div>
+                <ul className="involvement-expectations benefit-list">
+                  <li>One-time or recurring gifts welcome</li>
+                  <li>Tax-deductible where applicable</li>
+                  <li>Transparent impact reporting</li>
+                </ul>
 
                 <div className="form-footer-note">
                   <strong>Payment:</strong> Online payment processing will be confirmed securely after you submit this form.<br />
