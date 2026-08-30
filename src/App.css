@@ -415,25 +415,47 @@
 }
 
 .path-chip {
-  background: white;
+  background: #ffffff;
   border: 1px solid var(--color-sage);
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 1.75rem;
   border-radius: 50px;
   font-weight: 600;
   color: var(--color-forest);
   cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 71, 53, 0.06);
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  text-decoration: none;
 }
 
 .path-chip:hover {
   background: var(--color-mist);
   border-color: var(--color-leaf);
   color: var(--color-leaf);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 71, 53, 0.1);
+}
+
+.path-chip-highlight {
+  background: linear-gradient(135deg, var(--color-sage) 0%, #c8dcc0 100%);
+  border-color: var(--color-forest);
+  color: var(--color-forest);
+  font-weight: 700;
+}
+
+.path-chip-donate {
+  background: linear-gradient(135deg, var(--color-gold) 0%, #e0b86a 100%);
+  border: none;
+  color: var(--color-ink);
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(212, 168, 90, 0.35);
+}
+
+.path-chip-donate:hover {
+  color: var(--color-ink);
+  border: none;
+  box-shadow: 0 10px 24px rgba(212, 168, 90, 0.45);
 }
 
 /* Journey Section */
@@ -449,32 +471,69 @@
 }
 
 .journey-card {
-  background-color: var(--color-mist);
-  border: 2px solid var(--color-sage);
-  padding: 3rem 2rem;
-  border-radius: var(--border-radius-card);
-  text-align: center;
-  transition: all 0.3s ease;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--color-sage);
+  padding: 2.5rem 2rem 2.75rem;
+  border-radius: 20px;
+  text-align: left;
+  transition: all 0.35s ease;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0, 71, 53, 0.06);
+}
+
+.journey-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+}
+
+.journey-card-heal::before {
+  background: linear-gradient(90deg, var(--color-forest), var(--color-leaf));
+}
+
+.journey-card-grow::before {
+  background: linear-gradient(90deg, #b35900, #d4a85a);
+}
+
+.journey-card-blossom::before {
+  background: linear-gradient(90deg, #660066, #9b4d9b);
 }
 
 .journey-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 71, 53, 0.12);
+  border-color: transparent;
+}
+
+.journey-step {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--color-leaf);
+  margin-bottom: 1.25rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--color-mist);
+  border-radius: 20px;
 }
 
 .journey-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin-bottom: 1rem;
   color: var(--color-forest);
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
 .journey-card p {
   font-size: 1.05rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--color-forest);
-  opacity: 0.85;
+  opacity: 0.82;
 }
 
 /* Library Section */
@@ -659,19 +718,35 @@
 }
 
 .program-card {
-  background: #FFFFFF;
-  border: 1px solid var(--color-sage);
-  border-radius: var(--border-radius-card);
-  padding: 2.5rem 2rem;
-  box-shadow: var(--shadow-soft);
-  transition: all 0.3s ease;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(214, 226, 206, 0.8);
+  border-radius: 20px;
+  padding: 2.25rem 2rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 71, 53, 0.06);
+  transition: all 0.35s ease;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
+.program-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.program-card-heal::before { background: var(--color-forest); }
+.program-card-grow::before { background: #b35900; }
+.program-card-blossom::before { background: #660066; }
+
 .program-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transform: translateY(-8px);
+  box-shadow: 0 22px 44px rgba(0, 71, 53, 0.12);
+  border-color: transparent;
 }
 
 .program-badge {
@@ -708,14 +783,15 @@
 .meta-chip {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 700;
   background: var(--color-mist);
-  padding: 0.4rem 0.8rem;
-  border-radius: 12px;
+  padding: 0.45rem 0.85rem;
+  border-radius: 20px;
   color: var(--color-forest);
   border: 1px solid var(--color-sage);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .status-open { background: #E6F4EA; color: #137333; border-color: #CEEAD6; }
@@ -769,24 +845,31 @@
 }
 
 .impact-card {
-  padding: 2.5rem 2rem;
-  background: var(--color-mist);
-  border-radius: var(--border-radius-card);
+  position: relative;
+  padding: 3rem 2rem;
+  background: linear-gradient(160deg, #ffffff 0%, var(--color-mist) 100%);
+  border-radius: 20px;
   border: 1px solid var(--color-sage);
-  transition: all 0.3s ease;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 24px rgba(0, 71, 53, 0.05);
 }
 
 .impact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-soft);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 71, 53, 0.1);
+  border-color: var(--color-leaf);
 }
 
 .impact-number {
-  font-size: 4rem;
+  font-size: 4.25rem;
   font-weight: 800;
   color: var(--color-forest);
   line-height: 1;
   margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-leaf) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .impact-label {
@@ -1030,10 +1113,6 @@
     padding: 1.5rem;
   }
 
-  .involvement-card {
-    transform: scale(1) !important;
-  }
-
   .impact-number {
     font-size: 3rem;
   }
@@ -1060,20 +1139,6 @@
   font-size: 1.5rem;
   color: var(--color-forest);
   background-color: #FFFFFF;
-}
-
-/* Icon Wrappers */
-.journey-icon-wrapper {
-  margin-bottom: 1.5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 64px;
-  height: 64px;
-  background-color: #FFFFFF;
-  border-radius: 50%;
-  box-shadow: var(--shadow-soft);
-  border: 1px solid var(--color-sage);
 }
 
 /* Community Story Section */
@@ -1138,13 +1203,39 @@
 }
 
 .update-card {
-  background: var(--color-mist);
+  position: relative;
+  background: #ffffff;
   border: 1px solid var(--color-sage);
-  border-radius: var(--border-radius-card);
-  padding: 2.5rem 2rem;
-  box-shadow: var(--shadow-soft);
+  border-radius: 20px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 8px 28px rgba(0, 71, 53, 0.06);
   display: flex;
   flex-direction: column;
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+.update-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-forest), var(--color-leaf));
+}
+
+.event-card::before {
+  background: linear-gradient(90deg, var(--color-leaf), var(--color-gold));
+}
+
+.resource-card::before {
+  background: linear-gradient(90deg, var(--color-forest), #4a8f6e);
+}
+
+.update-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0, 71, 53, 0.1);
 }
 
 .update-badge {
@@ -1168,13 +1259,12 @@
 }
 
 .update-date {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--color-leaf);
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .update-desc {
@@ -1244,49 +1334,107 @@
 }
 
 .involvement-card {
-  background: var(--color-mist);
+  position: relative;
+  background: #ffffff;
   border: 1px solid var(--color-sage);
-  padding: 3rem 2rem;
-  border-radius: var(--border-radius-card);
-  text-align: center;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 28px rgba(0, 71, 53, 0.06);
+  overflow: hidden;
 }
 
-.involvement-icon {
-  width: 64px;
-  height: 64px;
-  background: #FFFFFF;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-  box-shadow: var(--shadow-soft);
-  color: var(--color-forest);
+.involvement-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+}
+
+.involvement-card-volunteer::before {
+  background: linear-gradient(90deg, var(--color-forest), var(--color-leaf));
+}
+
+.involvement-card-partner::before {
+  background: linear-gradient(90deg, #4a6fa5, #7ba3d4);
+}
+
+.involvement-card-donate::before {
+  background: linear-gradient(90deg, var(--color-gold), #e8c078);
+}
+
+.involvement-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 44px rgba(0, 71, 53, 0.12);
+  border-color: transparent;
+}
+
+.involvement-card-donate {
+  background: linear-gradient(180deg, #fffdf8 0%, #ffffff 40%);
+  border-color: rgba(212, 168, 90, 0.5);
+}
+
+.involvement-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-leaf);
+  margin-bottom: 1rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--color-mist);
+  border-radius: 20px;
 }
 
 .involvement-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   color: var(--color-forest);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+  font-weight: 800;
 }
 
 .involvement-expectations {
-  text-align: left;
-  margin-bottom: 2rem;
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
   flex-grow: 1;
 }
 
-.involvement-expectations p {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.involvement-expectations li {
+  position: relative;
+  padding-left: 1.1rem;
   margin-bottom: 0.75rem;
   font-size: 0.95rem;
   color: var(--color-forest);
   opacity: 0.85;
+  line-height: 1.5;
+}
+
+.involvement-expectations li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-leaf);
+}
+
+.involvement-cta {
+  width: 100%;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .involvement-card .pill-button {

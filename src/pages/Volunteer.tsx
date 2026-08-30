@@ -48,7 +48,6 @@ export const Volunteer: React.FC = () => {
               <div className="involvement-icon"><Heart size={28} color="var(--color-forest)" /></div>
               <h3>Time Commitment</h3>
               <div className="involvement-expectations">
-                <p><CheckCircle size={14} /> 2–4 hours per month</p>
                 <p><CheckCircle size={14} /> Flexible scheduling</p>
                 <p><CheckCircle size={14} /> Online or in person</p>
               </div>
