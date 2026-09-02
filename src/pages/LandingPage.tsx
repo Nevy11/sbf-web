@@ -244,32 +244,6 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Journey Section */}
-      <section className="journey-section">
-        <div className="container text-center">
-          <h2 className="section-title" style={{ fontSize: '2rem', marginBottom: '1rem' }}>Where are you in your journey?</h2>
-          <p className="section-description" style={{ marginBottom: '3rem' }}>
-            Choose the path that feels most useful today. You do not need to share your full story to take a first step.
-          </p>
-          <div className="journey-grid">
-            <div className="journey-card journey-card-heal">
-              <span className="journey-step">01</span>
-              <h3>HEAL</h3>
-              <p>Build emotional awareness, self-trust and steady ways to move forward.</p>
-            </div>
-            <div className="journey-card journey-card-grow">
-              <span className="journey-step">02</span>
-              <h3>GROW</h3>
-              <p>Strengthen mindset, practical skills and confidence through learning and mentorship.</p>
-            </div>
-            <div className="journey-card journey-card-blossom">
-              <span className="journey-step">03</span>
-              <h3>BLOSSOM</h3>
-              <p>Connect personal growth with purpose, contribution, leadership and community.</p>
-            </div>
-          </div>
-        </div>
-      </section>
       {/* Featured Programs Section */}
       <section id="programs" className="featured-programs-section">
         <div className="container">
@@ -315,14 +289,22 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Trust & Boundaries Section */}
-      <section className="trust-boundaries-section">
+      {/* About Us Section */}
+      <section className="trust-boundaries-section about-us-section">
         <div className="container text-center">
-          <div className="trust-card">
-            <h2 className="section-title" style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>A respectful space with clear boundaries.</h2>
-            <p className="section-description" style={{ fontSize: '1.1rem', margin: '0 auto', maxWidth: '800px', opacity: 0.9 }}>
-              SBF is independent, non-partisan and non-sectarian. Participation is choice-led and personal information is handled with care. SBF programs are not emergency, diagnostic or clinical services.
+          <div className="trust-card about-us-card">
+            <span className="about-us-eyebrow">About Us</span>
+            <blockquote className="about-us-quote">
+              &ldquo;Your story is not where you end; it is where your becoming begins.&rdquo;
+            </blockquote>
+            <p className="section-description about-us-description">
+              We create meaningful spaces where people come together, discover their potential, build
+              confidence, and turn personal experiences into purposeful action.
             </p>
+            <p className="about-us-tagline">Your story matters. Your future matters.</p>
+            <button type="button" className="pill-button primary about-us-btn">
+              About us
+            </button>
           </div>
         </div>
       </section>
