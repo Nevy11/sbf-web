@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Flower } from '../components/Icon3D';
 import {
   Phone,
   Mail,
@@ -508,9 +507,6 @@ export const LandingPage: React.FC = () => {
             Explore an upcoming program, ask a private question, volunteer your skills or discuss a partnership.
           </p>
           <div className="hero-actions" style={{ justifyContent: 'center' }}>
-            <a href="#programs" className="pill-button primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#FFFFFF', color: 'var(--color-forest)' }}>
-              Explore Programs
-            </a>
             <a href="#inquiry" className="pill-button outline" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderColor: '#FFFFFF', color: '#FFFFFF' }}>
               Send Inquiry
             </a>
@@ -525,8 +521,12 @@ export const LandingPage: React.FC = () => {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <div className="logo-section" style={{ marginBottom: '1.5rem', color: '#FFFFFF' }}>
-                <Flower color="#FFFFFF" size={32} />
+              <div className="logo-section footer-logo-section">
+                <img
+                  src="/sbf_logo_no_background_preview.png"
+                  alt="Smart Blossoming Foundation Logo"
+                  className="footer-logo"
+                />
                 <span className="brand-name">Smart Blossoming Foundation</span>
               </div>
               <p className="footer-description">

@@ -2337,6 +2337,17 @@
   color: #FFFFFF;
 }
 
+.footer-logo-section {
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.footer-logo {
+  width: auto;
+  height: 48px;
+  object-fit: contain;
+}
+
 .footer-description {
   margin-bottom: 2rem;
   line-height: 1.6;
