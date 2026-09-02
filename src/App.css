@@ -1044,14 +1044,14 @@
   color: rgba(255,255,255,0.9);
 }
 
-.about-us-eyebrow {
-  display: inline-block;
-  color: var(--color-sage);
-  font-weight: 700;
+.about-us-title {
+  font-size: 2.75rem;
+  line-height: 1.15;
+  font-weight: 800;
+  color: #ffffff;
   text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 0.14em;
-  margin-bottom: 1.5rem;
+  letter-spacing: 0.1em;
+  margin: 0 auto 2rem;
 }
 
 .about-us-quote {
@@ -1079,10 +1079,16 @@
 }
 
 .about-us-btn {
-  background-color: #ffffff;
-  color: var(--color-forest);
+  background-color: var(--color-gold);
+  color: var(--color-ink);
   border: none;
   cursor: default;
+  padding: 1rem 3rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+  margin-top: 0.75rem;
 }
 
 /* Early-Stage Impact Section */
@@ -1395,6 +1401,22 @@
 
   .thematic-title {
     font-size: 1.85rem;
+  }
+
+  .about-us-title {
+    font-size: 2rem;
+    letter-spacing: 0.06em;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-us-quote {
+    font-size: 1.35rem;
+  }
+
+  .about-us-btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 0.95rem 2rem;
   }
 
   .thematic-lead {

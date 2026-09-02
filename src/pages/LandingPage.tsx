@@ -330,7 +330,7 @@ export const LandingPage: React.FC = () => {
       <section className="trust-boundaries-section about-us-section">
         <div className="container text-center">
           <div className="trust-card about-us-card">
-            <span className="about-us-eyebrow">About Us</span>
+            <h2 className="about-us-title">About Us</h2>
             <blockquote className="about-us-quote">
               &ldquo;Your story is not where you end; it is where your becoming begins.&rdquo;
             </blockquote>
