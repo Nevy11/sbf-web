@@ -101,14 +101,51 @@ const THEMATIC_CARDS = [
   },
 ] as const;
 
+const INITIAL_VOICES_VISIBLE = 3;
+
+const VOICE_CARDS = [
+  {
+    name: 'Esther Kimani',
+    role: 'Community Developer | Social Worker | Mentor',
+    quote: 'More than a speaker, she became a mother to us.',
+    description:
+      'At the launch of Smart Blossoming Foundation, Esther Kimani came through with more than words. She shared lessons on leadership, togetherness, and the power of standing with one another. Her presence reminded us that building a foundation is not just about having a vision, but about learning to walk together, lead with purpose, and support one another along the journey.',
+    highlight: 'A Voice That Shaped Our Beginning',
+    image: '/hero-image.jpg',
+  },
+  {
+    name: 'Sylvia Wanja',
+    role: 'Multimedia Journalist | Mentor',
+    quote: 'She didn\u2019t just speak to us; she gave us a foundation to stand on.',
+    description:
+      'Through her mentorship session on mental and emotional growth, Sylvia Wanja inspired many of us to look within, understand ourselves, and approach life with greater confidence and intention. Her words created a meaningful foundation for personal growth and reminded us of the power of having someone who believes in your journey.',
+    image: '/sbf_smile.jpeg',
+  },
+  {
+    name: 'Tonny Kyule',
+    role: 'Writer | Communication & PR Specialist',
+    quote: 'Young, determined, and ready to make a difference.',
+    description:
+      'Tonny brought a fresh and practical perspective to Smart Blossoming Foundation through his Career Building & Skills session. With his experience and determination, he challenged young people to take their skills seriously, present themselves with confidence, and prepare intentionally for the opportunities ahead.',
+    impact:
+      'He reminded us that your age does not limit your ambition\u2014and preparation can turn potential into opportunity.',
+    image: '/knowledge.jpg',
+  },
+] as const;
+
 export const LandingPage: React.FC = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [showAllThemes, setShowAllThemes] = useState(false);
+  const [showAllVoices, setShowAllVoices] = useState(false);
 
   const visibleThemes = showAllThemes
     ? THEMATIC_CARDS
     : THEMATIC_CARDS.slice(0, INITIAL_THEMES_VISIBLE);
+
+  const visibleVoices = showAllVoices
+    ? VOICE_CARDS
+    : VOICE_CARDS.slice(0, INITIAL_VOICES_VISIBLE);
 
   const goToSlide = useCallback((index: number) => {
     setActiveSlide((index + HERO_SLIDES.length) % HERO_SLIDES.length);
@@ -309,32 +346,64 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Early-Stage Impact Section */}
-      <section id="impact" className="impact-section">
+      {/* Voices That Inspire Section */}
+      <section id="impact" className="thematic-section voices-section" aria-labelledby="voices-heading">
+        <div className="thematic-bg" aria-hidden="true" />
         <div className="container">
-          <div className="text-center" style={{ marginBottom: '4rem' }}>
-            <h2 className="section-title" style={{ marginBottom: '1.5rem' }}>Building evidence from the beginning.</h2>
-            <p className="section-description" style={{ margin: '0 auto', fontSize: '1.1rem', maxWidth: '800px' }}>
-              We publish verified participation, learning and feedback measures with reporting periods, definitions and limitations. Until a full annual report is available, we will share what we delivered, what participants told us and what we are improving.
+          <div className="thematic-header text-center">
+            <span className="thematic-eyebrow">Voices that inspire</span>
+            <h2 id="voices-heading" className="thematic-title">
+              Voices That Inspire
+            </h2>
+            <p className="thematic-lead">
+              Every meaningful conversation is shaped by voices that bring new perspectives, wisdom,
+              and experience.
             </p>
           </div>
-          <div className="impact-grid">
-            <div className="impact-card">
-              <div className="impact-number">85%</div>
-              <h4 className="impact-label">Reported Improved Wellbeing</h4>
-              <p className="impact-period">Jan-Jun 2026 (N=120)</p>
-            </div>
-            <div className="impact-card">
-              <div className="impact-number">4.8<span style={{ fontSize: '1.5rem', opacity: 0.7 }}>/5</span></div>
-              <h4 className="impact-label">Average Program Rating</h4>
-              <p className="impact-period">Jan-Jun 2026 (N=200)</p>
-            </div>
-            <div className="impact-card">
-              <div className="impact-number">50+</div>
-              <h4 className="impact-label">Community Sessions Delivered</h4>
-              <p className="impact-period">YTD 2026</p>
-            </div>
+
+          <div className="thematic-grid">
+            {visibleVoices.map((voice) => (
+              <article key={voice.name} className="thematic-card">
+                <div className="thematic-card-image-wrap">
+                  <img
+                    src={voice.image}
+                    alt=""
+                    className="thematic-card-image"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="thematic-card-body">
+                  <h3 className="thematic-card-title">{voice.name}</h3>
+                  <p className="voices-card-role">{voice.role}</p>
+                  <blockquote className="thematic-card-quote">
+                    <p>&ldquo;{voice.quote}&rdquo;</p>
+                  </blockquote>
+                  <p className="voices-card-description">{voice.description}</p>
+                  {'highlight' in voice && voice.highlight && (
+                    <p className="voices-card-highlight">&ldquo;{voice.highlight}&rdquo;</p>
+                  )}
+                  {'impact' in voice && voice.impact && (
+                    <p className="voices-card-impact">
+                      <strong>His impact:</strong> {voice.impact}
+                    </p>
+                  )}
+                </div>
+              </article>
+            ))}
           </div>
+
+          {VOICE_CARDS.length > INITIAL_VOICES_VISIBLE && (
+            <div className="thematic-actions text-center">
+              <button
+                type="button"
+                className="pill-button outline thematic-toggle-btn"
+                onClick={() => setShowAllVoices((expanded) => !expanded)}
+                aria-expanded={showAllVoices}
+              >
+                {showAllVoices ? 'Show less' : 'Read more'}
+              </button>
+            </div>
+          )}
         </div>
       </section>
 

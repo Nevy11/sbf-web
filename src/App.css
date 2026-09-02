@@ -564,6 +564,47 @@
   min-width: 180px;
 }
 
+.voices-section {
+  background-color: #ffffff;
+}
+
+.voices-card-role {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-leaf);
+  margin: -0.35rem 0 1rem;
+  line-height: 1.4;
+}
+
+.voices-card-description {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-forest);
+  opacity: 0.82;
+  margin: 0 0 1rem;
+}
+
+.voices-card-highlight {
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--color-forest);
+  margin: 0;
+}
+
+.voices-card-impact {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-forest);
+  opacity: 0.82;
+  margin: 1rem 0 0;
+}
+
+.voices-card-impact strong {
+  color: var(--color-forest);
+  font-weight: 700;
+}
+
 /* Legacy quick-paths (kept for any other pages) */
 .quick-paths-section {
   padding: 4rem 4rem 2rem;
