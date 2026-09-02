@@ -6,14 +6,6 @@ import {
   Mail,
   ChevronLeft,
   ChevronRight,
-  Heart,
-  Sprout,
-  Users,
-  BookOpen,
-  HandHeart,
-  Gift,
-  Handshake,
-  ArrowRight,
 } from 'lucide-react';
 import { SiteHeader } from '../components/SiteHeader';
 import '../App.css';
@@ -56,10 +48,67 @@ const HERO_SLIDES: Array<{
 ];
 
 const SLIDE_INTERVAL_MS = 5000;
+const INITIAL_THEMES_VISIBLE = 3;
+
+const THEMATIC_CARDS = [
+  {
+    title: 'Identity & Self-Discovery',
+    quote:
+      'I spent so much time trying to fit in that I forgot to ask who I really was. Then I began to listen to my own story, discover what mattered to me, and finally understand the person I was becoming.',
+    image: '/a_person_blossoming_without_logo.jpeg',
+  },
+  {
+    title: 'Confidence & Self-Belief',
+    quote:
+      'I used to stay quiet, afraid that my voice wasn\u2019t important. One conversation changed something in me\u2014I realized I didn\u2019t need to become someone else to be confident. I simply needed to believe in myself.',
+    image: '/sbf_smile.jpeg',
+  },
+  {
+    title: 'Emotional Wellbeing',
+    quote:
+      'I thought being strong meant hiding what I felt. Then I found a space where I could speak, listen, and be understood. I learned that acknowledging my emotions was not weakness\u2014it was strength.',
+    image: '/transformation.jpg',
+  },
+  {
+    title: 'Purpose & Direction',
+    quote:
+      'I knew I wanted more, but I didn\u2019t know where to begin. Through reflection and meaningful conversations, I started connecting my strengths with my dreams\u2014and my next step became clearer.',
+    image: '/hero-image.jpg',
+  },
+  {
+    title: 'Leadership & Personal Agency',
+    quote:
+      'I always thought leaders were people with titles. Then I realized leadership begins with me\u2014with the choices I make, the responsibility I take, and the difference I choose to create.',
+    image: '/knowledge.jpg',
+  },
+  {
+    title: 'Relationships & Communication',
+    quote:
+      'I thought being heard was all that mattered. Then I learned to listen, understand, and communicate with intention. The conversations changed\u2014and so did my relationships.',
+    image: '/a_person_blossoming.jpeg',
+  },
+  {
+    title: 'Life Skills & Future Readiness',
+    quote:
+      'The future once felt like something I had to figure out alone. Then I began learning the skills, making better choices, and preparing for opportunities I couldn\u2019t yet see.',
+    image: '/hero-image.jpg',
+  },
+  {
+    title: 'Community & Social Impact',
+    quote:
+      'I came looking for a change in myself. I left wondering how I could create change for someone else. Because when we discover our strength, we can use it to lift others too.',
+    image: '/sbf_smile.jpeg',
+  },
+] as const;
 
 export const LandingPage: React.FC = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [showAllThemes, setShowAllThemes] = useState(false);
+
+  const visibleThemes = showAllThemes
+    ? THEMATIC_CARDS
+    : THEMATIC_CARDS.slice(0, INITIAL_THEMES_VISIBLE);
 
   const goToSlide = useCallback((index: number) => {
     setActiveSlide((index + HERO_SLIDES.length) % HERO_SLIDES.length);
@@ -144,100 +193,54 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Welcome Bridge — mission & pathways */}
-      <section className="welcome-bridge-section" aria-labelledby="welcome-bridge-heading">
-        <div className="welcome-bridge-bg" aria-hidden="true" />
+      {/* Thematic Stories Section */}
+      <section className="thematic-section" aria-labelledby="thematic-heading">
+        <div className="thematic-bg" aria-hidden="true" />
         <div className="container">
-          <div className="welcome-bridge-header text-center">
-            <span className="welcome-bridge-eyebrow">Smart Blossoming Foundation</span>
-            <h2 id="welcome-bridge-heading" className="welcome-bridge-title">
-              A community where young people heal, grow&nbsp;and blossom.
+          <div className="thematic-header text-center">
+            <span className="thematic-eyebrow">Stories of growth</span>
+            <h2 id="thematic-heading" className="thematic-title">
+              Every journey has a theme
             </h2>
-            <p className="welcome-bridge-lead">
-              We create safe, choice-led spaces for emotional wellbeing, personal growth and purposeful
-              living — walking alongside every young person with compassion, mentorship and community.
+            <p className="thematic-lead">
+              Real reflections from the kinds of growth we nurture — identity, confidence, purpose,
+              and the courage to create change.
             </p>
           </div>
 
-          <div className="welcome-pillars">
-            <article className="welcome-pillar welcome-pillar-heal">
-              <div className="welcome-pillar-icon" aria-hidden="true">
-                <Heart size={28} strokeWidth={2} />
-              </div>
-              <h3>Safe &amp; Respectful</h3>
-              <p>Warm, non-judgmental spaces where you can share at your own pace — no pressure, no labels.</p>
-            </article>
-            <article className="welcome-pillar welcome-pillar-grow">
-              <div className="welcome-pillar-icon" aria-hidden="true">
-                <Sprout size={28} strokeWidth={2} />
-              </div>
-              <h3>Guided Growth</h3>
-              <p>Practical tools, mentorship and programs that build confidence, skills and emotional resilience.</p>
-            </article>
-            <article className="welcome-pillar welcome-pillar-blossom">
-              <div className="welcome-pillar-icon" aria-hidden="true">
-                <Users size={28} strokeWidth={2} />
-              </div>
-              <h3>Community-Centred</h3>
-              <p>Connect with peers and mentors who understand your journey and celebrate every step forward.</p>
-            </article>
+          <div className="thematic-grid">
+            {visibleThemes.map((theme) => (
+              <article key={theme.title} className="thematic-card">
+                <div className="thematic-card-image-wrap">
+                  <img
+                    src={theme.image}
+                    alt=""
+                    className="thematic-card-image"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="thematic-card-body">
+                  <h3 className="thematic-card-title">{theme.title}</h3>
+                  <blockquote className="thematic-card-quote">
+                    <p>&ldquo;{theme.quote}&rdquo;</p>
+                  </blockquote>
+                </div>
+              </article>
+            ))}
           </div>
 
-          <div className="welcome-actions">
-            <p className="welcome-actions-label">What would you like to do today?</p>
-            <div className="welcome-action-grid">
-              <a href="#programs" className="welcome-action-card">
-                <span className="welcome-action-icon welcome-action-icon-programs" aria-hidden="true">
-                  <Sprout size={22} strokeWidth={2.25} />
-                </span>
-                <span className="welcome-action-text">
-                  <strong>Join a program</strong>
-                  <span>Explore Heal, Grow &amp; Blossom pathways</span>
-                </span>
-                <ArrowRight size={18} className="welcome-action-arrow" aria-hidden="true" />
-              </a>
-              <a href="#resources" className="welcome-action-card">
-                <span className="welcome-action-icon welcome-action-icon-resources" aria-hidden="true">
-                  <BookOpen size={22} strokeWidth={2.25} />
-                </span>
-                <span className="welcome-action-text">
-                  <strong>Learn from resources</strong>
-                  <span>Guides, worksheets &amp; tools</span>
-                </span>
-                <ArrowRight size={18} className="welcome-action-arrow" aria-hidden="true" />
-              </a>
-              <Link to="/volunteer" className="welcome-action-card welcome-action-card-highlight">
-                <span className="welcome-action-icon welcome-action-icon-volunteer" aria-hidden="true">
-                  <HandHeart size={22} strokeWidth={2.25} />
-                </span>
-                <span className="welcome-action-text">
-                  <strong>Volunteer</strong>
-                  <span>Give your time &amp; skills</span>
-                </span>
-                <ArrowRight size={18} className="welcome-action-arrow" aria-hidden="true" />
-              </Link>
-              <a href="#get-involved" className="welcome-action-card">
-                <span className="welcome-action-icon welcome-action-icon-partner" aria-hidden="true">
-                  <Handshake size={22} strokeWidth={2.25} />
-                </span>
-                <span className="welcome-action-text">
-                  <strong>Partner with us</strong>
-                  <span>Align missions &amp; collaborate</span>
-                </span>
-                <ArrowRight size={18} className="welcome-action-arrow" aria-hidden="true" />
-              </a>
-              <Link to="/donate" className="welcome-action-card welcome-action-card-donate">
-                <span className="welcome-action-icon welcome-action-icon-donate" aria-hidden="true">
-                  <Gift size={22} strokeWidth={2.25} />
-                </span>
-                <span className="welcome-action-text">
-                  <strong>Donate</strong>
-                  <span>Fuel the mission</span>
-                </span>
-                <ArrowRight size={18} className="welcome-action-arrow" aria-hidden="true" />
-              </Link>
+          {THEMATIC_CARDS.length > INITIAL_THEMES_VISIBLE && (
+            <div className="thematic-actions text-center">
+              <button
+                type="button"
+                className="pill-button outline thematic-toggle-btn"
+                onClick={() => setShowAllThemes((expanded) => !expanded)}
+                aria-expanded={showAllThemes}
+              >
+                {showAllThemes ? 'Show less' : 'Read more'}
+              </button>
             </div>
-          </div>
+          )}
         </div>
       </section>
 

@@ -440,14 +440,14 @@
   box-shadow: 0 20px 40px rgba(0, 71, 53, 0.08);
 }
 
-/* Welcome Bridge Section */
-.welcome-bridge-section {
+/* Thematic Stories Section */
+.thematic-section {
   position: relative;
   padding: 5rem 0 4.5rem;
   overflow: hidden;
 }
 
-.welcome-bridge-bg {
+.thematic-bg {
   position: absolute;
   inset: 0;
   background:
@@ -457,12 +457,12 @@
   pointer-events: none;
 }
 
-.welcome-bridge-section .container {
+.thematic-section .container {
   position: relative;
   z-index: 1;
 }
 
-.welcome-bridge-eyebrow {
+.thematic-eyebrow {
   display: inline-block;
   color: var(--color-leaf);
   font-weight: 700;
@@ -472,7 +472,7 @@
   margin-bottom: 1rem;
 }
 
-.welcome-bridge-title {
+.thematic-title {
   font-size: 2.5rem;
   line-height: 1.15;
   font-weight: 800;
@@ -481,7 +481,7 @@
   margin: 0 auto 1.25rem;
 }
 
-.welcome-bridge-lead {
+.thematic-lead {
   font-size: 1.15rem;
   line-height: 1.7;
   color: var(--color-forest);
@@ -490,185 +490,78 @@
   margin: 0 auto 3.5rem;
 }
 
-.welcome-pillars {
+.thematic-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.75rem;
-  margin-bottom: 3.5rem;
 }
 
-.welcome-pillar {
+.thematic-card {
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
   border: 1px solid var(--color-sage);
   border-radius: 20px;
-  padding: 2rem 1.75rem 2.25rem;
-  text-align: left;
+  overflow: hidden;
   box-shadow: 0 8px 28px rgba(0, 71, 53, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.welcome-pillar:hover {
+.thematic-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 40px rgba(0, 71, 53, 0.1);
 }
 
-.welcome-pillar-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
-  margin-bottom: 1.25rem;
+.thematic-card-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
 }
 
-.welcome-pillar-heal .welcome-pillar-icon {
-  background: linear-gradient(135deg, rgba(0, 71, 53, 0.12) 0%, rgba(111, 157, 77, 0.2) 100%);
-  color: var(--color-forest);
+.thematic-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
-.welcome-pillar-grow .welcome-pillar-icon {
-  background: linear-gradient(135deg, rgba(212, 168, 90, 0.2) 0%, rgba(179, 89, 0, 0.12) 100%);
-  color: #8a5a00;
+.thematic-card:hover .thematic-card-image {
+  transform: scale(1.04);
 }
 
-.welcome-pillar-blossom .welcome-pillar-icon {
-  background: linear-gradient(135deg, rgba(111, 157, 77, 0.18) 0%, rgba(0, 71, 53, 0.1) 100%);
-  color: var(--color-leaf);
+.thematic-card-body {
+  padding: 1.75rem 1.75rem 2rem;
+  text-align: left;
 }
 
-.welcome-pillar h3 {
+.thematic-card-title {
   font-size: 1.2rem;
   font-weight: 800;
   color: var(--color-forest);
-  margin-bottom: 0.65rem;
-}
-
-.welcome-pillar p {
-  font-size: 0.98rem;
-  line-height: 1.65;
-  color: var(--color-forest);
-  opacity: 0.78;
-}
-
-.welcome-actions-label {
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--color-forest);
-  margin-bottom: 1.5rem;
-}
-
-.welcome-action-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-}
-
-.welcome-action-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.85rem;
-  padding: 1.35rem 1.25rem;
-  background: #ffffff;
-  border: 1px solid var(--color-sage);
-  border-radius: 16px;
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.25s ease;
-  box-shadow: 0 4px 16px rgba(0, 71, 53, 0.05);
-  position: relative;
-}
-
-.welcome-action-card:hover {
-  border-color: var(--color-leaf);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 71, 53, 0.1);
-}
-
-.welcome-action-card:hover .welcome-action-arrow {
-  transform: translateX(4px);
-  opacity: 1;
-}
-
-.welcome-action-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  flex-shrink: 0;
-}
-
-.welcome-action-icon-programs {
-  background: rgba(0, 71, 53, 0.1);
-  color: var(--color-forest);
-}
-
-.welcome-action-icon-resources {
-  background: rgba(111, 157, 77, 0.15);
-  color: var(--color-leaf);
-}
-
-.welcome-action-icon-volunteer {
-  background: rgba(214, 226, 206, 0.8);
-  color: var(--color-forest);
-}
-
-.welcome-action-icon-partner {
-  background: rgba(0, 71, 53, 0.08);
-  color: var(--color-forest);
-}
-
-.welcome-action-icon-donate {
-  background: rgba(212, 168, 90, 0.25);
-  color: #8a5a00;
-}
-
-.welcome-action-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  flex: 1;
-}
-
-.welcome-action-text strong {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--color-forest);
+  margin-bottom: 1rem;
   line-height: 1.3;
 }
 
-.welcome-action-text span {
-  font-size: 0.8rem;
+.thematic-card-quote {
+  margin: 0;
+}
+
+.thematic-card-quote p {
+  font-size: 0.98rem;
+  line-height: 1.7;
   color: var(--color-forest);
-  opacity: 0.65;
-  line-height: 1.4;
+  opacity: 0.8;
+  font-style: italic;
 }
 
-.welcome-action-arrow {
-  position: absolute;
-  top: 1.35rem;
-  right: 1.1rem;
-  color: var(--color-leaf);
-  opacity: 0.5;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+.thematic-actions {
+  margin-top: 2.5rem;
 }
 
-.welcome-action-card-highlight {
-  background: linear-gradient(160deg, #ffffff 0%, var(--color-mist) 100%);
-  border-color: var(--color-leaf);
-}
-
-.welcome-action-card-donate {
-  background: linear-gradient(160deg, #fffbf3 0%, rgba(212, 168, 90, 0.15) 100%);
-  border-color: var(--color-gold);
-}
-
-.welcome-action-card-donate:hover {
-  border-color: #c49a3a;
+.thematic-toggle-btn {
+  min-width: 180px;
 }
 
 /* Legacy quick-paths (kept for any other pages) */
@@ -1414,44 +1307,30 @@
     padding: 4rem 0;
   }
 
-  .welcome-bridge-section {
+  .thematic-section {
     padding: 3rem 0 2.5rem;
   }
 
-  .welcome-bridge-title {
+  .thematic-title {
     font-size: 1.85rem;
   }
 
-  .welcome-bridge-lead {
+  .thematic-lead {
     font-size: 1rem;
     margin-bottom: 2.5rem;
   }
 
-  .welcome-pillars {
+  .thematic-grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
-    margin-bottom: 2.5rem;
   }
 
-  .welcome-pillar {
+  .thematic-card-body {
     padding: 1.5rem 1.35rem 1.75rem;
   }
 
-  .welcome-action-grid {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-  }
-
-  .welcome-action-card {
-    flex-direction: row;
-    align-items: center;
-    padding: 1.1rem 1.25rem;
-  }
-
-  .welcome-action-arrow {
-    position: static;
-    margin-left: auto;
-    flex-shrink: 0;
+  .thematic-actions {
+    margin-top: 2rem;
   }
 
   .quick-paths-section {
@@ -2656,12 +2535,7 @@
 }
 
 @media (max-width: 1100px) {
-  .welcome-pillars {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .welcome-action-grid {
+  .thematic-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
