@@ -132,6 +132,30 @@ const CASE_STORIES = [
   },
 ] as const;
 
+const JOURNEY_PILLARS = [
+  {
+    title: 'Mentorship Sessions',
+    subtitle: 'Guidance that starts a conversation and creates a new perspective.',
+    description:
+      'Our mentorship sessions create safe and engaging spaces where young people can ask questions, share experiences, learn from others, and gain the confidence to navigate their personal and future journeys.',
+    variant: 'mentorship',
+  },
+  {
+    title: 'Career Building & Skills',
+    subtitle: 'Helping young people prepare for the opportunities ahead.',
+    description:
+      'Through practical sessions on career development, CV building, communication, personal branding, workplace readiness, and essential life skills, we help young people turn their potential into opportunity.',
+    variant: 'career',
+  },
+  {
+    title: 'School Mentorship Outreach',
+    subtitle: 'Taking meaningful conversations beyond our walls.',
+    description:
+      'We visit high schools to engage students in mentorship conversations that encourage self-awareness, confidence, leadership, career exploration, and purposeful decision-making.',
+    variant: 'school',
+  },
+] as const;
+
 const INITIAL_VOICES_VISIBLE = 3;
 
 const VOICE_CARDS = [
@@ -443,76 +467,35 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Freshness & Updates Section */}
-      <section id="resources" className="updates-section">
+      {/* Our Journey So Far Section */}
+      <section id="resources" className="journey-section journey-so-far-section" aria-labelledby="journey-heading">
         <div className="container">
-          <h2 className="section-title text-center" style={{ marginBottom: '3rem' }}>Upcoming & Recent</h2>
-          <div className="updates-grid">
-            <div className="update-card event-card">
-              <span className="update-badge">Upcoming Event</span>
-              <h3 className="update-title">Annual Blossoming Retreat</h3>
-              <p className="update-date">October 12, 2026</p>
-              <p className="update-desc">A full-day interactive retreat focusing on community building and resilience.</p>
-              <a href="#register" className="text-link">Register Now</a>
-            </div>
-            <div className="update-card resource-card">
-              <span className="update-badge">Recent Resource</span>
-              <h3 className="update-title">Guide to Emotional Regulation</h3>
-              <p className="update-date">Published: July 20, 2026</p>
-              <p className="update-desc">A practical 10-page guide with everyday tools to manage stress.</p>
-              <a href="#download" className="text-link">Download PDF</a>
-            </div>
-            <div className="update-card resource-card">
-              <span className="update-badge">Recent Resource</span>
-              <h3 className="update-title">Mindset Shift Worksheet</h3>
-              <p className="update-date">Published: July 5, 2026</p>
-              <p className="update-desc">Exercises to help identify and shift limiting beliefs.</p>
-              <a href="#download" className="text-link">Download PDF</a>
-            </div>
+          <div className="journey-so-far-header text-center">
+            <h2 id="journey-heading" className="journey-so-far-title">Our Journey So Far</h2>
+            <p className="journey-so-far-lead">
+              Creating spaces. Starting conversations. Inspiring possibility.
+            </p>
           </div>
-        </div>
-      </section>
 
+          <div className="journey-grid">
+            {JOURNEY_PILLARS.map((pillar) => (
+              <article key={pillar.title} className={`journey-card journey-card-${pillar.variant}`}>
+                <h3>{pillar.title}</h3>
+                <p className="journey-card-subtitle">{pillar.subtitle}</p>
+                <p>{pillar.description}</p>
+              </article>
+            ))}
+          </div>
 
-
-      {/* Get Involved Section */}
-      <section id="get-involved" className="get-involved-section">
-        <div className="container text-center">
-          <h2 className="section-title" style={{ marginBottom: '1rem' }}>Get Involved</h2>
-          <p className="section-description" style={{ marginBottom: '3rem', margin: '0 auto', maxWidth: '800px' }}>
-            Join our community in making a meaningful impact. Choose the path that fits your capacity and skills.
-          </p>
-          <div className="involvement-grid">
-            <div className="involvement-card involvement-card-volunteer">
-              <span className="involvement-tag">Give your time</span>
-              <h3>Volunteer</h3>
-              <ul className="involvement-expectations">
-                <li>2-4 hours per month</li>
-                <li>Background check required</li>
-                <li>Mandatory training session</li>
-              </ul>
-              <Link to="/volunteer" className="pill-button primary involvement-cta">Apply to Volunteer</Link>
-            </div>
-            <div className="involvement-card involvement-card-partner">
-              <span className="involvement-tag">Work together</span>
-              <h3>Partner</h3>
-              <ul className="involvement-expectations">
-                <li>Aligned mission & values</li>
-                <li>Signed MOU</li>
-                <li>Annual review</li>
-              </ul>
-              <Link to="/contact" className="pill-button outline involvement-cta">Become a Partner</Link>
-            </div>
-            <div className="involvement-card involvement-card-donate">
-              <span className="involvement-tag">Fuel the mission</span>
-              <h3>Donate</h3>
-              <ul className="involvement-expectations">
-                <li>One-time or recurring</li>
-                <li>Tax-deductible</li>
-                <li>Transparent reporting</li>
-              </ul>
-              <Link to="/donate" className="pill-button donate involvement-cta">Make a Donation</Link>
-            </div>
+          <div className="journey-closing text-center">
+            <h3 className="journey-closing-title">From Conversations to Action</h3>
+            <blockquote className="journey-closing-quote">
+              &ldquo;We don&rsquo;t just talk about transformation. We create spaces where it can begin.&rdquo;
+            </blockquote>
+            <p className="journey-closing-text">
+              Through mentorship sessions, career-building workshops, skills development, and school outreach,
+              Smart Blossoming Foundation brings meaningful conversations directly to the people who need them.
+            </p>
           </div>
         </div>
       </section>

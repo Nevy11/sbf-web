@@ -749,6 +749,87 @@
   opacity: 0.82;
 }
 
+.journey-so-far-section {
+  padding: 100px 0;
+  background-color: var(--color-mist);
+}
+
+.journey-so-far-title {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  font-weight: 800;
+  color: var(--color-forest);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 auto 1.25rem;
+}
+
+.journey-so-far-lead {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-forest);
+  opacity: 0.82;
+  max-width: 680px;
+  margin: 0 auto 3.5rem;
+}
+
+.journey-card-subtitle {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.55;
+  color: var(--color-leaf);
+  opacity: 1;
+  margin-bottom: 1rem;
+}
+
+.journey-card-mentorship::before {
+  background: linear-gradient(90deg, var(--color-forest), var(--color-leaf));
+}
+
+.journey-card-career::before {
+  background: linear-gradient(90deg, #b35900, #d4a85a);
+}
+
+.journey-card-school::before {
+  background: linear-gradient(90deg, #660066, #9b4d9b);
+}
+
+.journey-card h3 {
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+}
+
+.journey-closing {
+  margin-top: 4rem;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.journey-closing-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-forest);
+  margin-bottom: 1.5rem;
+}
+
+.journey-closing-quote {
+  margin: 0 auto 1.5rem;
+  font-size: 1.35rem;
+  line-height: 1.55;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--color-forest);
+}
+
+.journey-closing-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-forest);
+  opacity: 0.82;
+  margin: 0;
+}
+
 /* Library Section */
 .library-section {
   padding: 120px 0;
@@ -1548,6 +1629,27 @@
 
   .case-stories-tagline {
     font-size: 1.05rem;
+  }
+
+  .journey-so-far-title {
+    font-size: 1.85rem;
+  }
+
+  .journey-so-far-lead {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .journey-closing {
+    margin-top: 2.5rem;
+  }
+
+  .journey-closing-title {
+    font-size: 1.4rem;
+  }
+
+  .journey-closing-quote {
+    font-size: 1.15rem;
   }
 
   .thematic-lead {
