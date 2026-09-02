@@ -367,21 +367,33 @@ export const LandingPage: React.FC = () => {
       </section>
 
       {/* About Us Section */}
-      <section className="trust-boundaries-section about-us-section">
-        <div className="container text-center">
-          <div className="trust-card about-us-card">
-            <h2 className="about-us-title">About Us</h2>
-            <blockquote className="about-us-quote">
-              &ldquo;Your story is not where you end; it is where your becoming begins.&rdquo;
-            </blockquote>
-            <p className="section-description about-us-description">
-              We create meaningful spaces where people come together, discover their potential, build
-              confidence, and turn personal experiences into purposeful action.
-            </p>
-            <p className="about-us-tagline">Your story matters. Your future matters.</p>
-            <button type="button" className="pill-button primary about-us-btn">
-              About us
-            </button>
+      <section className="about-us-section" aria-labelledby="about-us-heading">
+        <div className="about-us-bg" aria-hidden="true" />
+        <div className="container">
+          <div className="about-us-layout">
+            <div className="about-us-image-wrap">
+              <img
+                src="/a_person_blossoming_without_logo.jpeg"
+                alt=""
+                className="about-us-image"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="about-us-content">
+              <span className="about-us-eyebrow">About Us</span>
+              <h2 id="about-us-heading" className="about-us-quote">
+                &ldquo;Your story is not where you end; it is where your becoming begins.&rdquo;
+              </h2>
+              <p className="about-us-description">
+                We create meaningful spaces where people come together, discover their potential,
+                build confidence, and turn personal experiences into purposeful action.
+              </p>
+              <p className="about-us-tagline">Your story matters. Your future matters.</p>
+              <button type="button" className="pill-button about-us-btn">
+                About us
+              </button>
+            </div>
           </div>
         </div>
       </section>
