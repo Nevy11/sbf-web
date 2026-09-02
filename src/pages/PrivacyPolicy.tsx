@@ -75,7 +75,7 @@ export function PrivacyPolicy() {
           <h2 style={{ color: 'var(--color-forest)', fontSize: '1.5rem', marginBottom: '1rem' }}>7. Contact Us</h2>
           <p style={{ lineHeight: 1.6, color: 'var(--color-text)' }}>
             If you have questions about this Privacy Policy or our privacy practices, please contact us at:<br /><br />
-            <strong>Email:</strong> hello@smartblossoming.org<br />
+            <strong>Email:</strong> smartblossomingfoundation@gmail.com<br />
             <strong>Phone:</strong> 0735231262
           </p>
         </section>

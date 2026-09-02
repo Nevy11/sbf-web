@@ -313,7 +313,7 @@ export const Donate: React.FC = () => {
 
                   <div className="form-footer-note">
                     <strong>Payment:</strong> Online payment processing will be confirmed securely after you submit.<br />
-                    <strong>Questions?</strong> Email hello@smartblossoming.org or call 0735231262.
+                    <strong>Questions?</strong> Email smartblossomingfoundation@gmail.com or call 0735231262.
                   </div>
                 </form>
               </div>
@@ -352,7 +352,7 @@ export const Donate: React.FC = () => {
               </p>
               <div className="footer-contact-details">
                 <p style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Phone size={16} /> 0735231262</p>
-                <p style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Mail size={16} /> hello@smartblossoming.org</p>
+                <p style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Mail size={16} /> smartblossomingfoundation@gmail.com</p>
               </div>
               <div className="social-links">
                 <a href="#" className="social-link" title="Twitter">𝕏</a>

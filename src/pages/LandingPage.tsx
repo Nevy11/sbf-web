@@ -546,7 +546,7 @@ export const LandingPage: React.FC = () => {
               </p>
               <div className="footer-contact-details">
                 <p style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Phone size={16} /> 0735231262</p>
-                <p style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Mail size={16} /> hello@smartblossoming.org</p>
+                <p style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Mail size={16} /> smartblossomingfoundation@gmail.com</p>
               </div>
               <div className="social-links">
                 <a href="#" className="social-link" title="Twitter">𝕏</a>

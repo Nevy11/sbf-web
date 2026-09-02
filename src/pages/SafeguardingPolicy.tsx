@@ -56,7 +56,7 @@ export function SafeguardingPolicy() {
           <h2 style={{ color: 'var(--color-forest)', fontSize: '1.5rem', marginBottom: '1rem' }}>5. Contact for Safeguarding Concerns</h2>
           <p style={{ lineHeight: 1.6, color: 'var(--color-text)' }}>
             If you have a safeguarding concern or need to report an incident, please contact us immediately in strict confidence:<br /><br />
-            <strong>Email:</strong> hello@smartblossoming.org<br />
+            <strong>Email:</strong> smartblossomingfoundation@gmail.com<br />
             <strong>Phone:</strong> 0735231262
           </p>
         </section>
