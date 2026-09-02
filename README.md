@@ -1,183 +1,180 @@
-# Smart Blossoming Foundation (SBF) Web App
+# Smart Blossoming Foundation — Website
 
-The Smart Blossoming Foundation web app is a React and TypeScript experience designed to support mental wellness, personal growth, and guided transformation. The platform is structured around three core user journeys:
+Official website for [Smart Blossoming Foundation](https://smartblossomingfoundation.pages.dev/), a community-centred organisation creating safe spaces for young people to heal emotionally, grow mentally, build confidence, and live with purpose.
 
-- Heal: emotional wellbeing and mental health support
-- Grow: learning, reflection, and personal development
-- Blossom: purpose, confidence, and self-actualization
+**Live site:** [https://smartblossomingfoundation.pages.dev/](https://smartblossomingfoundation.pages.dev/)
 
-This project combines a modern frontend experience with Supabase-backed data access and Cloudflare deployment support.
+## About the project
 
-## Overview
+This is a React single-page application built with Vite and TypeScript. It serves as the public-facing home for SBF — sharing the foundation's story, programs, voices, and ways to get involved — while also providing a protected member dashboard backed by Supabase.
 
-SBF provides a digital space where users can:
+The product experience is rooted in three pillars:
 
-- explore a welcoming landing experience
-- create an account and sign in securely
-- access a protected dashboard experience
-- navigate through themed wellness and growth views
-- interact with a foundation-centered experience designed for reflection and progress
-
-## Core Pillars
-
-The product experience is organized around three pillars:
-
-- Heal: creating psychological safety and emotional wellness
-- Grow: building knowledge, skills, and continuous learning habits
-- Blossom: embodying purpose and becoming an empowered self
+- **Heal** — emotional wellbeing and psychological safety
+- **Grow** — learning, skills, and personal development
+- **Blossom** — purpose, confidence, and community contribution
 
 ## Features
 
-- responsive, single-page application experience
-- protected routes for authenticated users
-- structured dashboard navigation for Heal, Grow, and Blossom views
-- Supabase integration for authentication and data access
-- Cloudflare Worker-based asset serving for deployment
-- modular component structure for maintainability
+### Public website
 
-## Tech Stack
+- Hero carousel with foundation messaging
+- Thematic stories section (growth themes with expandable cards)
+- Case stories — "Stories of Becoming"
+- About Us and founder spotlight (Hannet Paul)
+- Voices That Inspire — mentor and speaker highlights
+- Our Journey So Far — mentorship, career skills, and school outreach
+- Donate, Volunteer, Contact, and Events & Programs pages
+- Privacy, Terms of Service, and Safeguarding policy pages
+- Responsive layout with mobile navigation
 
-- Frontend: React, TypeScript, Vite
-- Routing: React Router
-- Styling: CSS Modules and custom styles
-- Backend and data: Supabase
-- Hosting and deployment: Cloudflare Workers / Wrangler
-- Linting: ESLint
+### Member area
 
-## Project Structure
+- Supabase authentication (sign up / sign in)
+- Protected dashboard with Heal, Grow, and Blossom views
+
+## Tech stack
+
+| Layer | Technology |
+|-------|------------|
+| Framework | React 19, TypeScript |
+| Build tool | Vite |
+| Routing | React Router |
+| Styling | Global CSS + CSS Modules |
+| Icons | Lucide React |
+| Auth & data | Supabase |
+| Hosting | Cloudflare Pages |
+| Deploy CLI | Wrangler |
+
+## Project structure
 
 ```text
+public/               # Static assets (images, favicon, _redirects)
 src/
-  components/         # shared UI components and route protection
-  lib/                # shared client and app utilities
-  pages/              # route-level views and page components
-  App.tsx             # application routing configuration
-  main.tsx            # app entry point
-  worker.ts           # Cloudflare Worker entry for SPA asset serving
+  components/         # Shared UI (SiteHeader, ProtectedRoute, etc.)
+  lib/                # Supabase client and utilities
+  pages/              # Route-level page components
+  App.tsx             # Route definitions
+  App.css             # Global styles
+  main.tsx            # Application entry point
 supabase/
-  config.toml         # Supabase project config
-  migrations/         # database migration files
+  config.toml         # Supabase local/project config
+  migrations/         # Database migrations
+wrangler.toml         # Cloudflare Pages project config
 ```
 
 ## Prerequisites
 
-Before getting started, make sure you have:
-
-- Node.js 18+ or newer
+- Node.js 18+
 - Yarn
-- a Supabase project
-- a Cloudflare account if you plan to deploy
+- A Supabase project (for auth/dashboard features)
+- A Cloudflare account (for deployment)
 
-## Environment Setup
+## Getting started
 
-Create a local environment file named `.env` in the project root and add your Supabase credentials:
+### 1. Clone and install
+
+```bash
+git clone <repository-url>
+cd sbf-web
+yarn install
+```
+
+### 2. Environment variables
+
+Create a `.env` file in the project root:
 
 ```env
 VITE_SUPABASE_URL=your_supabase_project_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
-These values are used by the Supabase client in the application.
-
-## Installation
-
-1. Clone the repository:
-
-```bash
-git clone <repository-url>
-cd sbf-web
-```
-
-2. Install dependencies:
-
-```bash
-yarn install
-```
-
-## Development
-
-Start the local development server:
+### 3. Run locally
 
 ```bash
 yarn dev
 ```
 
-The app will be available in your browser at the local Vite URL shown in the terminal.
+Open the URL shown in the terminal (typically `http://localhost:5173`).
 
-## Available Yarn Commands
+## Scripts
 
-We use [Yarn](https://yarnpkg.com/) as our package manager. If you are new to Yarn, here are the most common commands you will use in this project:
+| Command | Description |
+|---------|-------------|
+| `yarn dev` | Start the Vite development server |
+| `yarn build` | Type-check and build for production (`dist/`) |
+| `yarn preview` | Preview the production build locally |
+| `yarn lint` | Run ESLint |
+| `yarn deploy` | Build and deploy to Cloudflare Pages |
 
-- **`yarn install`** (or simply **`yarn`**)
-  Installs all the required dependencies. Run this immediately after cloning the repository, or when someone else has added a new package.
+## Routes
 
-- **`yarn dev`**
-  Starts the local development server. Use this when you are actively writing code. It will automatically reload the page when you save your changes.
+| Path | Page |
+|------|------|
+| `/` | Landing page |
+| `/events-programs` | Programs & events |
+| `/contact` | Contact form |
+| `/donate` | Donation information |
+| `/volunteer` | Volunteer opportunities |
+| `/privacy-policy` | Privacy policy |
+| `/terms-of-service` | Terms of service |
+| `/safeguarding-policy` | Safeguarding policy |
+| `/login` | Sign in |
+| `/signup` | Create account |
+| `/dashboard` | Member dashboard (protected) |
+| `/dashboard/heal` | Heal view (protected) |
+| `/dashboard/grow` | Grow view (protected) |
+| `/dashboard/blossom` | Blossom view (protected) |
 
-- **`yarn build`**
-  Compiles the application into optimized static files ready for production deployment.
+## Deployment
 
-- **`yarn preview`**
-  Locally hosts the production build created by `yarn build` so you can verify how the app will behave before deploying it.
+The site is deployed to **Cloudflare Pages** under the project `smartblossomingfoundation`.
 
-- **`yarn lint`**
-  Runs code quality checks to find potential errors or formatting issues.
+```bash
+yarn deploy
+```
 
-- **`yarn add <package-name>`**
-  Installs a new package and adds it to the project (e.g., `yarn add lodash`).
+This runs a production build and uploads `dist/` to Pages on the `main` branch.
 
-- **`yarn remove <package-name>`**
-  Uninstalls a package and removes it from the project.
+Manual deploy:
 
-## Routing Overview
+```bash
+yarn build
+npx wrangler pages deploy dist --project-name=smartblossomingfoundation --branch=main --commit-dirty=true
+```
 
-The app currently includes the following main routes:
+### SPA routing
 
-- `/` – landing page
-- `/login` – sign in page
-- `/signup` – sign up page
-- `/dashboard` – protected dashboard shell
-- `/dashboard/heal` – Heal experience
-- `/dashboard/grow` – Grow experience
-- `/dashboard/blossom` – Blossom experience
+Client-side routing is handled by `public/_redirects`:
 
-## Supabase Notes
+```text
+/*    /index.html   200
+```
 
-The application uses Supabase for backend connectivity and data access. Database migration files are stored in the `supabase/migrations` directory.
+This ensures React Router paths work when users visit URLs directly or refresh the page.
 
-If you are working with Supabase Edge Functions, you can deploy them using the Supabase CLI:
+## Supabase
+
+Authentication and dashboard data use Supabase. Migration files live in `supabase/migrations/`.
+
+To deploy an Edge Function:
 
 ```bash
 supabase functions deploy <function_name> --no-verify-jwt
 ```
 
-## Deployment
+## Contact
 
-### Frontend and Worker
-
-This project is configured for Cloudflare deployment using Wrangler and a Worker entry point in `src/worker.ts`.
-
-Build the site:
-
-```bash
-yarn build
-```
-
-Deploy with Wrangler:
-
-```bash
-npx wrangler deploy
-```
+- **Email:** smartblossomingfoundation@gmail.com
+- **Phone:** 0735231262
 
 ## Contributing
 
-Contributions are welcome. If you plan to make changes:
-
-1. create a feature branch
-2. make your updates
-3. test locally
-4. open a pull request with a clear summary of the change
+1. Create a feature branch
+2. Make your changes
+3. Test locally with `yarn dev` and `yarn build`
+4. Open a pull request with a clear summary
 
 ## License
 
-© 2024-Present Smart Blossoming Foundation (SBF). All rights reserved.
+© 2024–Present Smart Blossoming Foundation (SBF). All rights reserved.
