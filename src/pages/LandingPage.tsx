@@ -424,16 +424,21 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Community Story Section */}
-      <section className="community-story-section">
+      {/* Founder Section */}
+      <section className="community-story-section founder-section" aria-labelledby="founder-heading">
         <div className="container">
           <div className="story-card">
-            <h2 className="section-title">Community Story</h2>
+            <h2 id="founder-heading" className="section-title">Meet Our Founder — Hannet Paul</h2>
             <blockquote className="story-quote">
-              "Finding this space allowed me to connect with others who understood my journey. The workshops provided practical tools to navigate my daily life with more confidence and clarity. It's been a truly supportive environment for personal growth."
+              &ldquo;I turned my challenges into purpose&mdash;and that purpose became Smart Blossoming Foundation.&rdquo;
             </blockquote>
-            <div className="story-author">— Maya T. (Name changed for privacy)</div>
-            <a href="#read-more" className="text-link">Read story</a>
+            <p className="founder-description">
+              My journey has not always been easy, but the challenges I encountered shaped my understanding
+              of resilience, self-belief, and purpose. What began as a personal journey of finding my footing
+              became a vision to create spaces where others can discover their strength, gain confidence, and
+              see new possibilities for their future.
+            </p>
+            <p className="founder-closing">This is how Smart Blossoming Foundation began.</p>
           </div>
         </div>
       </section>
