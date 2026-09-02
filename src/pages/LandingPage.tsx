@@ -1,48 +1,57 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Flower } from '../components/Icon3D';
-import { Phone, Mail, ChevronLeft, ChevronRight } from 'lucide-react';
+import {
+  Phone,
+  Mail,
+  ChevronLeft,
+  ChevronRight,
+  Heart,
+  Sprout,
+  Users,
+  BookOpen,
+  HandHeart,
+  Gift,
+  Handshake,
+  ArrowRight,
+} from 'lucide-react';
 import { SiteHeader } from '../components/SiteHeader';
 import '../App.css';
 
 const HERO_SLIDES: Array<{
   image: string;
-  eyebrow: string;
   headline: string;
   subheadline: string;
-  trust: string;
-  primaryCta: { label: string; href: string };
-  secondaryCta: { label: string; href: string; isRoute?: boolean };
 }> = [
   {
     image: '/a_person_blossoming_without_logo.jpeg',
-    eyebrow: 'Personal growth, confidence and purpose',
     headline: 'Your story can blossom into purpose.',
     subheadline:
       'Smart Blossoming Foundation creates safe, community-centred spaces to heal emotionally, grow mentally, build confidence and live with purpose.',
-    trust: 'Respectful. Choice-led. Community-centred.',
-    primaryCta: { label: 'Explore Programs', href: '#programs' },
-    secondaryCta: { label: 'Ask Privately', href: '#inquiry' },
   },
   {
     image: '/sbf_smile.jpeg',
-    eyebrow: 'For every young person',
-    headline: 'Every young person deserves space to become.',
+    headline: 'Every Young Person Deserves Space to Become.',
     subheadline:
-      'We create safe and transformative spaces where young people heal emotionally, grow mentally, build confidence, discover purpose and become equipped to shape their future.',
-    trust: 'Safe. Supportive. Youth-centred.',
-    primaryCta: { label: 'Explore Programs', href: '#programs' },
-    secondaryCta: { label: 'Ask Privately', href: '#inquiry' },
+      'More than just sessions, we create experiences that spark self-discovery, build confidence, shift perspectives, and inspire action. Every session is a step toward becoming more intentional, empowered, and ready for what\u2019s next.',
   },
   {
     image: '/transformation.jpg',
-    eyebrow: 'Heal. Grow. Blossom.',
     headline: 'Where healing meets purpose.',
     subheadline:
-      'From emotional wellbeing to confident leadership, we walk alongside each person through a journey of growth — with compassion, mentorship and community at every step.',
-    trust: 'Independent. Non-partisan. Choice-led.',
-    primaryCta: { label: 'Explore Programs', href: '#programs' },
-    secondaryCta: { label: 'Volunteer', href: '/volunteer', isRoute: true },
+      'Find a community that believes in your potential, supports your growth, and walks with you as you discover your voice, confidence, and purpose.',
+  },
+  {
+    image: '/hero-image.jpg',
+    headline: 'Creating Moments That Transform Lives.',
+    subheadline:
+      'Smart Blossoming Foundation brings young people together through meaningful sessions, conversations, and mentorship that inspire confidence, clarity, self-discovery, and purposeful action.',
+  },
+  {
+    image: '/knowledge.jpg',
+    headline: 'Together, We Create Greater Impact.',
+    subheadline:
+      'At Smart Blossoming Foundation, we believe meaningful change happens when we work together. We partner with individuals, organizations, communities, and institutions to create transformative experiences that equip young people with the confidence, knowledge, connections, and opportunities to shape their future.',
   },
 ];
 
@@ -97,27 +106,8 @@ export const LandingPage: React.FC = () => {
               aria-hidden={index !== activeSlide}
             >
               <div className="hero-carousel-content container">
-                <span className="hero-carousel-eyebrow">{slide.eyebrow}</span>
                 <h1 className="hero-carousel-headline">{slide.headline}</h1>
                 <p className="hero-carousel-subheadline">{slide.subheadline}</p>
-                <div className="hero-carousel-actions">
-                  <a
-                    href={slide.primaryCta.href}
-                    className="pill-button primary hero-carousel-btn"
-                  >
-                    {slide.primaryCta.label}
-                  </a>
-                  {slide.secondaryCta.isRoute ? (
-                    <Link to={slide.secondaryCta.href} className="pill-button outline hero-carousel-btn hero-carousel-btn-outline">
-                      {slide.secondaryCta.label}
-                    </Link>
-                  ) : (
-                    <a href={slide.secondaryCta.href} className="pill-button outline hero-carousel-btn hero-carousel-btn-outline">
-                      {slide.secondaryCta.label}
-                    </a>
-                  )}
-                </div>
-                <p className="hero-carousel-trust">{slide.trust}</p>
               </div>
             </article>
           ))}
@@ -154,15 +144,100 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Quick Paths Section */}
-      <section className="quick-paths-section">
-        <h2 className="quick-paths-title">I want to...</h2>
-        <div className="quick-paths-chips">
-          <a href="#programs" className="path-chip">Join a program</a>
-          <a href="#resources" className="path-chip">Learn from resources</a>
-          <a href="#get-involved" className="path-chip">Partner</a>
-          <Link to="/volunteer" className="path-chip path-chip-highlight">Volunteer</Link>
-          <Link to="/donate" className="path-chip path-chip-donate">Donate</Link>
+      {/* Welcome Bridge — mission & pathways */}
+      <section className="welcome-bridge-section" aria-labelledby="welcome-bridge-heading">
+        <div className="welcome-bridge-bg" aria-hidden="true" />
+        <div className="container">
+          <div className="welcome-bridge-header text-center">
+            <span className="welcome-bridge-eyebrow">Smart Blossoming Foundation</span>
+            <h2 id="welcome-bridge-heading" className="welcome-bridge-title">
+              A community where young people heal, grow&nbsp;and blossom.
+            </h2>
+            <p className="welcome-bridge-lead">
+              We create safe, choice-led spaces for emotional wellbeing, personal growth and purposeful
+              living — walking alongside every young person with compassion, mentorship and community.
+            </p>
+          </div>
+
+          <div className="welcome-pillars">
+            <article className="welcome-pillar welcome-pillar-heal">
+              <div className="welcome-pillar-icon" aria-hidden="true">
+                <Heart size={28} strokeWidth={2} />
+              </div>
+              <h3>Safe &amp; Respectful</h3>
+              <p>Warm, non-judgmental spaces where you can share at your own pace — no pressure, no labels.</p>
+            </article>
+            <article className="welcome-pillar welcome-pillar-grow">
+              <div className="welcome-pillar-icon" aria-hidden="true">
+                <Sprout size={28} strokeWidth={2} />
+              </div>
+              <h3>Guided Growth</h3>
+              <p>Practical tools, mentorship and programs that build confidence, skills and emotional resilience.</p>
+            </article>
+            <article className="welcome-pillar welcome-pillar-blossom">
+              <div className="welcome-pillar-icon" aria-hidden="true">
+                <Users size={28} strokeWidth={2} />
+              </div>
+              <h3>Community-Centred</h3>
+              <p>Connect with peers and mentors who understand your journey and celebrate every step forward.</p>
+            </article>
+          </div>
+
+          <div className="welcome-actions">
+            <p className="welcome-actions-label">What would you like to do today?</p>
+            <div className="welcome-action-grid">
+              <a href="#programs" className="welcome-action-card">
+                <span className="welcome-action-icon welcome-action-icon-programs" aria-hidden="true">
+                  <Sprout size={22} strokeWidth={2.25} />
+                </span>
+                <span className="welcome-action-text">
+                  <strong>Join a program</strong>
+                  <span>Explore Heal, Grow &amp; Blossom pathways</span>
+                </span>
+                <ArrowRight size={18} className="welcome-action-arrow" aria-hidden="true" />
+              </a>
+              <a href="#resources" className="welcome-action-card">
+                <span className="welcome-action-icon welcome-action-icon-resources" aria-hidden="true">
+                  <BookOpen size={22} strokeWidth={2.25} />
+                </span>
+                <span className="welcome-action-text">
+                  <strong>Learn from resources</strong>
+                  <span>Guides, worksheets &amp; tools</span>
+                </span>
+                <ArrowRight size={18} className="welcome-action-arrow" aria-hidden="true" />
+              </a>
+              <Link to="/volunteer" className="welcome-action-card welcome-action-card-highlight">
+                <span className="welcome-action-icon welcome-action-icon-volunteer" aria-hidden="true">
+                  <HandHeart size={22} strokeWidth={2.25} />
+                </span>
+                <span className="welcome-action-text">
+                  <strong>Volunteer</strong>
+                  <span>Give your time &amp; skills</span>
+                </span>
+                <ArrowRight size={18} className="welcome-action-arrow" aria-hidden="true" />
+              </Link>
+              <a href="#get-involved" className="welcome-action-card">
+                <span className="welcome-action-icon welcome-action-icon-partner" aria-hidden="true">
+                  <Handshake size={22} strokeWidth={2.25} />
+                </span>
+                <span className="welcome-action-text">
+                  <strong>Partner with us</strong>
+                  <span>Align missions &amp; collaborate</span>
+                </span>
+                <ArrowRight size={18} className="welcome-action-arrow" aria-hidden="true" />
+              </a>
+              <Link to="/donate" className="welcome-action-card welcome-action-card-donate">
+                <span className="welcome-action-icon welcome-action-icon-donate" aria-hidden="true">
+                  <Gift size={22} strokeWidth={2.25} />
+                </span>
+                <span className="welcome-action-text">
+                  <strong>Donate</strong>
+                  <span>Fuel the mission</span>
+                </span>
+                <ArrowRight size={18} className="welcome-action-arrow" aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
