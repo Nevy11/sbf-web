@@ -101,6 +101,37 @@ const THEMATIC_CARDS = [
   },
 ] as const;
 
+const CASE_STORIES = [
+  {
+    number: '01',
+    category: 'Session Story',
+    title: 'The Conversation That Changed How I Saw Myself',
+    description:
+      'A young participant shares how one meaningful conversation helped them recognize their strengths, find their voice, and see new possibilities for their future.',
+  },
+  {
+    number: '02',
+    category: 'Community Story',
+    title: 'When Young People Come Together, Possibilities Grow',
+    description:
+      'A community session brought young people together to share experiences, challenge perspectives, and discover that they were not alone in navigating life\u2019s uncertainties.',
+  },
+  {
+    number: '03',
+    category: 'Transformation Story',
+    title: 'From \u201cI Don\u2019t Know\u201d to \u201cI Can\u201d',
+    description:
+      'Sometimes transformation begins with a simple conversation. Discover how a session created a moment of clarity and gave one young person the confidence to take their next step.',
+  },
+  {
+    number: '04',
+    category: 'Partnership Story',
+    title: 'Together, We Create Greater Impact',
+    description:
+      'Discover how partnerships bring together people, ideas, resources, and opportunities to create meaningful experiences and lasting impact for young people.',
+  },
+] as const;
+
 const INITIAL_VOICES_VISIBLE = 3;
 
 const VOICE_CARDS = [
@@ -281,48 +312,34 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Featured Programs Section */}
-      <section id="programs" className="featured-programs-section">
+      {/* Case Stories Section */}
+      <section id="programs" className="case-stories-section" aria-labelledby="case-stories-heading">
         <div className="container">
-          <h2 className="section-title text-center" style={{ marginBottom: '3rem' }}>Featured Programs</h2>
-          <div className="programs-grid">
-            <div className="program-card program-card-heal">
-              <div className="program-badge heal-badge">HEAL</div>
-              <h3 className="program-title">Emotional First Aid</h3>
-              <div className="program-meta">
-                <span className="meta-chip">Adults 18+</span>
-                <span className="meta-chip">Online</span>
-                <span className="meta-chip status-open">Open</span>
-                <span className="meta-chip">Next: Aug 15</span>
-              </div>
-              <p className="program-benefit">Learn immediate, practical tools to manage anxiety and regulate your nervous system in moments of stress.</p>
-              <button className="pill-button outline full-width">View Program</button>
-            </div>
-            <div className="program-card program-card-grow">
-              <div className="program-badge grow-badge">GROW</div>
-              <h3 className="program-title">Confidence Building Workshop</h3>
-              <div className="program-meta">
-                <span className="meta-chip">Youth 14-17</span>
-                <span className="meta-chip">In person</span>
-                <span className="meta-chip status-upcoming">Upcoming</span>
-                <span className="meta-chip">Next: Sep 5</span>
-              </div>
-              <p className="program-benefit">Develop self-trust and communication skills to navigate social situations and academic pressures.</p>
-              <button className="pill-button outline full-width">View Program</button>
-            </div>
-            <div className="program-card program-card-blossom">
-              <div className="program-badge blossom-badge">BLOSSOM</div>
-              <h3 className="program-title">Community Leadership Program</h3>
-              <div className="program-meta">
-                <span className="meta-chip">All Ages</span>
-                <span className="meta-chip">Hybrid</span>
-                <span className="meta-chip status-closed">Closed</span>
-                <span className="meta-chip">Next: Spring 2027</span>
-              </div>
-              <p className="program-benefit">Turn your personal growth into community impact by learning how to mentor and support others.</p>
-              <button className="pill-button outline full-width">View Program</button>
-            </div>
+          <div className="case-stories-header text-center">
+            <span className="case-stories-eyebrow">Case Stories</span>
+            <h2 id="case-stories-heading" className="case-stories-title">
+              Stories of Becoming
+            </h2>
+            <p className="case-stories-lead">
+              Every story has a moment that can change everything.
+            </p>
           </div>
+
+          <div className="case-stories-grid">
+            {CASE_STORIES.map((story) => (
+              <article key={story.number} className="case-story-card">
+                <span className="case-story-label">
+                  {story.number} &mdash; {story.category}
+                </span>
+                <h3 className="case-story-title">{story.title}</h3>
+                <p className="case-story-description">{story.description}</p>
+              </article>
+            ))}
+          </div>
+
+          <p className="case-stories-tagline text-center">
+            Your story is not where you end; it is where your becoming begins.
+          </p>
         </div>
       </section>
 
