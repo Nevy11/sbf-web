@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { HeartPulse, TrendingUp, Flower, LogOut, LayoutDashboard, Calendar } from './Icon3D';
+import { Info } from 'lucide-react'; // <-- Imported directly from lucide-react to fix the error
 import { supabase } from '../lib/supabase';
 import styles from './Navigation.module.css';
 
@@ -50,13 +51,21 @@ export const Navigation: React.FC = () => {
           <span>Blossom</span>
         </NavLink>
 
-        {/* UPDATED: Button label and route for the Events & Programs page */}
         <NavLink 
           to="/events-programs" 
           className={({ isActive }) => isActive ? `${styles.navItem} ${styles.activeNavItem}` : styles.navItem}
         >
           <Calendar size={20} />
           <span>Events & Programs</span>
+        </NavLink>
+
+        {/* About Us Link */}
+        <NavLink 
+          to="/about" 
+          className={({ isActive }) => isActive ? `${styles.navItem} ${styles.activeNavItem}` : styles.navItem}
+        >
+          <Info size={20} />
+          <span>About Us</span>
         </NavLink>
       </div>
       

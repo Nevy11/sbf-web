@@ -1,9 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { LandingPage } from './pages/LandingPage';
-import { EventsPrograms } from './pages/EventsPrograms'; // <-- Added new import
+import { About } from './pages/About'; // <-- Added About import
+import { EventsPrograms } from './pages/EventsPrograms';
 import { Contact } from './pages/Contact';
-import { Donate } from './pages/Donate';
-import { Volunteer } from './pages/Volunteer';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { TermsOfService } from './pages/TermsOfService';
 import { SafeguardingPolicy } from './pages/SafeguardingPolicy';
@@ -21,10 +20,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/events-programs" element={<EventsPrograms />} /> {/* <-- Added new route */}
+        <Route path="/about" element={<About />} /> {/* <-- Added About route */}
+        <Route path="/events-programs" element={<EventsPrograms />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/donate" element={<Donate />} />
-        <Route path="/volunteer" element={<Volunteer />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/safeguarding-policy" element={<SafeguardingPolicy />} />

@@ -24,7 +24,7 @@ const HERO_SLIDES: Array<{
     image: '/sbf_smile.jpeg',
     headline: 'Every Young Person Deserves Space to Become.',
     subheadline:
-      'More than just sessions, we create experiences that spark self-discovery, build confidence, shift perspectives, and inspire action. Every session is a step toward becoming more intentional, empowered, and ready for what\u2019s next.',
+      'More than just sessions, we create experiences that spark self-discovery, build confidence, shift perspectives, and inspire action. Every session is a step toward becoming more intentional, empowered, and ready for what’s next.',
   },
   {
     image: '/transformation.jpg',
@@ -59,37 +59,37 @@ const THEMATIC_CARDS = [
   {
     title: 'Confidence & Self-Belief',
     quote:
-      'I used to stay quiet, afraid that my voice wasn\u2019t important. One conversation changed something in me\u2014I realized I didn\u2019t need to become someone else to be confident. I simply needed to believe in myself.',
+      'I used to stay quiet, afraid that my voice wasn’t important. One conversation changed something in me—I realized I didn’t need to become someone else to be confident. I simply needed to believe in myself.',
     image: '/sbf_smile.jpeg',
   },
   {
     title: 'Emotional Wellbeing',
     quote:
-      'I thought being strong meant hiding what I felt. Then I found a space where I could speak, listen, and be understood. I learned that acknowledging my emotions was not weakness\u2014it was strength.',
+      'I thought being strong meant hiding what I felt. Then I found a space where I could speak, listen, and be understood. I learned that acknowledging my emotions was not weakness—it was strength.',
     image: '/transformation.jpg',
   },
   {
     title: 'Purpose & Direction',
     quote:
-      'I knew I wanted more, but I didn\u2019t know where to begin. Through reflection and meaningful conversations, I started connecting my strengths with my dreams\u2014and my next step became clearer.',
+      'I knew I wanted more, but I didn’t know where to begin. Through reflection and meaningful conversations, I started connecting my strengths with my dreams—and my next step became clearer.',
     image: '/hero-image.jpg',
   },
   {
     title: 'Leadership & Personal Agency',
     quote:
-      'I always thought leaders were people with titles. Then I realized leadership begins with me\u2014with the choices I make, the responsibility I take, and the difference I choose to create.',
+      'I always thought leaders were people with titles. Then I realized leadership begins with me—with the choices I make, the responsibility I take, and the difference I choose to create.',
     image: '/knowledge.jpg',
   },
   {
     title: 'Relationships & Communication',
     quote:
-      'I thought being heard was all that mattered. Then I learned to listen, understand, and communicate with intention. The conversations changed\u2014and so did my relationships.',
+      'I thought being heard was all that mattered. Then I learned to listen, understand, and communicate with intention. The conversations changed—and so did my relationships.',
     image: '/a_person_blossoming.jpeg',
   },
   {
     title: 'Life Skills & Future Readiness',
     quote:
-      'The future once felt like something I had to figure out alone. Then I began learning the skills, making better choices, and preparing for opportunities I couldn\u2019t yet see.',
+      'The future once felt like something I had to figure out alone. Then I began learning the skills, making better choices, and preparing for opportunities I couldn’t yet see.',
     image: '/hero-image.jpg',
   },
   {
@@ -113,12 +113,12 @@ const CASE_STORIES = [
     category: 'Community Story',
     title: 'When Young People Come Together, Possibilities Grow',
     description:
-      'A community session brought young people together to share experiences, challenge perspectives, and discover that they were not alone in navigating life\u2019s uncertainties.',
+      'A community session brought young people together to share experiences, challenge perspectives, and discover that they were not alone in navigating life’s uncertainties.',
   },
   {
     number: '03',
     category: 'Transformation Story',
-    title: 'From \u201cI Don\u2019t Know\u201d to \u201cI Can\u201d',
+    title: 'From “I Don’t Know” to “I Can”',
     description:
       'Sometimes transformation begins with a simple conversation. Discover how a session created a moment of clarity and gave one young person the confidence to take their next step.',
   },
@@ -170,7 +170,7 @@ const VOICE_CARDS = [
   {
     name: 'Sylvia Wanja',
     role: 'Multimedia Journalist | Mentor',
-    quote: 'She didn\u2019t just speak to us; she gave us a foundation to stand on.',
+    quote: 'She didn’t just speak to us; she gave us a foundation to stand on.',
     description:
       'Through her mentorship session on mental and emotional growth, Sylvia Wanja inspired many of us to look within, understand ourselves, and approach life with greater confidence and intention. Her words created a meaningful foundation for personal growth and reminded us of the power of having someone who believes in your journey.',
     image: '/sbf_smile.jpeg',
@@ -182,7 +182,7 @@ const VOICE_CARDS = [
     description:
       'Tonny brought a fresh and practical perspective to Smart Blossoming Foundation through his Career Building & Skills session. With his experience and determination, he challenged young people to take their skills seriously, present themselves with confidence, and prepare intentionally for the opportunities ahead.',
     impact:
-      'He reminded us that your age does not limit your ambition\u2014and preparation can turn potential into opportunity.',
+      'He reminded us that your age does not limit your ambition—and preparation can turn potential into opportunity.',
     image: '/knowledge.jpg',
   },
 ] as const;
@@ -390,9 +390,9 @@ export const LandingPage: React.FC = () => {
                 build confidence, and turn personal experiences into purposeful action.
               </p>
               <p className="about-us-tagline">Your story matters. Your future matters.</p>
-              <button type="button" className="pill-button about-us-btn">
+              <Link to="/about" className="pill-button about-us-btn" style={{ display: 'inline-block', textDecoration: 'none' }}>
                 About us
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -465,7 +465,7 @@ export const LandingPage: React.FC = () => {
           <div className="story-card">
             <h2 id="founder-heading" className="section-title">Meet Our Founder — Hannet Paul</h2>
             <blockquote className="story-quote">
-              &ldquo;I turned my challenges into purpose&mdash;and that purpose became Smart Blossoming Foundation.&rdquo;
+              &ldquo;I turned my challenges into purpose—and that purpose became Smart Blossoming Foundation.&rdquo;
             </blockquote>
             <p className="founder-description">
               My journey has not always been easy, but the challenges I encountered shaped my understanding
@@ -501,7 +501,7 @@ export const LandingPage: React.FC = () => {
           <div className="journey-closing text-center">
             <h3 className="journey-closing-title">From Conversations to Action</h3>
             <blockquote className="journey-closing-quote">
-              &ldquo;We don&rsquo;t just talk about transformation. We create spaces where it can begin.&rdquo;
+              &ldquo;We don’t just talk about transformation. We create spaces where it can begin.&rdquo;
             </blockquote>
             <p className="journey-closing-text">
               Through mentorship sessions, career-building workshops, skills development, and school outreach,
@@ -519,14 +519,15 @@ export const LandingPage: React.FC = () => {
             Explore an upcoming program, ask a private question, volunteer your skills or discuss a partnership.
           </p>
           <div className="hero-actions" style={{ justifyContent: 'center' }}>
-            <a href="#inquiry" className="pill-button outline" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderColor: '#FFFFFF', color: '#FFFFFF' }}>
+            <Link to="/events-programs" className="pill-button primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#FFFFFF', color: 'var(--color-forest)', textDecoration: 'none' }}>
+              Explore Programs
+            </Link>
+            <Link to="/contact" className="pill-button outline" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderColor: '#FFFFFF', color: '#FFFFFF', textDecoration: 'none' }}>
               Send Inquiry
-            </a>
+            </Link>
           </div>
         </div>
       </section>
-
-
 
       {/* Complete Footer */}
       <footer id="contact" className="site-footer">
@@ -562,6 +563,8 @@ export const LandingPage: React.FC = () => {
               <h4 className="footer-heading">Navigation</h4>
               <ul className="footer-links">
                 <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/events-programs">Programs & Events</Link></li>
                 <li><a href="#impact">Impact</a></li>
                 <li><a href="#resources">Resources</a></li>
                 <li><Link to="/volunteer">Volunteer</Link></li>

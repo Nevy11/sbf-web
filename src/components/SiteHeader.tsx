@@ -47,6 +47,12 @@ export const SiteHeader: React.FC = () => {
             <NavLink to="/" end onClick={() => setMenuOpen(false)}>
               Home
             </NavLink>
+            <NavLink to="/about" onClick={() => setMenuOpen(false)}>
+              About
+            </NavLink>
+            <NavLink to="/events-programs" onClick={() => setMenuOpen(false)}>
+              Programs & Events
+            </NavLink>
             <a href={sectionLink('#impact')} onClick={() => setMenuOpen(false)}>
               Impact
             </a>
@@ -59,13 +65,13 @@ export const SiteHeader: React.FC = () => {
           </nav>
 
           <div className="header-actions">
-            <a
-              href={sectionLink('#programs')}
+            <NavLink
+              to="/events-programs"
               className="pill-button outline explore-programs-btn"
               onClick={() => setMenuOpen(false)}
             >
               Programs
-            </a>
+            </NavLink>
             <NavLink
               to="/volunteer"
               className="pill-button primary volunteer-btn"
