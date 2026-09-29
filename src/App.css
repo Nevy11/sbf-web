@@ -1084,9 +1084,9 @@
 
 .case-stories-featured-wrap {
   width: 100%;
-  max-width: 520px;
-  aspect-ratio: 3 / 4;
-  margin: 0 auto 3.5rem;
+  max-width: none;
+  aspect-ratio: 21 / 9;
+  margin: 0 0 3.5rem;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 12px 32px rgba(0, 71, 53, 0.1);
@@ -1096,6 +1096,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -1786,7 +1787,13 @@
 
   .case-stories-lead {
     font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .case-stories-featured-wrap {
+    aspect-ratio: 16 / 9;
     margin-bottom: 2.5rem;
+    border-radius: 16px;
   }
 
   .case-stories-grid {
@@ -1796,7 +1803,7 @@
   }
 
   .case-story-card {
-    padding: 1.5rem 1.35rem 1.75rem;
+    padding: 0;
   }
 
   .case-stories-tagline {
