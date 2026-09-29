@@ -2034,8 +2034,9 @@
   font-size: 1.1rem;
   line-height: 1.75;
   color: rgba(255, 255, 255, 0.92);
-  margin: 0 auto 1.5rem;
-  max-width: 720px;
+  margin: 0 0 1.5rem;
+  max-width: none;
+  text-align: left;
 }
 
 .founder-closing {
@@ -2043,12 +2044,37 @@
   font-weight: 700;
   color: #ffffff;
   margin: 0;
+  text-align: left;
+}
+
+.founder-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 380px) 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.founder-content {
+  text-align: left;
+}
+
+.founder-content .section-title {
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.founder-content .story-quote {
+  text-align: left;
+  margin-bottom: 1.5rem;
 }
 
 .founder-image-wrap {
-  width: min(280px, 70vw);
+  width: 100%;
   aspect-ratio: 3 / 4;
-  margin: 0 auto 2rem;
+  margin: 0;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
@@ -2061,6 +2087,27 @@
   object-fit: cover;
   object-position: center top;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .founder-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 480px;
+  }
+
+  .founder-image-wrap {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .founder-content,
+  .founder-content .section-title,
+  .founder-content .story-quote,
+  .founder-description,
+  .founder-closing {
+    text-align: center;
+  }
 }
 
 .text-link {

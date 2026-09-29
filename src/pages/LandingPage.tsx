@@ -24,7 +24,7 @@ const HERO_SLIDES: Array<{
     image: '/images/hero-space-to-become.jpeg',
     headline: 'Every Young Person Deserves Space to Become.',
     subheadline:
-      'More than just sessions, we create experiences that spark self-discovery, build confidence, shift perspectives, and inspire action. Every session is a step toward becoming more intentional, empowered, and ready for what\u2019s next.',
+      'More than just sessions, we create experiences that spark self-discovery, build confidence, shift perspectives, and inspire action. Every session is a step toward becoming more intentional, empowered, and ready for what’s next.',
   },
   {
     image: '/images/hero-healing-purpose.jpeg',
@@ -120,7 +120,7 @@ const CASE_STORIES = [
   {
     number: '03',
     category: 'Transformation Story',
-    title: 'From \u201cI Don\u2019t Know\u201d to \u201cI Can\u201d',
+    title: 'From “I Don’t Know” to “I Can”',
     description:
       'Sometimes transformation begins with a simple conversation. Discover how a session created a moment of clarity and gave one young person the confidence to take their next step.',
     image: '/images/case-transformation-story.jpeg',
@@ -177,7 +177,7 @@ const VOICE_CARDS = [
   {
     name: 'Sylvia Wanja',
     role: 'Multimedia Journalist | Mentor',
-    quote: 'She didn\u2019t just speak to us; she gave us a foundation to stand on.',
+    quote: 'She didn’t just speak to us; she gave us a foundation to stand on.',
     description:
       'Through her mentorship session on mental and emotional growth, Sylvia Wanja inspired many of us to look within, understand ourselves, and approach life with greater confidence and intention. Her words created a meaningful foundation for personal growth and reminded us of the power of having someone who believes in your journey.',
     image: '/images/voice-sylvia-wanja.jpeg',
@@ -415,9 +415,9 @@ export const LandingPage: React.FC = () => {
                 build confidence, and turn personal experiences into purposeful action.
               </p>
               <p className="about-us-tagline">Your story matters. Your future matters.</p>
-              <button type="button" className="pill-button about-us-btn">
+              <Link to="/about" className="pill-button about-us-btn" style={{ display: 'inline-block', textDecoration: 'none' }}>
                 About us
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -487,7 +487,7 @@ export const LandingPage: React.FC = () => {
       {/* Founder Section */}
       <section className="community-story-section founder-section" aria-labelledby="founder-heading">
         <div className="container">
-          <div className="story-card founder-card">
+          <div className="founder-layout">
             <div className="founder-image-wrap">
               <img
                 src="/images/founder-hannet-paul.jpeg"
@@ -496,17 +496,19 @@ export const LandingPage: React.FC = () => {
                 loading="lazy"
               />
             </div>
-            <h2 id="founder-heading" className="section-title">Meet Our Founder — Hannet Paul</h2>
-            <blockquote className="story-quote">
-              &ldquo;I turned my challenges into purpose&mdash;and that purpose became Smart Blossoming Foundation.&rdquo;
-            </blockquote>
-            <p className="founder-description">
-              My journey has not always been easy, but the challenges I encountered shaped my understanding
-              of resilience, self-belief, and purpose. What began as a personal journey of finding my footing
-              became a vision to create spaces where others can discover their strength, gain confidence, and
-              see new possibilities for their future.
-            </p>
-            <p className="founder-closing">This is how Smart Blossoming Foundation began.</p>
+            <div className="founder-content">
+              <h2 id="founder-heading" className="section-title">Meet Our Founder — Hannet Paul</h2>
+              <blockquote className="story-quote">
+                &ldquo;I turned my challenges into purpose—and that purpose became Smart Blossoming Foundation.&rdquo;
+              </blockquote>
+              <p className="founder-description">
+                My journey has not always been easy, but the challenges I encountered shaped my understanding
+                of resilience, self-belief, and purpose. What began as a personal journey of finding my footing
+                became a vision to create spaces where others can discover their strength, gain confidence, and
+                see new possibilities for their future.
+              </p>
+              <p className="founder-closing">This is how Smart Blossoming Foundation began.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -552,7 +554,7 @@ export const LandingPage: React.FC = () => {
             </div>
             <h3 className="journey-closing-title">From Conversations to Action</h3>
             <blockquote className="journey-closing-quote">
-              &ldquo;We don&rsquo;t just talk about transformation. We create spaces where it can begin.&rdquo;
+              &ldquo;We don’t just talk about transformation. We create spaces where it can begin.&rdquo;
             </blockquote>
             <p className="journey-closing-text">
               Through mentorship sessions, career-building workshops, skills development, and school outreach,
@@ -570,14 +572,15 @@ export const LandingPage: React.FC = () => {
             Explore an upcoming program, ask a private question, volunteer your skills or discuss a partnership.
           </p>
           <div className="hero-actions" style={{ justifyContent: 'center' }}>
-            <a href="#inquiry" className="pill-button outline" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderColor: '#FFFFFF', color: '#FFFFFF' }}>
+            <Link to="/events-programs" className="pill-button primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#FFFFFF', color: 'var(--color-forest)', textDecoration: 'none' }}>
+              Explore Programs
+            </Link>
+            <Link to="/contact" className="pill-button outline" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderColor: '#FFFFFF', color: '#FFFFFF', textDecoration: 'none' }}>
               Send Inquiry
-            </a>
+            </Link>
           </div>
         </div>
       </section>
-
-
 
       {/* Complete Footer */}
       <footer id="contact" className="site-footer">
@@ -613,6 +616,8 @@ export const LandingPage: React.FC = () => {
               <h4 className="footer-heading">Navigation</h4>
               <ul className="footer-links">
                 <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/events-programs">Programs & Events</Link></li>
                 <li><a href="#impact">Impact</a></li>
                 <li><a href="#resources">Resources</a></li>
                 <li><Link to="/volunteer">Volunteer</Link></li>
