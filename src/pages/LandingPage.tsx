@@ -15,31 +15,31 @@ const HERO_SLIDES: Array<{
   subheadline: string;
 }> = [
   {
-    image: '/a_person_blossoming_without_logo.jpeg',
+    image: '/images/hero-blossom-purpose.jpeg',
     headline: 'Your story can blossom into purpose.',
     subheadline:
       'Smart Blossoming Foundation creates safe, community-centred spaces to heal emotionally, grow mentally, build confidence and live with purpose.',
   },
   {
-    image: '/sbf_smile.jpeg',
+    image: '/images/hero-space-to-become.jpeg',
     headline: 'Every Young Person Deserves Space to Become.',
     subheadline:
       'More than just sessions, we create experiences that spark self-discovery, build confidence, shift perspectives, and inspire action. Every session is a step toward becoming more intentional, empowered, and ready for what\u2019s next.',
   },
   {
-    image: '/transformation.jpg',
+    image: '/images/hero-healing-purpose.jpeg',
     headline: 'Where healing meets purpose.',
     subheadline:
       'Find a community that believes in your potential, supports your growth, and walks with you as you discover your voice, confidence, and purpose.',
   },
   {
-    image: '/hero-image.jpg',
+    image: '/images/hero-transform-lives.jpeg',
     headline: 'Creating Moments That Transform Lives.',
     subheadline:
       'Smart Blossoming Foundation brings young people together through meaningful sessions, conversations, and mentorship that inspire confidence, clarity, self-discovery, and purposeful action.',
   },
   {
-    image: '/knowledge.jpg',
+    image: '/images/hero-greater-impact.jpeg',
     headline: 'Together, We Create Greater Impact.',
     subheadline:
       'At Smart Blossoming Foundation, we believe meaningful change happens when we work together. We partner with individuals, organizations, communities, and institutions to create transformative experiences that equip young people with the confidence, knowledge, connections, and opportunities to shape their future.',
@@ -54,49 +54,49 @@ const THEMATIC_CARDS = [
     title: 'Identity & Self-Discovery',
     quote:
       'I spent so much time trying to fit in that I forgot to ask who I really was. Then I began to listen to my own story, discover what mattered to me, and finally understand the person I was becoming.',
-    image: '/a_person_blossoming_without_logo.jpeg',
+    image: '/images/theme-identity.jpeg',
   },
   {
     title: 'Confidence & Self-Belief',
     quote:
       'I used to stay quiet, afraid that my voice wasn\u2019t important. One conversation changed something in me\u2014I realized I didn\u2019t need to become someone else to be confident. I simply needed to believe in myself.',
-    image: '/sbf_smile.jpeg',
+    image: '/images/theme-confidence.jpeg',
   },
   {
     title: 'Emotional Wellbeing',
     quote:
       'I thought being strong meant hiding what I felt. Then I found a space where I could speak, listen, and be understood. I learned that acknowledging my emotions was not weakness\u2014it was strength.',
-    image: '/transformation.jpg',
+    image: '/images/theme-emotional-wellbeing.jpeg',
   },
   {
     title: 'Purpose & Direction',
     quote:
       'I knew I wanted more, but I didn\u2019t know where to begin. Through reflection and meaningful conversations, I started connecting my strengths with my dreams\u2014and my next step became clearer.',
-    image: '/hero-image.jpg',
+    image: '/images/theme-purpose.jpeg',
   },
   {
     title: 'Leadership & Personal Agency',
     quote:
       'I always thought leaders were people with titles. Then I realized leadership begins with me\u2014with the choices I make, the responsibility I take, and the difference I choose to create.',
-    image: '/knowledge.jpg',
+    image: '/images/theme-leadership.jpeg',
   },
   {
     title: 'Relationships & Communication',
     quote:
       'I thought being heard was all that mattered. Then I learned to listen, understand, and communicate with intention. The conversations changed\u2014and so did my relationships.',
-    image: '/a_person_blossoming.jpeg',
+    image: '/images/theme-relationships.jpeg',
   },
   {
     title: 'Life Skills & Future Readiness',
     quote:
       'The future once felt like something I had to figure out alone. Then I began learning the skills, making better choices, and preparing for opportunities I couldn\u2019t yet see.',
-    image: '/hero-image.jpg',
+    image: '/images/theme-life-skills.jpeg',
   },
   {
     title: 'Community & Social Impact',
     quote:
       'I came looking for a change in myself. I left wondering how I could create change for someone else. Because when we discover our strength, we can use it to lift others too.',
-    image: '/sbf_smile.jpeg',
+    image: '/images/theme-community-impact.jpeg',
   },
 ] as const;
 
@@ -107,6 +107,7 @@ const CASE_STORIES = [
     title: 'The Conversation That Changed How I Saw Myself',
     description:
       'A young participant shares how one meaningful conversation helped them recognize their strengths, find their voice, and see new possibilities for their future.',
+    image: '/images/case-session-story.jpeg',
   },
   {
     number: '02',
@@ -114,6 +115,7 @@ const CASE_STORIES = [
     title: 'When Young People Come Together, Possibilities Grow',
     description:
       'A community session brought young people together to share experiences, challenge perspectives, and discover that they were not alone in navigating life\u2019s uncertainties.',
+    image: '/images/case-community-story.jpeg',
   },
   {
     number: '03',
@@ -121,6 +123,7 @@ const CASE_STORIES = [
     title: 'From \u201cI Don\u2019t Know\u201d to \u201cI Can\u201d',
     description:
       'Sometimes transformation begins with a simple conversation. Discover how a session created a moment of clarity and gave one young person the confidence to take their next step.',
+    image: '/images/case-transformation-story.jpeg',
   },
   {
     number: '04',
@@ -128,6 +131,7 @@ const CASE_STORIES = [
     title: 'Together, We Create Greater Impact',
     description:
       'Discover how partnerships bring together people, ideas, resources, and opportunities to create meaningful experiences and lasting impact for young people.',
+    image: '/images/case-partnership-story.jpeg',
   },
 ] as const;
 
@@ -138,6 +142,7 @@ const JOURNEY_PILLARS = [
     description:
       'Our mentorship sessions create safe and engaging spaces where young people can ask questions, share experiences, learn from others, and gain the confidence to navigate their personal and future journeys.',
     variant: 'mentorship',
+    image: '/images/journey-mentorship.jpeg',
   },
   {
     title: 'Career Building & Skills',
@@ -145,6 +150,7 @@ const JOURNEY_PILLARS = [
     description:
       'Through practical sessions on career development, CV building, communication, personal branding, workplace readiness, and essential life skills, we help young people turn their potential into opportunity.',
     variant: 'career',
+    image: '/images/journey-career-skills.jpeg',
   },
   {
     title: 'School Mentorship Outreach',
@@ -152,6 +158,7 @@ const JOURNEY_PILLARS = [
     description:
       'We visit high schools to engage students in mentorship conversations that encourage self-awareness, confidence, leadership, career exploration, and purposeful decision-making.',
     variant: 'school',
+    image: '/images/journey-school-outreach.jpeg',
   },
 ] as const;
 
@@ -165,7 +172,7 @@ const VOICE_CARDS = [
     description:
       'At the launch of Smart Blossoming Foundation, Esther Kimani came through with more than words. She shared lessons on leadership, togetherness, and the power of standing with one another. Her presence reminded us that building a foundation is not just about having a vision, but about learning to walk together, lead with purpose, and support one another along the journey.',
     highlight: 'A Voice That Shaped Our Beginning',
-    image: '/hero-image.jpg',
+    image: '/images/voice-esther-kimani.jpeg',
   },
   {
     name: 'Sylvia Wanja',
@@ -173,7 +180,7 @@ const VOICE_CARDS = [
     quote: 'She didn\u2019t just speak to us; she gave us a foundation to stand on.',
     description:
       'Through her mentorship session on mental and emotional growth, Sylvia Wanja inspired many of us to look within, understand ourselves, and approach life with greater confidence and intention. Her words created a meaningful foundation for personal growth and reminded us of the power of having someone who believes in your journey.',
-    image: '/sbf_smile.jpeg',
+    image: '/images/voice-sylvia-wanja.jpeg',
   },
   {
     name: 'Tonny Kyule',
@@ -183,7 +190,7 @@ const VOICE_CARDS = [
       'Tonny brought a fresh and practical perspective to Smart Blossoming Foundation through his Career Building & Skills session. With his experience and determination, he challenged young people to take their skills seriously, present themselves with confidence, and prepare intentionally for the opportunities ahead.',
     impact:
       'He reminded us that your age does not limit your ambition\u2014and preparation can turn potential into opportunity.',
-    image: '/knowledge.jpg',
+    image: '/images/voice-tonny-kyule.jpeg',
   },
 ] as const;
 
@@ -346,16 +353,34 @@ export const LandingPage: React.FC = () => {
             <p className="case-stories-lead">
               Every story has a moment that can change everything.
             </p>
+            <div className="case-stories-featured-wrap">
+              <img
+                src="/images/stories-of-becoming.jpeg"
+                alt=""
+                className="case-stories-featured-image"
+                loading="lazy"
+              />
+            </div>
           </div>
 
           <div className="case-stories-grid">
             {CASE_STORIES.map((story) => (
               <article key={story.number} className="case-story-card">
-                <span className="case-story-label">
-                  {story.number} &mdash; {story.category}
-                </span>
-                <h3 className="case-story-title">{story.title}</h3>
-                <p className="case-story-description">{story.description}</p>
+                <div className="case-story-image-wrap">
+                  <img
+                    src={story.image}
+                    alt=""
+                    className="case-story-image"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="case-story-body">
+                  <span className="case-story-label">
+                    {story.number} &mdash; {story.category}
+                  </span>
+                  <h3 className="case-story-title">{story.title}</h3>
+                  <p className="case-story-description">{story.description}</p>
+                </div>
               </article>
             ))}
           </div>
@@ -373,7 +398,7 @@ export const LandingPage: React.FC = () => {
           <div className="about-us-layout">
             <div className="about-us-image-wrap">
               <img
-                src="/a_person_blossoming_without_logo.jpeg"
+                src="/images/about-us.jpeg"
                 alt=""
                 className="about-us-image"
                 loading="lazy"
@@ -462,7 +487,15 @@ export const LandingPage: React.FC = () => {
       {/* Founder Section */}
       <section className="community-story-section founder-section" aria-labelledby="founder-heading">
         <div className="container">
-          <div className="story-card">
+          <div className="story-card founder-card">
+            <div className="founder-image-wrap">
+              <img
+                src="/images/founder-hannet-paul.jpeg"
+                alt="Hannet Paul, Founder of Smart Blossoming Foundation"
+                className="founder-image"
+                loading="lazy"
+              />
+            </div>
             <h2 id="founder-heading" className="section-title">Meet Our Founder — Hannet Paul</h2>
             <blockquote className="story-quote">
               &ldquo;I turned my challenges into purpose&mdash;and that purpose became Smart Blossoming Foundation.&rdquo;
@@ -491,14 +524,32 @@ export const LandingPage: React.FC = () => {
           <div className="journey-grid">
             {JOURNEY_PILLARS.map((pillar) => (
               <article key={pillar.title} className={`journey-card journey-card-${pillar.variant}`}>
-                <h3>{pillar.title}</h3>
-                <p className="journey-card-subtitle">{pillar.subtitle}</p>
-                <p>{pillar.description}</p>
+                <div className="journey-card-image-wrap">
+                  <img
+                    src={pillar.image}
+                    alt=""
+                    className="journey-card-image"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="journey-card-body">
+                  <h3>{pillar.title}</h3>
+                  <p className="journey-card-subtitle">{pillar.subtitle}</p>
+                  <p>{pillar.description}</p>
+                </div>
               </article>
             ))}
           </div>
 
           <div className="journey-closing text-center">
+            <div className="journey-closing-image-wrap">
+              <img
+                src="/images/journey-conversations-to-action.jpeg"
+                alt=""
+                className="journey-closing-image"
+                loading="lazy"
+              />
+            </div>
             <h3 className="journey-closing-title">From Conversations to Action</h3>
             <blockquote className="journey-closing-quote">
               &ldquo;We don&rsquo;t just talk about transformation. We create spaces where it can begin.&rdquo;
