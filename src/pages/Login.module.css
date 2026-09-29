@@ -2,9 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--header-height));
   background-color: var(--color-dominant);
   padding: 1rem;
+  padding-top: calc(var(--header-height) + 1rem);
 }
 
 .loginCard {

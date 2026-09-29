@@ -4,10 +4,7 @@ import { Menu, X } from 'lucide-react';
 
 export const SiteHeader: React.FC = () => {
   const { pathname } = useLocation();
-  const isHome = pathname === '/';
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const sectionLink = (hash: string) => (isHome ? hash : `/${hash}`);
 
   useEffect(() => {
     setMenuOpen(false);
@@ -53,25 +50,12 @@ export const SiteHeader: React.FC = () => {
             <NavLink to="/events-programs" onClick={() => setMenuOpen(false)}>
               Programs & Events
             </NavLink>
-            <a href={sectionLink('#impact')} onClick={() => setMenuOpen(false)}>
-              Impact
-            </a>
-            <a href={sectionLink('#resources')} onClick={() => setMenuOpen(false)}>
-              Resources
-            </a>
             <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
               Contact
             </NavLink>
           </nav>
 
           <div className="header-actions">
-            <NavLink
-              to="/events-programs"
-              className="pill-button outline explore-programs-btn"
-              onClick={() => setMenuOpen(false)}
-            >
-              Programs
-            </NavLink>
             <NavLink
               to="/volunteer"
               className="pill-button primary volunteer-btn"

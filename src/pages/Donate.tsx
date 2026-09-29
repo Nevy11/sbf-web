@@ -331,8 +331,8 @@ export const Donate: React.FC = () => {
               <Link to="/volunteer" className="pill-button primary" style={{ display: 'inline-flex', alignItems: 'center' }}>
                 Volunteer With Us
               </Link>
-              <Link to="/events-programs" className="pill-button outline" style={{ display: 'inline-flex', alignItems: 'center' }}>
-                View Programs
+              <Link to="/contact" className="pill-button outline" style={{ display: 'inline-flex', alignItems: 'center' }}>
+                Contact Us
               </Link>
             </div>
           </div>
@@ -368,8 +368,8 @@ export const Donate: React.FC = () => {
               <h4 className="footer-heading">Navigation</h4>
               <ul className="footer-links">
                 <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
                 <li><Link to="/events-programs">Programs & Events</Link></li>
-                <li><a href="/#impact">Impact</a></li>
                 <li><Link to="/volunteer">Volunteer</Link></li>
                 <li><Link to="/donate">Donate</Link></li>
                 <li><Link to="/contact">Contact</Link></li>

@@ -542,25 +542,6 @@ export const LandingPage: React.FC = () => {
               </article>
             ))}
           </div>
-
-          <div className="journey-closing text-center">
-            <div className="journey-closing-image-wrap">
-              <img
-                src="/images/journey-conversations-to-action.jpeg"
-                alt=""
-                className="journey-closing-image"
-                loading="lazy"
-              />
-            </div>
-            <h3 className="journey-closing-title">From Conversations to Action</h3>
-            <blockquote className="journey-closing-quote">
-              &ldquo;We don’t just talk about transformation. We create spaces where it can begin.&rdquo;
-            </blockquote>
-            <p className="journey-closing-text">
-              Through mentorship sessions, career-building workshops, skills development, and school outreach,
-              Smart Blossoming Foundation brings meaningful conversations directly to the people who need them.
-            </p>
-          </div>
         </div>
       </section>
 
@@ -572,9 +553,6 @@ export const LandingPage: React.FC = () => {
             Explore an upcoming program, ask a private question, volunteer your skills or discuss a partnership.
           </p>
           <div className="hero-actions" style={{ justifyContent: 'center' }}>
-            <Link to="/events-programs" className="pill-button primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#FFFFFF', color: 'var(--color-forest)', textDecoration: 'none' }}>
-              Explore Programs
-            </Link>
             <Link to="/contact" className="pill-button outline" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderColor: '#FFFFFF', color: '#FFFFFF', textDecoration: 'none' }}>
               Send Inquiry
             </Link>
@@ -618,8 +596,6 @@ export const LandingPage: React.FC = () => {
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/events-programs">Programs & Events</Link></li>
-                <li><a href="#impact">Impact</a></li>
-                <li><a href="#resources">Resources</a></li>
                 <li><Link to="/volunteer">Volunteer</Link></li>
                 <li><Link to="/donate">Donate</Link></li>
                 <li><Link to="/contact">Contact</Link></li>

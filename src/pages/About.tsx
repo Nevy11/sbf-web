@@ -134,8 +134,6 @@ export const About: React.FC = () => {
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/events-programs">Programs & Events</Link></li>
-                <li><a href="/#impact">Impact</a></li>
-                <li><a href="/#resources">Resources</a></li>
                 <li><Link to="/volunteer">Volunteer</Link></li>
                 <li><Link to="/donate">Donate</Link></li>
                 <li><Link to="/contact">Contact</Link></li>

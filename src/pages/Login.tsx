@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Navigate, Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { Flower, Eye, EyeOff } from '../components/Icon3D';
+import { SiteHeader } from '../components/SiteHeader';
 import styles from './Login.module.css';
 
 export const Login: React.FC = () => {
@@ -64,7 +65,9 @@ export const Login: React.FC = () => {
   };
 
   return (
-    <div className={styles.loginContainer}>
+    <>
+      <SiteHeader />
+      <div className={styles.loginContainer}>
       <div className={styles.loginCard}>
         <div className={styles.header}>
           <Flower className={styles.logo} size={48} />
@@ -139,5 +142,6 @@ export const Login: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
